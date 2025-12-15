@@ -1,0 +1,224 @@
+{
+    "common": {
+        "fleetbase": "Fleetbase",
+        "navigator": "Navigator",
+        "apiKey": "مفتاح API",
+        "cancel": "إلغاء",
+        "new": "جديد",
+        "create": "إنشاء",
+        "save": "حفظ",
+        "delete": "حذف",
+        "edit": "تعديل",
+        "update": "تحديث",
+        "service": "خدمة",
+        "retry": "إعادة المحاولة",
+        "loading": "جاري التحميل...",
+        "confirm": "تأكيد",
+        "confirmation": "تأكيد",
+        "ok": "موافق",
+        "done": "تم",
+        "tryAgain": "حاول مرة أخرى"
+    },
+    "buttons": {
+        "continueWithPhone": "متابعة باستخدام الهاتف",
+        "continueWithApple": "متابعة باستخدام Apple",
+        "continueWithFacebook": "متابعة باستخدام Facebook",
+        "continueWithInstagram": "متابعة باستخدام Instagram",
+        "continueWithGoogle": "متابعة باستخدام Google",
+        "sendVerificationCode": "إرسال رمز التحقق",
+        "home": "الرئيسية"
+    },
+    "PhoneLoginScreen": {
+        "title": "تسجيل الدخول عبر الرسائل النصية",
+        "sendVerificationCode": "إرسال رمز التحقق",
+        "home": "الرئيسية",
+        "invalidPhoneNumber": "رقم الهاتف المقدم غير صحيح."
+    },
+    "PhoneLoginVerifyScreen": {
+        "codeSentTo": "تم إرسال الرمز إلى {{phone}}",
+        "verifyCode": "تحقق من الرمز",
+        "retry": "إعادة المحاولة",
+        "unableToSendSMS": "تعذر إرسال رسالة نصية.",
+        "verificationCodeSentVia": "تم إرسال رمز التحقق عبر {{method}}."
+    },
+    "DriverDashboardScreen": {
+        "tracking": "التتبع:",
+        "yes": "نعم",
+        "no": "لا",
+        "location": "الموقع:",
+        "latitude": "خط العرض",
+        "longitude": "خط الطول",
+        "heading": "الاتجاه",
+        "altitude": "الارتفاع",
+        "activeOrders": "الطلبات النشطة",
+        "speed": "السرعة"
+    },
+    "DriverProfileScreen": {
+        "account": "الحساب",
+        "organization": "المنظمة"
+    },
+    "DriverNavigator": {
+        "navigator": "الملاح",
+        "dashTab": "لوحة التحكم",
+        "ordersTab": "الطلبات",
+        "reportsTab": "التقارير",
+        "chatTab": "الدردشة",
+        "accountTab": "الحساب",
+        "createFuelReport": "إنشاء تقرير وقود جديد",
+        "editFuelReport": "تعديل تقرير الوقود من {{date}}",
+        "createIssue": "إنشاء مشكلة جديدة",
+        "editIssue": "تعديل المشكلة من {{date}}"
+    },
+    "DriverOrderManagementScreen": {
+        "activeOrders": "الطلبات النشطة: {{count}}",
+        "noCurrentOrders": "لا توجد طلبات حالية لـ {{date}}",
+        "ordersTitle": "طلبات {{day}}",
+        "orders": "طلبات",
+        "order": "طلب",
+        "stops": "محطات",
+        "stop": "محطة",
+        "left": "متبقية"
+    },
+    "ChatHomeScreen": {
+        "chats": "المحادثات",
+        "noMessages": "لا توجد رسائل"
+    },
+    "CreateChatChannelScreen": {
+        "createNewChat": "إنشاء محادثة جديدة",
+        "channelName": "اسم القناة",
+        "inputChannelName": "أدخل اسم قناة الدردشة...",
+        "selectParticipants": "اختر المشاركين:",
+        "unselect": "إلغاء التحديد",
+        "select": "اختيار",
+        "createNewChatButton": "إنشاء محادثة جديدة",
+        "channelNameRequired": "اسم قناة الدردشة مطلوب.",
+        "chatCreated": "تم إنشاء قناة دردشة جديدة: {{name}}"
+    },
+    "OrderCard": {
+        "customers": "العملاء:",
+        "customer": "العميل:",
+        "dateScheduled": "التاريخ المجدول:",
+        "podRequired": "إثبات التسليم مطلوب:",
+        "dispatchedAt": "تم الإرسال في:",
+        "eta": "الوقت المتوقع للوصول:",
+        "ect": "الوقت المتوقع للإنجاز:",
+        "na": "غير متاح"
+    },
+    "OrderScreen": {
+        "waypointCompleted": "اكتمل نقطة التوقف",
+        "waypointCompletedMessage": "تم إكمال نشاط نقطة التوقف للوجهة {{previous}}. وجهتك الحالية الآن هي {{current}}. يمكنك تغيير الوجهة في أي وقت بالضغط على زر \"الوجهة الحالية\".",
+        "continue": "متابعة",
+        "acceptAdhocTitle": "قبول طلب مخصص؟",
+        "acceptAdhocMessage": "بقبول هذا الطلب المخصص سيتم تعيينه لك وسيبدأ الطلب فوراً.",
+        "cancel": "إلغاء",
+        "accept": "قبول",
+        "dismissAdhocTitle": "رفض الطلب المخصص؟",
+        "dismissAdhocMessage": "برفض هذا الطلب المخصص لن يظهر بعد الآن كطلب متاح.",
+        "ok": "موافق",
+        "orderNotDispatchedTitle": "الطلب لم يتم إرساله بعد",
+        "orderNotDispatchedMessage": "هذا الطلب لم يتم إرساله بعد، هل أنت متأكد أنك تريد المتابعة؟",
+        "yes": "نعم",
+        "warning": "تحذير!",
+        "acceptOrder": "قبول الطلب",
+        "dismissOrder": "رفض الطلب",
+        "startOrder": "بدء الطلب",
+        "updateActivity": "تحديث النشاط",
+        "startNavigation": "بدء الملاحة",
+        "orderInformation": "معلومات الطلب",
+        "id": "المعرف",
+        "internalId": "المعرف الداخلي",
+        "trackingNumber": "رقم التتبع",
+        "proofOfDelivery": "إثبات التسليم",
+        "type": "النوع",
+        "dateCreated": "تاريخ الإنشاء",
+        "dateScheduled": "التاريخ المجدول",
+        "dateDispatched": "تاريخ الإرسال",
+        "orderRoute": "مسار الطلب",
+        "orderProgress": "تقدم الطلب",
+        "currentDestination": "الوجهة الحالية",
+        "nextDestination": "الوجهة التالية",
+        "totalDistance": "المسافة الإجمالية",
+        "startTime": "وقت البدء",
+        "currentEta": "الوقت المتوقع الحالي",
+        "ect": "الوقت المتوقع للإنجاز",
+        "orderNotes": "ملاحظات الطلب",
+        "orderProof": "إثبات الطلب",
+        "orderPayload": "حمولة الطلب",
+        "customer": "العميل",
+        "orderDocuments": "مستندات وملفات الطلب",
+        "orderComments": "تعليقات الطلب",
+        "updatingActivity": "تحديث النشاط: {{status}}",
+        "statusUpdated": "تم تحديث حالة الطلب إلى: {{status}}",
+        "na": "غير متاح"
+    },
+    "PhoneInput": {
+        "enterPhoneNumber": "أدخل رقم الهاتف",
+        "searchCountry": "ابحث عن دولة"
+    },
+    "orderStatuses": {
+        "created": "تم الإنشاء",
+        "preparing": "جاري التحضير",
+        "dispatched": "مُرسَل",
+        "driver_enroute": "السائق في الطريق",
+        "pending": "مُعلَّق",
+        "in_progress": "في تقدم",
+        "completed": "مكتمل"
+    },
+    "BootScreen": {
+        "missingRequiredConfigurationKeys": "مفاتيح التكوين المطلوبة مفقودة"
+    },
+    "AccountScreen": {
+        "changeProfilePhotoOptions": {
+            "takePhoto": "التقاط صورة",
+            "photoLibrary": "مكتبة الصور",
+            "deleteProfilePhoto": "حذف صورة الملف الشخصي"
+        },
+        "profilePhoto": "صورة الملف الشخصي",
+        "email": "البريد الإلكتروني",
+        "phoneNumber": "رقم الهاتف",
+        "name": "الاسم",
+        "language": "اللغة",
+        "theme": "المظهر",
+        "deleteAccount": "حذف الحساب",
+        "termsOfService": "شروط الخدمة",
+        "privacyPolicy": "سياسة الخصوصية",
+        "tracking": "التتبع",
+        "account": "الحساب",
+        "dataProtection": "حماية البيانات",
+        "clearCache": "مسح ذاكرة التخزين المؤقت",
+        "signOut": "تسجيل الخروج",
+        "signedOut": "تم تسجيل الخروج.",
+        "cacheCleared": "تم مسح ذاكرة التخزين المؤقت.",
+        "schemeChanged": "الآن باستخدام وضع {{selectedScheme}}.",
+        "languageChanged": "الآن باستخدام {{selectedLanguage}}.",
+        "photoChanged": "تم تغيير صورة الملف الشخصي.",
+        "photoRemoved": "تم حذف صورة الملف الشخصي."
+    },
+    "ProfileScreen": {
+        "organizationChanged": "تم التبديل إلى منظمة {{selectedOrganization}}."
+    },
+    "AddNewLocationScreen": {
+        "addNewAddress": "إضافة عنوان جديد",
+        "streetName": "اسم الشارع والرقم",
+        "weThinkYoureAroundHere": "نعتقد أنك في هذه المنطقة",
+        "cantFindYourAddress": "لا تستطيع العثور على عنوانك؟",
+        "useMapInstead": "استخدم الخريطة بدلاً من ذلك"
+    },
+    "SetupWarningScreen": {
+        "configurationMissing": "التكوينات مفقودة!",
+        "unconfiguredApp": "يبدو أنك لم تقم بتكوين تطبيقك بشكل صحيح.",
+        "envMissing": "مفقود من البيئة!"
+    },
+    "DriverReportScreen": {},
+    "LocationPermissionScreen": {
+        "enableLocationServices": "تفعيل خدمات الموقع",
+        "enableLocationPrompt": "نحتاج إلى موقعك لتوفير التتبع والتحديثات في الوقت الفعلي. يرجى السماح بالوصول للمتابعة.",
+        "shareAndContinue": "مشاركة والمتابعة",
+        "permissionNeededTitle": "إذن الموقع مطلوب",
+        "enableInSettingsTitle": "تفعيل الموقع في الإعدادات",
+        "permissionDeniedPrompt": "بدون الوصول إلى الموقع، لن تعمل بعض الميزات. هل ترغب في السماح بالوصول الآن؟",
+        "locationBlockedPrompt": "تم حظر الوصول إلى الموقع. يرجى فتح الإعدادات وتفعيله للمتابعة.",
+        "goToSettings": "الانتقال إلى الإعدادات",
+        "skipForNow": "تخطي في الوقت الحالي"
+    }
+}
