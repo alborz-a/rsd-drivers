@@ -150,11 +150,8 @@ dependencies {
     // Splash screen
     implementation 'androidx.core:core-splashscreen:1.0.0-alpha02' 
 
-    if (project.hermesEnabled.toBoolean()) {
-        implementation("com.facebook.react:hermes-android")
-    } else {
-        implementation jscFlavor
-    }
+    // Hermes is the default JS engine in React Native 0.77+
+    implementation("com.facebook.react:hermes-android")
 }
 
 apply plugin: 'com.google.gms.google-services'
