@@ -155,19 +155,17 @@ jobs:
       # ============================================
       # GRADLE CACHES
       # ============================================
-      - name: Cache Gradle Wrapper
+      - name: Cache Gradle Dependencies & Build Cache
         uses: actions/cache@v4
         with:
-          path: ~/.gradle/wrapper
-          key: ${{ runner.os }}-gradle-wrapper-${{ hashFiles('**/gradle-wrapper.properties') }}
-
-      - name: Cache Gradle Dependencies
-        uses: actions/cache@v4
-        with:
-          path: ~/.gradle/caches
-          key: ${{ runner.os }}-gradle-caches-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+            ${{ github.workspace }}/.gradle/caches
+            ${{ github.workspace }}/.gradle/build-cache
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
           restore-keys: |
-            ${{ runner.os }}-gradle-caches-
+            ${{ runner.os }}-gradle-
 
       - name: Make Gradlew Executable
         run: cd android && chmod +x ./gradlew
@@ -176,9 +174,11 @@ jobs:
       # BUILD - No 'clean' to enable incremental builds
       # ============================================
       - name: Build Android Debug APK
+        env:
+          GRADLE_USER_HOME: ${{ github.workspace }}/.gradle
         run: |
           cd android
-          ./gradlew assembleDebug --no-daemon --console=plain --stacktrace --info
+          ./gradlew assembleDebug --build-cache --no-daemon --console=plain --stacktrace --info
 
       - name: Upload Android APK
         uses: actions/upload-artifact@v4
