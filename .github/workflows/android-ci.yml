@@ -1,13 +1,13 @@
 name: Navigator Android App CI
 
 on:
-  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
 
 env:
   FLEETBASE_KEY: ${{ secrets.FLEETBASE_KEY }}
   GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
-  TRANSISTORSOFT_LICENSE_KEY: ${{ secrets.TRANSISTORSOFT_LICENSE_KEY }}
-  ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
 
 jobs:
   install_and_test:
@@ -48,6 +48,7 @@ jobs:
 
       - name: Create .env file (install_and_test)
         run: |
+          echo "APP_NAME=EtemadLife" > .env
           echo "APP_LINK_PREFIX=${{ secrets.APP_LINK_PREFIX }}" > .env
           echo "FLEETBASE_KEY=${{ secrets.FLEETBASE_KEY }}" >> .env
           echo "GOOGLE_MAPS_API_KEY=${{ secrets.GOOGLE_MAPS_API_KEY }}" >> .env
@@ -55,7 +56,7 @@ jobs:
           echo "FACEBOOK_CLIENT_TOKEN=${{ secrets.FACEBOOK_CLIENT_TOKEN }}" >> .env
           echo "GOOGLE_CLIENT_ID=${{ secrets.GOOGLE_CLIENT_ID }}" >> .env
           echo "GOOGLE_IOS_CLIENT_ID=${{ secrets.GOOGLE_IOS_CLIENT_ID }}" >> .env
-          echo "TRANSISTORSOFT_LICENSE_KEY=${{ secrets.TRANSISTORSOFT_LICENSE_KEY }}" >> .env
+          echo "DEFAULT_COORDINATES=36.5399,52.6783" >> .env
 
       - name: Generate cache key
         id: cache-key
@@ -98,11 +99,10 @@ jobs:
           cat > .env <<EOF
           APP_NAME=EtemadLife
           APP_IDENTIFIER=delivery.etemadlife.platform.drivers
-          APP_LINK_PREFIX=dummy
-          FLEETBASE_KEY=dummy
+          APP_LINK_PREFIX=royalstars-el
+          FLEETBASE_KEY=flb_live_PcN1McEg2CoosoEipiMW
           GOOGLE_MAPS_API_KEY=dummy
           DEFAULT_COORDINATES=36.5399,52.6783
-          TRANSISTORSOFT_LICENSE_KEY=dummy
           FACEBOOK_APP_ID=dummy
           FACEBOOK_CLIENT_TOKEN=dummy
           EOF
@@ -226,6 +226,7 @@ jobs:
 
       - name: Create .env file (release)
         run: |
+          echo "APP_NAME=EtemadLife" > .env
           echo "APP_LINK_PREFIX=${{ secrets.APP_LINK_PREFIX }}" > .env
           echo "FLEETBASE_KEY=${{ secrets.FLEETBASE_KEY }}" >> .env
           echo "GOOGLE_MAPS_API_KEY=${{ secrets.GOOGLE_MAPS_API_KEY }}" >> .env
@@ -233,7 +234,7 @@ jobs:
           echo "FACEBOOK_CLIENT_TOKEN=${{ secrets.FACEBOOK_CLIENT_TOKEN }}" >> .env
           echo "GOOGLE_CLIENT_ID=${{ secrets.GOOGLE_CLIENT_ID }}" >> .env
           echo "GOOGLE_IOS_CLIENT_ID=${{ secrets.GOOGLE_IOS_CLIENT_ID }}" >> .env
-          echo "TRANSISTORSOFT_LICENSE_KEY=${{ secrets.TRANSISTORSOFT_LICENSE_KEY }}" >> .env
+          echo "DEFAULT_COORDINATES=36.5399,52.6783" >> .env
 
       - name: Generate google-services.json (from secret)
         env:
@@ -268,4 +269,4 @@ jobs:
         with:
           name: android-release-apk
           path: android/app/build/outputs/apk/release/app-release.apk
-          retention-days: 90
+          retention-days: 7
