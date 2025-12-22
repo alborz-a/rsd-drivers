@@ -1,17 +1,23 @@
 export default {
     common: {
+        apiKey: "کلید API",
         cancel: "لغو",
         close: "بستن",
         delete: "حذف",
         done: "انجام شد",
         edit: "ویرایش",
         error: "خطا",
+        fleetbase: "فلیتبیس",
+        loading: "در حال بارگذاری",
         remove: "حذف",
         reset: "بازنشانی",
         retry: "تلاش مجدد",
         save: "ذخیره",
         select: "انتخاب",
-        loading: "در حال بارگذاری",
+        storefront: "فروشگاه",
+    },
+    BootScreen: {
+        missingRequiredConfigurationKeys: "کلیدهای پیکربندی مورد نیاز ناقص هستند",
     },
     Buttons: {
         continueWithPhone: "ادامه با تلفن",
@@ -255,6 +261,11 @@ export default {
     },
     FleetScreen: {
         fleetscreen: "صفحه ناوگان",
+    },
+    SetupWarningScreen: {
+        configurationMissing: "تنظیمات ناقص!",
+        envMissing: "در محیط موجود نیست!",
+        unconfiguredApp: "به نظر می‌رسد برنامه خود را به درستی پیکربندی نکرده‌اید.",
     },
     VehicleScreen: {
         vehiclescreen: "صفحه وسیله نقلیه",

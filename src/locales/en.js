@@ -1,16 +1,23 @@
 export default {
   common: {
+    apiKey: 'API Key',
     cancel: 'Cancel',
     close: 'Close',
     delete: 'Delete',
     done: 'Done',
     edit: 'Edit',
     error: 'Error',
+    fleetbase: 'Fleetbase',
+    loading: 'Loading',
     remove: 'Remove',
     reset: 'Reset',
     retry: 'Retry',
     save: 'Save',
     select: 'Select',
+    storefront: 'Storefront',
+  },
+  BootScreen: {
+    missingRequiredConfigurationKeys: 'Missing required configuration keys',
   },
   AdhocOrderCard: {
     acceptAdHocOrder: 'Accept Ad-Hoc order?',
@@ -155,6 +162,11 @@ export default {
   },
   FleetScreen: {
     fleetscreen: 'FleetScreen',
+  },
+  SetupWarningScreen: {
+    configurationMissing: 'Configurations Missing!',
+    envMissing: 'is missing from environment!',
+    unconfiguredApp: "Looks like you haven't properly configured your app.",
   },
   FuelReportForm: {
     cost: 'Cost',

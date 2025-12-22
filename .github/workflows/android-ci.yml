@@ -59,6 +59,7 @@ jobs:
           echo "GOOGLE_IOS_CLIENT_ID=${{ secrets.GOOGLE_IOS_CLIENT_ID }}" >> .env
           echo "DEFAULT_COORDINATES=36.5399,52.6783" >> .env
           echo "TRANSISTORSOFT_LICENSE_KEY=dummy" >> .env
+          echo "STOREFRONT_KEY=dummy" >> .env
 
       - name: Generate cache key
         id: cache-key
@@ -108,6 +109,7 @@ jobs:
           FACEBOOK_APP_ID=dummy
           FACEBOOK_CLIENT_TOKEN=dummy
           TRANSISTORSOFT_LICENSE_KEY=dummy
+          STOREFRONT_KEY=dummy
           EOF
 
 
@@ -239,6 +241,7 @@ jobs:
           echo "GOOGLE_IOS_CLIENT_ID=${{ secrets.GOOGLE_IOS_CLIENT_ID }}" >> .env
           echo "DEFAULT_COORDINATES=36.5399,52.6783" >> .env
           echo "TRANSISTORSOFT_LICENSE_KEY=dummy" >> .env
+          echo "STOREFRONT_KEY=dummy" >> .env
 
       - name: Generate google-services.json (from secret)
         env:
