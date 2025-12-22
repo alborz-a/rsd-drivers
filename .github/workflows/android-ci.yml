@@ -8,6 +8,7 @@ on:
 env:
   FLEETBASE_KEY: ${{ secrets.FLEETBASE_KEY }}
   GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+  TRANSISTORSOFT_LICENSE_KEY: ${{ secrets.TRANSISTORSOFT_LICENSE_KEY }}
 
 jobs:
   install_and_test:
