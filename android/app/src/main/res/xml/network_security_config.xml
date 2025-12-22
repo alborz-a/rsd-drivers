@@ -14,6 +14,7 @@
     </base-config>
 
     <domain-config>
+        <domain includeSubdomains="true">etemadlife.delivery</domain>
         <domain includeSubdomains="true">fleetbase.io</domain>
         <domain includeSubdomains="true">fleetbase.engineering</domain>
         <trust-anchors>

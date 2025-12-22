@@ -105,6 +105,7 @@ jobs:
           DEFAULT_COORDINATES=36.5399,52.6783
           FACEBOOK_APP_ID=dummy
           FACEBOOK_CLIENT_TOKEN=dummy
+          TRANSISTORSOFT_LICENSE_KEY=dummy
           EOF
 
 
