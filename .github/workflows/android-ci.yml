@@ -30,21 +30,21 @@ jobs:
         run: corepack prepare yarn@3.6.4 --activate
 
       # ============================================
-      # YARN 3 (Berry) CACHE - Uses .yarn/cache folder
+      # NODE_MODULES CACHE (for nodeLinker: node-modules)
       # ============================================
-      - name: Cache Yarn 3 dependencies
+      - name: Cache node_modules
         uses: actions/cache@v4
-        id: yarn-cache
+        id: node-modules-cache
         with:
           path: |
+            node_modules
             .yarn/cache
-            .pnp.cjs
-            .pnp.loader.mjs
-          key: ${{ runner.os }}-yarn3-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-yarn3-
+            ${{ runner.os }}-node-
 
       - name: Install dependencies
+        if: steps.node-modules-cache.outputs.cache-hit != 'true'
         run: yarn install --immutable
 
       - name: Create .env
@@ -153,32 +153,21 @@ jobs:
           test -d "$ANDROID_SDK_ROOT/cmake/3.22.1" && echo "  ✓ cmake;3.22.1"
 
       # ============================================
-      # GRADLE CACHES
+      # GRADLE SETUP WITH BUILT-IN CACHING
       # ============================================
-      - name: Cache Gradle Dependencies & Build Cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.gradle/caches
-            ~/.gradle/wrapper
-            ${{ github.workspace }}/.gradle/caches
-            ${{ github.workspace }}/.gradle/build-cache
-          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
-          restore-keys: |
-            ${{ runner.os }}-gradle-
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
 
       - name: Make Gradlew Executable
         run: cd android && chmod +x ./gradlew
 
       # ============================================
-      # BUILD - No 'clean' to enable incremental builds
+      # BUILD
       # ============================================
       - name: Build Android Debug APK
-        env:
-          GRADLE_USER_HOME: ${{ github.workspace }}/.gradle
         run: |
           cd android
-          ./gradlew assembleDebug --build-cache --no-daemon --console=plain --stacktrace --info
+          ./gradlew assembleDebug --build-cache --console=plain --stacktrace
 
       - name: Upload Android APK
         uses: actions/upload-artifact@v4
@@ -205,18 +194,19 @@ jobs:
       - name: Activate Yarn 3.6.4
         run: corepack prepare yarn@3.6.4 --activate
 
-      - name: Cache Yarn 3 dependencies
+      - name: Cache node_modules
         uses: actions/cache@v4
+        id: node-modules-cache-release
         with:
           path: |
+            node_modules
             .yarn/cache
-            .pnp.cjs
-            .pnp.loader.mjs
-          key: ${{ runner.os }}-yarn3-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-yarn3-
+            ${{ runner.os }}-node-
 
       - name: Install dependencies
+        if: steps.node-modules-cache-release.outputs.cache-hit != 'true'
         run: yarn install --immutable
 
       - name: Create .env file (release)
@@ -261,16 +251,13 @@ jobs:
             /usr/local/lib/android/sdk/cmake/3.22.1
           key: android-sdk-35-ndk-27.1.12297006-cmake-3.22.1
 
-      - name: Cache Gradle Dependencies
-        uses: actions/cache@v4
-        with:
-          path: ~/.gradle/caches
-          key: ${{ runner.os }}-gradle-caches-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
 
       - name: Build Android Release APK
         run: |
           cd android
-          ./gradlew assembleRelease --no-daemon --console=plain --stacktrace
+          ./gradlew assembleRelease --build-cache --console=plain --stacktrace
 
       - name: Upload Android Release APK
         uses: actions/upload-artifact@v4
