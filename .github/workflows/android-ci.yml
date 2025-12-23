@@ -10,9 +10,8 @@ env:
   GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
   TRANSISTORSOFT_LICENSE_KEY: ${{ secrets.TRANSISTORSOFT_LICENSE_KEY }}
   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
-  # Shared cache keys (no branch/tag in key = shared across all refs)
-  NODE_CACHE_KEY: Linux-node-v1-${{ hashFiles('**/yarn.lock') }}
   SDK_CACHE_KEY: android-sdk-v1-35-ndk-27.1.12297006-cmake-3.22.1
+
 
 jobs:
   android_build:
@@ -42,7 +41,7 @@ jobs:
           path: |
             node_modules
             .yarn/cache
-          key: ${{ env.NODE_CACHE_KEY }}
+          key: Linux-node-v1-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             Linux-node-v1-
             Linux-node-
@@ -65,7 +64,7 @@ jobs:
           path: |
             node_modules
             .yarn/cache
-          key: ${{ env.NODE_CACHE_KEY }}
+          key: Linux-node-v1-${{ hashFiles('**/yarn.lock') }}
 
       - name: Create .env
         run: |
@@ -237,7 +236,7 @@ jobs:
           path: |
             node_modules
             .yarn/cache
-          key: ${{ env.NODE_CACHE_KEY }}
+          key: Linux-node-v1-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             Linux-node-v1-
             Linux-node-
@@ -258,7 +257,7 @@ jobs:
           path: |
             node_modules
             .yarn/cache
-          key: ${{ env.NODE_CACHE_KEY }}
+          key: Linux-node-v1-${{ hashFiles('**/yarn.lock') }}
 
       - name: Create .env file (release)
         run: |
