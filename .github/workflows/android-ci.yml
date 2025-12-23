@@ -203,7 +203,7 @@ jobs:
             - name: Build Android Debug APK
               run: |
                   cd android
-                  ./gradlew assembleDebug --build-cache --parallel --console=plain
+                  ./gradlew assembleDebug -PbundleInDebug=true --build-cache --parallel --console=plain
 
             - name: Upload Android APK
               uses: actions/upload-artifact@v4
