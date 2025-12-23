@@ -42,9 +42,6 @@ jobs:
             node_modules
             .yarn/cache
           key: Linux-node-v1-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            Linux-node-v1-
-            Linux-node-
 
       - name: Install dependencies
         run: |
@@ -122,8 +119,6 @@ jobs:
             /usr/local/lib/android/sdk/ndk/27.1.12297006
             /usr/local/lib/android/sdk/cmake/3.22.1
           key: ${{ env.SDK_CACHE_KEY }}
-          restore-keys: |
-            android-sdk-v1-
 
       - name: Ensure Android SDK/NDK/CMake toolchain
         if: steps.android-sdk-cache.outputs.cache-hit != 'true'
@@ -237,9 +232,6 @@ jobs:
             node_modules
             .yarn/cache
           key: Linux-node-v1-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            Linux-node-v1-
-            Linux-node-
 
       - name: Install dependencies
         run: |
@@ -300,8 +292,6 @@ jobs:
             /usr/local/lib/android/sdk/ndk/27.1.12297006
             /usr/local/lib/android/sdk/cmake/3.22.1
           key: ${{ env.SDK_CACHE_KEY }}
-          restore-keys: |
-            android-sdk-v1-
 
       - name: Save Android SDK cache
         if: steps.android-sdk-cache-release.outputs.cache-hit != 'true'
