@@ -1,0 +1,164 @@
+name: Navigator Android App CI (Local Runner)
+
+on:
+    # Manual trigger only - for testing on local runner
+    workflow_dispatch:
+        inputs:
+            clean_build:
+                description: 'Force clean build (no cache)'
+                required: false
+                type: boolean
+                default: false
+
+env:
+    FLEETBASE_KEY: ${{ secrets.FLEETBASE_KEY }}
+    GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+    TRANSISTORSOFT_LICENSE_KEY: ${{ secrets.TRANSISTORSOFT_LICENSE_KEY }}
+    # Your local Android SDK path (adjust if different)
+    ANDROID_SDK_ROOT: ${{ vars.ANDROID_SDK_ROOT || '/home/runner/Android/Sdk' }}
+    CLEAN_BUILD: ${{ inputs.clean_build }}
+
+jobs:
+    android_build:
+        runs-on: [self-hosted, Linux, X64]
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '18'
+
+            - name: Enable Corepack
+              run: corepack enable
+
+            - name: Activate Yarn 3.6.4
+              run: corepack prepare yarn@3.6.4 --activate
+
+            # ============================================
+            # LOCAL RUNNER: No GitHub cache needed - use local disk
+            # node_modules persists between runs on local runner
+            # ============================================
+            - name: Install dependencies
+              run: |
+                  yarn install --immutable
+
+            - name: Create .env
+              run: |
+                  # Extract version from tag (remove 'v' prefix), fallback for manual runs
+                  VERSION="${GITHUB_REF_NAME#v}"
+                  if [ -z "$VERSION" ] || [ "$VERSION" = "$GITHUB_REF_NAME" ]; then
+                    VERSION="1.0.0-local"
+                  fi
+                  cat > .env <<EOF
+                  APP_NAME=EtemadLife
+                  APP_IDENTIFIER=delivery.etemadlife.platform.drivers
+                  APP_LINK_PREFIX=royalstars-el
+                  FLEETBASE_HOST=https://api.platform.etemadlife.delivery
+                  FLEETBASE_KEY=${{ secrets.FLEETBASE_KEY }}
+                  GOOGLE_MAPS_API_KEY=${{ secrets.GOOGLE_MAPS_API_KEY }}
+                  DEFAULT_COORDINATES=36.5399,52.6783
+                  FACEBOOK_APP_ID=dummy
+                  FACEBOOK_CLIENT_TOKEN=dummy
+                  TRANSISTORSOFT_LICENSE_KEY=dummy
+                  STOREFRONT_KEY=dummy
+                  ANDROID_VERSION_NAME=${VERSION}
+                  EOF
+                  echo "Created .env with VERSION=${VERSION}"
+                  cat .env
+
+            - name: Generate google-services.json (from secret)
+              env:
+                  GOOGLE_SERVICES_JSON: ${{ secrets.GOOGLE_SERVICES_JSON }}
+              run: |
+                  mkdir -p android/app
+                  printf '%s' "$GOOGLE_SERVICES_JSON" > android/app/google-services.json
+
+            - name: Validate google-services.json
+              run: |
+                  python3 -c "import json,sys; json.load(open('android/app/google-services.json','rb')); print('google-services.json -> valid JSON')"
+
+            - name: Set up JDK 17
+              uses: actions/setup-java@v4
+              with:
+                  distribution: 'temurin'
+                  java-version: '17'
+
+            # ============================================
+            # LOCAL RUNNER: Check for required tools
+            # ============================================
+            - name: Verify Android SDK
+              run: |
+                  echo "ANDROID_SDK_ROOT=$ANDROID_SDK_ROOT"
+                  if [ -d "$ANDROID_SDK_ROOT" ]; then
+                    echo "✓ Android SDK found"
+                    ls -la "$ANDROID_SDK_ROOT"
+                  else
+                    echo "❌ Android SDK not found at $ANDROID_SDK_ROOT"
+                    echo "Please set the ANDROID_SDK_ROOT variable in your repository settings"
+                    exit 1
+                  fi
+
+            - name: Check/Install Ninja
+              run: |
+                  if command -v ninja &> /dev/null; then
+                    echo "✓ Ninja already installed: $(ninja --version)"
+                  else
+                    sudo apt-get update && sudo apt-get install -y ninja-build
+                  fi
+
+            # ============================================
+            # LOCAL RUNNER: Use Gradle directly (no action caching needed)
+            # Local disk caching is automatic
+            # ============================================
+            - name: Make Gradlew Executable
+              run: cd android && chmod +x ./gradlew
+
+            # ============================================
+            # CLEAN BUILD - Only if requested
+            # ============================================
+            - name: Clean build directories
+              if: inputs.clean_build == true
+              run: |
+                  cd android
+                  ./gradlew clean
+                  rm -rf app/build/
+                  rm -rf .gradle/
+                  echo "✓ Cleaned all build directories"
+
+            # ============================================
+            # Always clean JS bundle to ensure fresh code
+            # ============================================
+            - name: Clean stale JS bundle
+              run: |
+                  cd android
+                  rm -rf app/build/generated/assets/
+                  rm -rf app/build/intermediates/assets/
+                  rm -rf app/build/intermediates/merged_assets/
+                  echo "✓ Cleaned JS bundle directories - will rebuild fresh"
+
+            # ============================================
+            # BUILD
+            # ============================================
+            - name: Build Android Debug APK
+              run: |
+                  cd android
+                  ./gradlew assembleDebug --build-cache --parallel --console=plain
+
+            - name: Upload Android APK
+              uses: actions/upload-artifact@v4
+              with:
+                  name: android-debug-local-${{ github.run_number }}-apk
+                  path: android/app/build/outputs/apk/debug/app-debug.apk
+                  retention-days: 7
+
+            # ============================================
+            # LOCAL RUNNER: Optional - copy APK to local path
+            # ============================================
+            - name: Copy APK to local output
+              run: |
+                  mkdir -p ~/apk-output
+                  cp android/app/build/outputs/apk/debug/app-debug.apk ~/apk-output/app-debug-$(date +%Y%m%d-%H%M%S).apk
+                  echo "✓ APK copied to ~/apk-output/"
+                  ls -la ~/apk-output/
