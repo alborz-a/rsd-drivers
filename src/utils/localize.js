@@ -18,7 +18,7 @@ export function getAvailableLocales() {
 }
 
 export function getLocale() {
-    return getString('_locale') ?? navigatorConfig('defaultLocale', 'fa');
+    return getString('_locale_v2') ?? navigatorConfig('defaultLocale', 'fa');
 }
 
 export function getLanguage() {

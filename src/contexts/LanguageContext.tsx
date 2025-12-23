@@ -24,7 +24,7 @@ const LanguageContext = createContext<LanguageContextProps>({
 });
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-    const [locale, setLocaleState] = useStorage<string>('_locale', navigatorConfig('defaultLocale', 'fa'));
+    const [locale, setLocaleState] = useStorage<string>('_locale_v2', navigatorConfig('defaultLocale', 'fa'));
 
     const languages = Object.keys(I18n.translations).map((code) => {
         return { code, ...getLangNameFromCode(code), emoji: localeEmoji(code) };

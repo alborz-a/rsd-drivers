@@ -4,15 +4,15 @@ import useStorage, { getString, setString } from './use-storage';
 import { navigatorConfig, getTheme } from '../utils';
 import { capitalize } from '../utils/format';
 
-export const USER_COLOR_SCHEME_KEY = 'user_color_scheme';
-export const APP_THEME_KEY = 'app_theme';
+export const USER_COLOR_SCHEME_KEY = 'user_color_scheme_v2';
+export const APP_THEME_KEY = 'app_theme_v2';
 export const schemes = ['light', 'dark'] as const;
 
 export default function useAppTheme() {
     const baseTheme = capitalize(navigatorConfig('theme')); // e.g., 'Indigo'
     const systemColorScheme = useColorScheme(); // 'light' or 'dark';
-    const [userColorScheme, setUserColorScheme] = useStorage<string>(USER_COLOR_SCHEME_KEY, systemColorScheme || 'light');
-    const [appTheme, setAppTheme] = useStorage<string>(APP_THEME_KEY, `${userColorScheme}${baseTheme}`);
+    const [userColorScheme, setUserColorScheme] = useStorage<string>(USER_COLOR_SCHEME_KEY, 'dark');
+    const [appTheme, setAppTheme] = useStorage<string>(APP_THEME_KEY, `dark${baseTheme}`);
     const initializedRef = useRef(false);
 
     const isDarkMode = userColorScheme === 'dark';

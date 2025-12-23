@@ -6,7 +6,7 @@ type UseLocaleReturn = [string, (locale: string) => void];
 
 const useLocale = (defaultLocale: string = 'fa'): UseLocaleReturn => {
     // MMKV storage hook for persisting the locale
-    const [locale, setStoredLocale] = useStorage<string>('_locale', defaultLocale);
+    const [locale, setStoredLocale] = useStorage<string>('_locale_v2', defaultLocale);
 
     // Sets the locale and persists it in storage
     const setLocale = useCallback(
