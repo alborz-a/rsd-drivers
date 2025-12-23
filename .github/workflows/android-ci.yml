@@ -58,7 +58,7 @@ jobs:
 
       # Save cache only if it wasn't restored (prevents saving duplicate on every tag)
       - name: Save node_modules cache
-        if: steps.node-modules-cache.outputs.cache-hit != 'true'
+        if: steps.node-modules-cache.outputs.cache-hit != 'true' && github.ref == 'refs/heads/main'
         uses: actions/cache/save@v4
         with:
           path: |
@@ -164,7 +164,7 @@ jobs:
 
       # Save SDK cache only if not restored
       - name: Save Android SDK cache
-        if: steps.android-sdk-cache.outputs.cache-hit != 'true'
+        if: steps.android-sdk-cache.outputs.cache-hit != 'true' && github.ref == 'refs/heads/main'
         uses: actions/cache/save@v4
         with:
           path: |
@@ -189,7 +189,7 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
-          cache-read-only: false
+          cache-read-only: ${{ github.ref != 'refs/heads/main' }}
 
       - name: Make Gradlew Executable
         run: cd android && chmod +x ./gradlew
@@ -246,7 +246,7 @@ jobs:
           done
 
       - name: Save node_modules cache
-        if: steps.node-modules-cache-release.outputs.cache-hit != 'true'
+        if: steps.node-modules-cache-release.outputs.cache-hit != 'true' && github.ref == 'refs/heads/main'
         uses: actions/cache/save@v4
         with:
           path: |
@@ -297,7 +297,7 @@ jobs:
           key: ${{ env.SDK_CACHE_KEY }}
 
       - name: Save Android SDK cache
-        if: steps.android-sdk-cache-release.outputs.cache-hit != 'true'
+        if: steps.android-sdk-cache-release.outputs.cache-hit != 'true' && github.ref == 'refs/heads/main'
         uses: actions/cache/save@v4
         with:
           path: |
@@ -310,7 +310,7 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
-          cache-read-only: false
+          cache-read-only: ${{ github.ref != 'refs/heads/main' }}
 
       - name: Build Android Release APK
         run: |
