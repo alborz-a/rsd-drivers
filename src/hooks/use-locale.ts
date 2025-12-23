@@ -4,7 +4,7 @@ import useStorage from './use-storage';
 
 type UseLocaleReturn = [string, (locale: string) => void];
 
-const useLocale = (defaultLocale: string = 'en'): UseLocaleReturn => {
+const useLocale = (defaultLocale: string = 'fa'): UseLocaleReturn => {
     // MMKV storage hook for persisting the locale
     const [locale, setStoredLocale] = useStorage<string>('_locale', defaultLocale);
 

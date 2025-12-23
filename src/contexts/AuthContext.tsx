@@ -356,7 +356,7 @@ export const AuthProvider = ({ children }) => {
         clearSessionData();
 
         // Reset locale
-        setLocale(navigatorConfig('defaultLocale', 'en'));
+        setLocale(navigatorConfig('defaultLocale', 'fa'));
 
         later(() => {
             dispatch({ type: 'LOGOUT', isSigningOut: false });

@@ -18,13 +18,13 @@ interface LanguageContextProps {
 }
 
 const LanguageContext = createContext<LanguageContextProps>({
-    locale: 'en',
-    setLocale: () => {},
+    locale: 'fa',
+    setLocale: () => { },
     t: () => '',
 });
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-    const [locale, setLocaleState] = useStorage<string>('_locale', navigatorConfig('defaultLocale', 'en'));
+    const [locale, setLocaleState] = useStorage<string>('_locale', navigatorConfig('defaultLocale', 'fa'));
 
     const languages = Object.keys(I18n.translations).map((code) => {
         return { code, ...getLangNameFromCode(code), emoji: localeEmoji(code) };

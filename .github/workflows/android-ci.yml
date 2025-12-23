@@ -13,7 +13,6 @@ env:
   GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
   TRANSISTORSOFT_LICENSE_KEY: ${{ secrets.TRANSISTORSOFT_LICENSE_KEY }}
   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
-  SDK_CACHE_KEY: android-sdk-v1-35-ndk-27.1.12297006-cmake-3.22.1
 
 
 jobs:
@@ -111,21 +110,10 @@ jobs:
           fi
 
       # ============================================
-      # ANDROID SDK/NDK/CMAKE CACHE - Restore only
+      # ANDROID SDK/NDK/CMAKE - Always ensure installed
+      # (Caching system dirs fails due to permission issues)
       # ============================================
-      - name: Restore Android SDK cache
-        uses: actions/cache/restore@v4
-        id: android-sdk-cache
-        with:
-          path: |
-            /usr/local/lib/android/sdk/platforms/android-35
-            /usr/local/lib/android/sdk/build-tools/35.0.0
-            /usr/local/lib/android/sdk/ndk/27.1.12297006
-            /usr/local/lib/android/sdk/cmake/3.22.1
-          key: ${{ env.SDK_CACHE_KEY }}
-
       - name: Ensure Android SDK/NDK/CMake toolchain
-        if: steps.android-sdk-cache.outputs.cache-hit != 'true'
         shell: bash
         run: |
           set -e
@@ -162,27 +150,6 @@ jobs:
 
           "$ANDROID_SDK_ROOT/cmake/3.22.1/bin/cmake" --version || true
           test -f "$ANDROID_SDK_ROOT/ndk/27.1.12297006/source.properties" && echo "✅ NDK 27.1.12297006 installed"
-
-      # Save SDK cache only if not restored
-      - name: Save Android SDK cache
-        if: steps.android-sdk-cache.outputs.cache-hit != 'true' && github.ref == 'refs/heads/main'
-        uses: actions/cache/save@v4
-        with:
-          path: |
-            /usr/local/lib/android/sdk/platforms/android-35
-            /usr/local/lib/android/sdk/build-tools/35.0.0
-            /usr/local/lib/android/sdk/ndk/27.1.12297006
-            /usr/local/lib/android/sdk/cmake/3.22.1
-          key: ${{ env.SDK_CACHE_KEY }}
-
-      - name: Verify SDK components (cache hit)
-        if: steps.android-sdk-cache.outputs.cache-hit == 'true'
-        run: |
-          echo "✅ Using cached Android SDK components"
-          test -d "$ANDROID_SDK_ROOT/platforms/android-35" && echo "  ✓ platforms;android-35"
-          test -d "$ANDROID_SDK_ROOT/build-tools/35.0.0" && echo "  ✓ build-tools;35.0.0"
-          test -d "$ANDROID_SDK_ROOT/ndk/27.1.12297006" && echo "  ✓ ndk;27.1.12297006"
-          test -d "$ANDROID_SDK_ROOT/cmake/3.22.1" && echo "  ✓ cmake;3.22.1"
 
       # ============================================
       # GRADLE SETUP WITH BUILT-IN CACHING
@@ -286,27 +253,7 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Restore Android SDK cache
-        uses: actions/cache/restore@v4
-        id: android-sdk-cache-release
-        with:
-          path: |
-            /usr/local/lib/android/sdk/platforms/android-35
-            /usr/local/lib/android/sdk/build-tools/35.0.0
-            /usr/local/lib/android/sdk/ndk/27.1.12297006
-            /usr/local/lib/android/sdk/cmake/3.22.1
-          key: ${{ env.SDK_CACHE_KEY }}
-
-      - name: Save Android SDK cache
-        if: steps.android-sdk-cache-release.outputs.cache-hit != 'true' && github.ref == 'refs/heads/main'
-        uses: actions/cache/save@v4
-        with:
-          path: |
-            /usr/local/lib/android/sdk/platforms/android-35
-            /usr/local/lib/android/sdk/build-tools/35.0.0
-            /usr/local/lib/android/sdk/ndk/27.1.12297006
-            /usr/local/lib/android/sdk/cmake/3.22.1
-          key: ${{ env.SDK_CACHE_KEY }}
+      # SDK caching removed - permission issues with system directories
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
