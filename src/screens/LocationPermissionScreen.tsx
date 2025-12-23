@@ -75,7 +75,7 @@ const LocationPermissionScreen: React.FC = () => {
     return (
         <YStack flex={1} bg='$background' pt={insets.top} pb={insets.bottom} alignItems='center' justifyContent='center' padding='$6'>
             <YStack alignItems='center' justifyContent='center'>
-                <Image source={require('../../assets/images/isometric-geolocation-1.png')} width={360} height={360} resizeMode='contain' />
+                <Image source={require('../../assets/images/isometricgeolocation1.png')} width={360} height={360} resizeMode='contain' />
             </YStack>
 
             <Text fontSize='$8' fontWeight='bold' color='$textPrimary' mb='$2' textAlign='center'>
