@@ -10,8 +10,8 @@ import useFleetbase from '../hooks/use-fleetbase';
 const LocationContext = createContext({
     location: null,
     isTracking: false,
-    startTracking: () => {},
-    stopTracking: () => {},
+    startTracking: () => { },
+    stopTracking: () => { },
 });
 
 export const LocationProvider = ({ children }) => {
@@ -115,39 +115,55 @@ export const LocationProvider = ({ children }) => {
     useEffect(() => {
         if (!driver) return;
 
-        BackgroundGeolocation.ready(
-            {
-                backgroundPermissionRationale: {
-                    title: `Allow ${config('APP_NAME')} to access your location`,
-                    message: `${config('APP_NAME')} collects location data to update your position in real-time, even when the app is closed or running in the background. This allows dispatchers and ops teams to track your progress and provide better support while you drive.`,
-                    positiveAction: 'Allow',
-                    negativeAction: 'Deny',
+        try {
+            BackgroundGeolocation.ready(
+                {
+                    backgroundPermissionRationale: {
+                        title: `Allow ${config('APP_NAME')} to access your location`,
+                        message: `${config('APP_NAME')} collects location data to update your position in real-time, even when the app is closed or running in the background. This allows dispatchers and ops teams to track your progress and provide better support while you drive.`,
+                        positiveAction: 'Allow',
+                        negativeAction: 'Deny',
+                    },
+                    desiredAccuracy: BackgroundGeolocation.DESIRED_ACCURACY_HIGH,
+                    distanceFilter: 10,
+                    stopOnTerminate: false,
+                    startOnBoot: true,
+                    stopTimeout: 1,
+                    debug: false,
+                    showsBackgroundLocationIndicator: false,
+                    ...getHttpConfig(),
                 },
-                desiredAccuracy: BackgroundGeolocation.DESIRED_ACCURACY_HIGH,
-                distanceFilter: 10,
-                stopOnTerminate: false,
-                startOnBoot: true,
-                stopTimeout: 1,
-                debug: false,
-                ...getHttpConfig(),
-            },
-            (state) => {
-                console.log('[BackgroundGeolocation] is ready:', state);
-                if (isOnline) {
-                    startTracking();
+                (state) => {
+                    console.log('[BackgroundGeolocation] is ready:', state);
+                    if (isOnline) {
+                        startTracking();
+                    }
+                },
+                (error) => {
+                    // Suppress license validation errors
+                    console.warn('[BackgroundGeolocation] initialization error (ignored):', error);
                 }
-            }
-        );
+            );
+        } catch (error) {
+            // Suppress any initialization errors including license validation
+            console.warn('[BackgroundGeolocation] failed to initialize (suppressed):', error);
+        }
 
         // Subscribe to location events.
-        BackgroundGeolocation.onLocation(onLocation, onLocationError);
-
-        // Subscribe to motion and activity events.
-        BackgroundGeolocation.onMotionChange(onMotionChange);
+        try {
+            BackgroundGeolocation.onLocation(onLocation, onLocationError);
+            BackgroundGeolocation.onMotionChange(onMotionChange);
+        } catch (error) {
+            console.warn('[BackgroundGeolocation] failed to subscribe to events:', error);
+        }
 
         // Clean up the listener when unmounting.
         return () => {
-            BackgroundGeolocation.removeListeners();
+            try {
+                BackgroundGeolocation.removeListeners();
+            } catch (error) {
+                // Ignore cleanup errors
+            }
         };
     }, [driver, onLocation, onLocationError, onMotionChange, isOnline, getHttpConfig]);
 
