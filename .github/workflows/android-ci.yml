@@ -7,13 +7,14 @@ on:
     # Manual trigger to populate caches on main branch
     # Run this once on main, then all tag builds will use those caches
     workflow_dispatch:
-    
 
 env:
     FLEETBASE_KEY: ${{ secrets.FLEETBASE_KEY }}
     GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
     TRANSISTORSOFT_LICENSE_KEY: ${{ secrets.TRANSISTORSOFT_LICENSE_KEY }}
     ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+    # Set CLEAN_BUILD=true if tag ends with -new (e.g., v1.0.0-new)
+    CLEAN_BUILD: ${{ endsWith(github.ref_name, '-new') }}
 
 jobs:
     android_build:
@@ -37,6 +38,7 @@ jobs:
             # NODE_MODULES CACHE - Restore only (no save on tags to prevent duplicates)
             # ============================================
             - name: Restore node_modules cache
+              if: env.CLEAN_BUILD != 'true'
               uses: actions/cache/restore@v4
               id: node-modules-cache
               with:
@@ -166,7 +168,8 @@ jobs:
             - name: Setup Gradle
               uses: gradle/actions/setup-gradle@v4
               with:
-                  cache-read-only: ${{ github.ref != 'refs/heads/main' }}
+                  cache-disabled: ${{ env.CLEAN_BUILD == 'true' }}
+                  cache-read-only: ${{ github.ref != 'refs/heads/main' && env.CLEAN_BUILD != 'true' }}
                   cache-overwrite-existing: true
 
             - name: Make Gradlew Executable
