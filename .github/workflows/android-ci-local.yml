@@ -86,18 +86,40 @@ jobs:
                   java-version: '17'
 
             # ============================================
-            # LOCAL RUNNER: Check for required tools
+            # LOCAL RUNNER: Setup Android SDK (auto-install if missing)
             # ============================================
-            - name: Verify Android SDK
+            - name: Setup Android SDK
               run: |
                   echo "ANDROID_SDK_ROOT=$ANDROID_SDK_ROOT"
-                  if [ -d "$ANDROID_SDK_ROOT" ]; then
-                    echo "✓ Android SDK found"
+
+                  # Check if SDK exists
+                  if [ -d "$ANDROID_SDK_ROOT/platform-tools" ]; then
+                    echo "✓ Android SDK already installed"
                     ls -la "$ANDROID_SDK_ROOT"
                   else
-                    echo "❌ Android SDK not found at $ANDROID_SDK_ROOT"
-                    echo "Please set the ANDROID_SDK_ROOT variable in your repository settings"
-                    exit 1
+                    echo "📦 Installing Android SDK..."
+                    mkdir -p "$ANDROID_SDK_ROOT"
+                    cd "$ANDROID_SDK_ROOT"
+                    
+                    # Download command line tools if not present
+                    if [ ! -f "cmdline-tools/latest/bin/sdkmanager" ]; then
+                      echo "Downloading Android command line tools..."
+                      wget -q https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip -O cmdline-tools.zip
+                      unzip -q cmdline-tools.zip
+                      mkdir -p cmdline-tools/latest
+                      mv cmdline-tools/* cmdline-tools/latest/ 2>/dev/null || true
+                      rm -f cmdline-tools.zip
+                    fi
+                    
+                    # Accept licenses
+                    yes | ./cmdline-tools/latest/bin/sdkmanager --licenses > /dev/null 2>&1 || true
+                    
+                    # Install required SDK components
+                    echo "Installing SDK components..."
+                    ./cmdline-tools/latest/bin/sdkmanager "platform-tools" "platforms;android-34" "build-tools;34.0.0"
+                    
+                    echo "✓ Android SDK installed successfully"
+                    ls -la "$ANDROID_SDK_ROOT"
                   fi
 
             - name: Check/Install Ninja
