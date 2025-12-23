@@ -61,13 +61,23 @@ export const ConfigProvider = ({ children }: { children: ReactNode }) => {
 
     const resolveConnectionConfig = useCallback(
         (key, defaultValue = null) => {
+            // Default values for EtemadLife - used when no instance link or .env override
+            const defaults = {
+                FLEETBASE_HOST: 'https://api.platform.etemadlife.delivery',
+                FLEETBASE_KEY: 'flb_live_PcN1McEg2CoosoEipiMW',
+                SOCKETCLUSTER_HOST: 'https://socket.platform.etemadlife.delivery',
+                SOCKETCLUSTER_PORT: 38000,
+                SOCKETCLUSTER_SECURE: true,
+                SOCKETCLUSTER_PATH: '/socketcluster/',
+            };
+
             const fullConfig = {
-                FLEETBASE_HOST: instanceLinkedFleetbaseHost ?? config('FLEETBASE_HOST'),
-                FLEETBASE_KEY: instanceLinkedFleetbaseKey ?? config('FLEETBASE_KEY'),
-                SOCKETCLUSTER_HOST: instanceLinkedSocketclusterHost ?? config('SOCKETCLUSTER_HOST', 'socket.fleetbase.io'),
-                SOCKETCLUSTER_PORT: parseInt(instanceLinkedSocketclusterPort ?? config('SOCKETCLUSTER_PORT', '8000')),
-                SOCKETCLUSTER_SECURE: toBoolean(instanceLinkedSocketclusterSecure ?? config('SOCKETCLUSTER_SECURE', true)),
-                SOCKETCLUSTER_PATH: config('SOCKETCLUSTER_PATH', '/socketcluster/'),
+                FLEETBASE_HOST: instanceLinkedFleetbaseHost ?? config('FLEETBASE_HOST') ?? defaults.FLEETBASE_HOST,
+                FLEETBASE_KEY: instanceLinkedFleetbaseKey ?? config('FLEETBASE_KEY') ?? defaults.FLEETBASE_KEY,
+                SOCKETCLUSTER_HOST: instanceLinkedSocketclusterHost ?? config('SOCKETCLUSTER_HOST') ?? defaults.SOCKETCLUSTER_HOST,
+                SOCKETCLUSTER_PORT: parseInt(instanceLinkedSocketclusterPort ?? config('SOCKETCLUSTER_PORT') ?? defaults.SOCKETCLUSTER_PORT),
+                SOCKETCLUSTER_SECURE: toBoolean(instanceLinkedSocketclusterSecure ?? config('SOCKETCLUSTER_SECURE') ?? defaults.SOCKETCLUSTER_SECURE),
+                SOCKETCLUSTER_PATH: config('SOCKETCLUSTER_PATH') ?? defaults.SOCKETCLUSTER_PATH,
             };
 
             return get(fullConfig, key, defaultValue);

@@ -94,7 +94,7 @@ const BootScreen = ({ route }) => {
                 />
             )}
             <YStack alignItems='center' justifyContent='center'>
-                <Image source={require('../../assets/splash-screen.png')} width={100} height={100} borderRadius='$4' mb='$1' />
+                <Image source={require('../../assets/splash-screen.png')} width={200} height={200} borderRadius='$4' mb='$1' />
                 <XStack mt='$2' alignItems='center' justifyContent='center' space='$3'>
                     <Spinner size='small' color='$textPrimary' />
                 </XStack>
