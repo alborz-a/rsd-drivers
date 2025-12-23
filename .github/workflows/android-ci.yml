@@ -7,6 +7,12 @@ on:
     # Manual trigger to populate caches on main branch
     # Run this once on main, then all tag builds will use those caches
     workflow_dispatch:
+        inputs:
+            clean_build:
+                description: 'Force clean build (no cache)'
+                required: false
+                type: boolean
+                default: false
 
 env:
     FLEETBASE_KEY: ${{ secrets.FLEETBASE_KEY }}
@@ -27,7 +33,7 @@ jobs:
               uses: actions/setup-node@v4
               with:
                   node-version: '18'
- 
+
             - name: Enable Corepack
               run: corepack enable
 
