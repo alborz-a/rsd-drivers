@@ -63,9 +63,9 @@ jobs:
                     }
                   done
 
-            # Save cache only if it wasn't restored (prevents saving duplicate on every tag)
+            # Save cache if it wasn't restored AND (on main branch OR manual dispatch)
             - name: Save node_modules cache
-              if: steps.node-modules-cache.outputs.cache-hit != 'true' && github.ref == 'refs/heads/main'
+              if: steps.node-modules-cache.outputs.cache-hit != 'true' && (github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch')
               uses: actions/cache/save@v4
               with:
                   path: |
@@ -198,12 +198,38 @@ jobs:
                   echo "✓ Cleaned JS bundle directories - will rebuild fresh"
 
             # ============================================
+            # CLEAN GRADLE (only when CLEAN_BUILD is true)
+            # ============================================
+            - name: Gradle Clean
+              if: env.CLEAN_BUILD == 'true'
+              run: |
+                  cd android
+                  ./gradlew clean
+                  echo "✓ Gradle clean completed"
+
+            # ============================================
+            # BUNDLE JS - Manually bundle to ensure standalone APK
+            # This is THE FIX for the "Unable to load script" error
+            # ============================================
+            - name: Bundle JS (Manual)
+              run: |
+                  mkdir -p android/app/src/main/assets
+                  npx react-native bundle \
+                    --platform android \
+                    --dev false \
+                    --entry-file index.js \
+                    --bundle-output android/app/src/main/assets/index.android.bundle \
+                    --assets-dest android/app/src/main/res
+                  echo "✓ JS bundle created successfully"
+                  ls -la android/app/src/main/assets/
+
+            # ============================================
             # BUILD
             # ============================================
             - name: Build Android Debug APK
               run: |
                   cd android
-                  ./gradlew assembleDebug -PbundleInDebug=true --build-cache --parallel --console=plain
+                  ./gradlew assembleDebug --build-cache --console=plain
 
             - name: Upload Android APK
               uses: actions/upload-artifact@v4
