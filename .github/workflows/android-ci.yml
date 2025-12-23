@@ -188,9 +188,13 @@ jobs:
             - name: Clean stale JS bundle
               run: |
                   cd android
+                  # Delete caching directories
                   rm -rf app/build/generated/assets/
                   rm -rf app/build/intermediates/assets/
                   rm -rf app/build/intermediates/merged_assets/
+                  # Delete checked-in bundles (THE ROOT CAUSE)
+                  rm -f app/src/main/assets/index.android.bundle
+                  rm -f app/src/main/assets/index.android.bundle.meta
                   echo "✓ Cleaned JS bundle directories - will rebuild fresh"
 
             # ============================================
