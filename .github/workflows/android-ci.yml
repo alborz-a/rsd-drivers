@@ -159,32 +159,29 @@ jobs:
                   test -f "$ANDROID_SDK_ROOT/ndk/27.1.12297006/source.properties" && echo "✅ NDK 27.1.12297006 installed"
 
             # ============================================
-            # NATIVE BUILD CACHE (.cxx folder)
-            # This caches the CMake/NDK compiled .so files - the SLOWEST part (~15 min)
-            # Key is based on NDK version and gradle config, NOT source files
-            # So it stays valid even when you edit JS/TS code
-            # ============================================
-            - name: Restore native build cache
-              uses: actions/cache/restore@v4
-              id: native-cache
-              with:
-                  path: |
-                      android/.cxx
-                      android/app/build/intermediates/cmake
-                  key: native-ndk27-${{ hashFiles('android/app/build.gradle') }}
-                  restore-keys: |
-                      native-ndk27-
-
-            # ============================================
-            # GRADLE SETUP WITH BUILT-IN CACHING
+            # GRADLE SETUP WITH CACHING
+            # cache-overwrite: true prevents creating duplicate entries
             # ============================================
             - name: Setup Gradle
               uses: gradle/actions/setup-gradle@v4
               with:
                   cache-read-only: ${{ github.ref != 'refs/heads/main' }}
+                  cache-overwrite-existing: true
 
             - name: Make Gradlew Executable
               run: cd android && chmod +x ./gradlew
+
+            # ============================================
+            # CLEAN JS BUNDLE - Forces Metro to rebuild from source
+            # This ensures your TSX/JS changes are ALWAYS included
+            # ============================================
+            - name: Clean stale JS bundle
+              run: |
+                  cd android
+                  rm -rf app/build/generated/assets/
+                  rm -rf app/build/intermediates/assets/
+                  rm -rf app/build/intermediates/merged_assets/
+                  echo "✓ Cleaned JS bundle directories - will rebuild fresh"
 
             # ============================================
             # BUILD
@@ -193,18 +190,6 @@ jobs:
               run: |
                   cd android
                   ./gradlew assembleDebug --build-cache --parallel --console=plain
-
-            # ============================================
-            # SAVE NATIVE CACHE (only on main, only if not hit)
-            # ============================================
-            - name: Save native build cache
-              if: github.ref == 'refs/heads/main' && steps.native-cache.outputs.cache-hit != 'true'
-              uses: actions/cache/save@v4
-              with:
-                  path: |
-                      android/.cxx
-                      android/app/build/intermediates/cmake
-                  key: native-ndk27-${{ hashFiles('android/app/build.gradle') }}
 
             - name: Upload Android APK
               uses: actions/upload-artifact@v4
