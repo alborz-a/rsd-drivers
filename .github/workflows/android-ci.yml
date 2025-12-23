@@ -10,6 +10,9 @@ env:
   GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
   TRANSISTORSOFT_LICENSE_KEY: ${{ secrets.TRANSISTORSOFT_LICENSE_KEY }}
   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+  # Shared cache keys (no branch/tag in key = shared across all refs)
+  NODE_CACHE_KEY: Linux-node-v1-${{ hashFiles('**/yarn.lock') }}
+  SDK_CACHE_KEY: android-sdk-v1-35-ndk-27.1.12297006-cmake-3.22.1
 
 jobs:
   android_build:
@@ -30,18 +33,19 @@ jobs:
         run: corepack prepare yarn@3.6.4 --activate
 
       # ============================================
-      # NODE_MODULES CACHE (for nodeLinker: node-modules)
+      # NODE_MODULES CACHE - Restore only (no save on tags to prevent duplicates)
       # ============================================
-      - name: Cache node_modules
-        uses: actions/cache@v4
+      - name: Restore node_modules cache
+        uses: actions/cache/restore@v4
         id: node-modules-cache
         with:
           path: |
             node_modules
             .yarn/cache
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ env.NODE_CACHE_KEY }}
           restore-keys: |
-            ${{ runner.os }}-node-
+            Linux-node-v1-
+            Linux-node-
 
       - name: Install dependencies
         run: |
@@ -52,6 +56,16 @@ jobs:
               sleep 10
             }
           done
+
+      # Save cache only if it wasn't restored (prevents saving duplicate on every tag)
+      - name: Save node_modules cache
+        if: steps.node-modules-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            node_modules
+            .yarn/cache
+          key: ${{ env.NODE_CACHE_KEY }}
 
       - name: Create .env
         run: |
@@ -97,10 +111,10 @@ jobs:
           fi
 
       # ============================================
-      # ANDROID SDK/NDK/CMAKE CACHE
+      # ANDROID SDK/NDK/CMAKE CACHE - Restore only
       # ============================================
-      - name: Cache Android SDK components
-        uses: actions/cache@v4
+      - name: Restore Android SDK cache
+        uses: actions/cache/restore@v4
         id: android-sdk-cache
         with:
           path: |
@@ -108,7 +122,9 @@ jobs:
             /usr/local/lib/android/sdk/build-tools/35.0.0
             /usr/local/lib/android/sdk/ndk/27.1.12297006
             /usr/local/lib/android/sdk/cmake/3.22.1
-          key: android-sdk-35-ndk-27.1.12297006-cmake-3.22.1
+          key: ${{ env.SDK_CACHE_KEY }}
+          restore-keys: |
+            android-sdk-v1-
 
       - name: Ensure Android SDK/NDK/CMake toolchain
         if: steps.android-sdk-cache.outputs.cache-hit != 'true'
@@ -149,6 +165,18 @@ jobs:
           "$ANDROID_SDK_ROOT/cmake/3.22.1/bin/cmake" --version || true
           test -f "$ANDROID_SDK_ROOT/ndk/27.1.12297006/source.properties" && echo "✅ NDK 27.1.12297006 installed"
 
+      # Save SDK cache only if not restored
+      - name: Save Android SDK cache
+        if: steps.android-sdk-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            /usr/local/lib/android/sdk/platforms/android-35
+            /usr/local/lib/android/sdk/build-tools/35.0.0
+            /usr/local/lib/android/sdk/ndk/27.1.12297006
+            /usr/local/lib/android/sdk/cmake/3.22.1
+          key: ${{ env.SDK_CACHE_KEY }}
+
       - name: Verify SDK components (cache hit)
         if: steps.android-sdk-cache.outputs.cache-hit == 'true'
         run: |
@@ -163,6 +191,8 @@ jobs:
       # ============================================
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
+        with:
+          cache-read-only: false
 
       - name: Make Gradlew Executable
         run: cd android && chmod +x ./gradlew
@@ -200,17 +230,18 @@ jobs:
         run: corepack prepare yarn@3.6.4 --activate
 
       # ============================================
-      # NODE_MODULES CACHE (for nodeLinker: node-modules)
+      # NODE_MODULES CACHE - Self-hosted uses different OS label
       # ============================================
-      - name: Cache node_modules
-        uses: actions/cache@v4
+      - name: Restore node_modules cache
+        uses: actions/cache/restore@v4
         id: node-modules-cache
         with:
           path: |
             node_modules
             .yarn/cache
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-node-v1-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
+            ${{ runner.os }}-node-v1-
             ${{ runner.os }}-node-
 
       - name: Install dependencies
@@ -222,6 +253,15 @@ jobs:
               sleep 10
             }
           done
+
+      - name: Save node_modules cache
+        if: steps.node-modules-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            node_modules
+            .yarn/cache
+          key: ${{ runner.os }}-node-v1-${{ hashFiles('**/yarn.lock') }}
 
       - name: Create .env
         run: |
@@ -269,8 +309,8 @@ jobs:
       # ============================================
       # ANDROID SDK/NDK/CMAKE CACHE
       # ============================================
-      - name: Cache Android SDK components
-        uses: actions/cache@v4
+      - name: Restore Android SDK cache
+        uses: actions/cache/restore@v4
         id: android-sdk-cache
         with:
           path: |
@@ -278,7 +318,9 @@ jobs:
             /usr/local/lib/android/sdk/build-tools/35.0.0
             /usr/local/lib/android/sdk/ndk/27.1.12297006
             /usr/local/lib/android/sdk/cmake/3.22.1
-          key: android-sdk-35-ndk-27.1.12297006-cmake-3.22.1
+          key: ${{ env.SDK_CACHE_KEY }}
+          restore-keys: |
+            android-sdk-v1-
 
       - name: Ensure Android SDK/NDK/CMake toolchain
         if: steps.android-sdk-cache.outputs.cache-hit != 'true'
@@ -319,6 +361,17 @@ jobs:
           "$ANDROID_SDK_ROOT/cmake/3.22.1/bin/cmake" --version || true
           test -f "$ANDROID_SDK_ROOT/ndk/27.1.12297006/source.properties" && echo "✅ NDK 27.1.12297006 installed"
 
+      - name: Save Android SDK cache
+        if: steps.android-sdk-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            /usr/local/lib/android/sdk/platforms/android-35
+            /usr/local/lib/android/sdk/build-tools/35.0.0
+            /usr/local/lib/android/sdk/ndk/27.1.12297006
+            /usr/local/lib/android/sdk/cmake/3.22.1
+          key: ${{ env.SDK_CACHE_KEY }}
+
       - name: Verify SDK components (cache hit)
         if: steps.android-sdk-cache.outputs.cache-hit == 'true'
         run: |
@@ -333,6 +386,8 @@ jobs:
       # ============================================
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
+        with:
+          cache-read-only: false
 
       - name: Make Gradlew Executable
         run: cd android && chmod +x ./gradlew
@@ -348,7 +403,7 @@ jobs:
       - name: Upload Android APK
         uses: actions/upload-artifact@v4
         with:
-          name: android-debug-${{ github.ref_name }}-apk
+          name: android-debug-google-${{ github.ref_name }}-apk
           path: android/app/build/outputs/apk/debug/app-debug.apk
           retention-days: 30
   
@@ -370,16 +425,17 @@ jobs:
       - name: Activate Yarn 3.6.4
         run: corepack prepare yarn@3.6.4 --activate
 
-      - name: Cache node_modules
-        uses: actions/cache@v4
+      - name: Restore node_modules cache
+        uses: actions/cache/restore@v4
         id: node-modules-cache-release
         with:
           path: |
             node_modules
             .yarn/cache
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ env.NODE_CACHE_KEY }}
           restore-keys: |
-            ${{ runner.os }}-node-
+            Linux-node-v1-
+            Linux-node-
 
       - name: Install dependencies
         run: |
@@ -389,6 +445,15 @@ jobs:
               sleep 10
             }
           done
+
+      - name: Save node_modules cache
+        if: steps.node-modules-cache-release.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            node_modules
+            .yarn/cache
+          key: ${{ env.NODE_CACHE_KEY }}
 
       - name: Create .env file (release)
         run: |
@@ -421,8 +486,8 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Cache Android SDK components
-        uses: actions/cache@v4
+      - name: Restore Android SDK cache
+        uses: actions/cache/restore@v4
         id: android-sdk-cache-release
         with:
           path: |
@@ -430,10 +495,25 @@ jobs:
             /usr/local/lib/android/sdk/build-tools/35.0.0
             /usr/local/lib/android/sdk/ndk/27.1.12297006
             /usr/local/lib/android/sdk/cmake/3.22.1
-          key: android-sdk-35-ndk-27.1.12297006-cmake-3.22.1
+          key: ${{ env.SDK_CACHE_KEY }}
+          restore-keys: |
+            android-sdk-v1-
+
+      - name: Save Android SDK cache
+        if: steps.android-sdk-cache-release.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            /usr/local/lib/android/sdk/platforms/android-35
+            /usr/local/lib/android/sdk/build-tools/35.0.0
+            /usr/local/lib/android/sdk/ndk/27.1.12297006
+            /usr/local/lib/android/sdk/cmake/3.22.1
+          key: ${{ env.SDK_CACHE_KEY }}
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
+        with:
+          cache-read-only: false
 
       - name: Build Android Release APK
         run: |
