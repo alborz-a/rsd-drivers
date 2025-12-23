@@ -159,42 +159,19 @@ jobs:
                   test -f "$ANDROID_SDK_ROOT/ndk/27.1.12297006/source.properties" && echo "✅ NDK 27.1.12297006 installed"
 
             # ============================================
-            # REACT NATIVE / METRO CACHE
-            # Caches the JS bundle and Metro transformer output
-            # This is the KEY optimization for JS-only changes
+            # NATIVE BUILD CACHE (.cxx folder)
+            # This caches the CMake/NDK compiled .so files - the SLOWEST part (~15 min)
+            # Key is based on NDK version and gradle config, NOT source files
+            # So it stays valid even when you edit JS/TS code
             # ============================================
-            - name: Restore React Native cache
+            - name: Restore native build cache
               uses: actions/cache/restore@v4
-              id: rn-cache
+              id: native-cache
               with:
-                  path: |
-                      ~/.cache/react-native
-                      android/app/build/generated/assets
-                      android/app/build/generated/res
-                      android/app/build/intermediates/assets
-                      android/app/build/intermediates/merged_assets
-                  key: rn-cache-${{ hashFiles('src/**/*', 'App.tsx', 'index.js', 'babel.config.js', 'metro.config.js') }}
+                  path: android/app/.cxx
+                  key: native-ndk27-${{ hashFiles('android/app/build.gradle') }}
                   restore-keys: |
-                      rn-cache-
-
-            # ============================================
-            # GRADLE BUILD CACHE (Native compilation artifacts)
-            # Caches CMake/NDK compiled .so files - the SLOWEST part
-            # ============================================
-            - name: Restore Gradle build cache
-              uses: actions/cache/restore@v4
-              id: gradle-build-cache
-              with:
-                  path: |
-                      ~/.gradle/caches/build-cache-1
-                      android/.gradle/build-cache
-                      android/app/.cxx
-                      android/app/build/intermediates/cxx
-                      android/app/build/intermediates/cmake
-                  key: gradle-build-${{ hashFiles('android/build.gradle', 'android/app/build.gradle', 'android/gradle.properties') }}-${{ hashFiles('**/yarn.lock') }}
-                  restore-keys: |
-                      gradle-build-${{ hashFiles('android/build.gradle', 'android/app/build.gradle', 'android/gradle.properties') }}-
-                      gradle-build-
+                      native-ndk27-
 
             # ============================================
             # GRADLE SETUP WITH BUILT-IN CACHING
@@ -214,36 +191,16 @@ jobs:
               run: |
                   cd android
                   ./gradlew assembleDebug --build-cache --parallel --console=plain
-              env:
-                  # Enable Gradle build cache on disk
-                  GRADLE_OPTS: '-Dorg.gradle.caching=true'
 
             # ============================================
-            # SAVE CACHES (only on main branch to avoid duplicates)
+            # SAVE NATIVE CACHE (only on main, only if not hit)
             # ============================================
-            - name: Save React Native cache
-              if: github.ref == 'refs/heads/main' && steps.rn-cache.outputs.cache-hit != 'true'
+            - name: Save native build cache
+              if: github.ref == 'refs/heads/main' && steps.native-cache.outputs.cache-hit != 'true'
               uses: actions/cache/save@v4
               with:
-                  path: |
-                      ~/.cache/react-native
-                      android/app/build/generated/assets
-                      android/app/build/generated/res
-                      android/app/build/intermediates/assets
-                      android/app/build/intermediates/merged_assets
-                  key: rn-cache-${{ hashFiles('src/**/*', 'App.tsx', 'index.js', 'babel.config.js', 'metro.config.js') }}
-
-            - name: Save Gradle build cache
-              if: github.ref == 'refs/heads/main' && steps.gradle-build-cache.outputs.cache-hit != 'true'
-              uses: actions/cache/save@v4
-              with:
-                  path: |
-                      ~/.gradle/caches/build-cache-1
-                      android/.gradle/build-cache
-                      android/app/.cxx
-                      android/app/build/intermediates/cxx
-                      android/app/build/intermediates/cmake
-                  key: gradle-build-${{ hashFiles('android/build.gradle', 'android/app/build.gradle', 'android/gradle.properties') }}-${{ hashFiles('**/yarn.lock') }}
+                  path: android/app/.cxx
+                  key: native-ndk27-${{ hashFiles('android/app/build.gradle') }}
 
             - name: Upload Android APK
               uses: actions/upload-artifact@v4
