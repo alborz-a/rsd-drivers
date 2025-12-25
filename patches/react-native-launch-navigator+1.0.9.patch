@@ -1,0 +1,28 @@
+diff --git a/node_modules/react-native-launch-navigator/ios/RNLaunchNavigator/LN_LaunchNavigator.m b/node_modules/react-native-launch-navigator/ios/RNLaunchNavigator/LN_LaunchNavigator.m
+index 7b0072a..1463042 100644
+--- a/node_modules/react-native-launch-navigator/ios/RNLaunchNavigator/LN_LaunchNavigator.m
++++ b/node_modules/react-native-launch-navigator/ios/RNLaunchNavigator/LN_LaunchNavigator.m
+@@ -1320,13 +1320,17 @@ - (BOOL)isMapAppInstalled:(LNApp)mapApp {
+     return [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:urlPrefix]];
+ }
+ 
+--(void) ensureNavigateParamNames{
+-  for(id object in navigateParamNames){
+-    NSString* key = object;
+-    if(![navigateParams objectForKey:key]){
+-      [navigateParams setValue:nil forKey:key];
++- (void)ensureNavigateParamNames {
++    NSMutableDictionary *mutableParams = [navigateParams mutableCopy];
++
++    for (NSString *key in navigateParamNames) {
++        if (![mutableParams objectForKey:key]) {
++            [mutableParams setObject:[NSNull null] forKey:key];
++        }
+     }
+-  }
++
++    // Reassign the modified copy back
++    navigateParams = [mutableParams copy];
+ }
+ 
+ - (NSString*)urlPrefixForMapApp:(LNApp)mapApp {
