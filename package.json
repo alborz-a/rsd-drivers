@@ -150,7 +150,8 @@
         "react-native-launch-navigator@^1.0.9": "patch:react-native-launch-navigator@npm%3A1.0.9#./.yarn/patches/react-native-launch-navigator-npm-1.0.9-f069a6b5fd.patch",
         "react-native-notifications@^5.1.0": "patch:react-native-notifications@npm%3A5.1.0#./.yarn/patches/react-native-notifications-npm-5.1.0-3e3b2ea3f8.patch",
         "react-native-screens": "4.3.0",
-        "react-native-reanimated": "3.16.1"
+        "react-native-reanimated": "3.16.1",
+        "react-native-gesture-handler": "2.20.2"
     },
     "packageManager": "yarn@3.6.4"
 }
