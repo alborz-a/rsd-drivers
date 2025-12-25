@@ -52,22 +52,23 @@ jobs:
               run: |
                   # Extract version from ref name, fallback for manual runs
                   $VERSION = if ($env:GITHUB_REF_NAME -match '^v(.+)$') { $Matches[1] } else { "1.0.0-local" }
-                  
-                  @"
-APP_NAME=EtemadLife
-APP_IDENTIFIER=delivery.etemadlife.platform.drivers
-APP_LINK_PREFIX=royalstars-el
-FLEETBASE_HOST=https://api.platform.etemadlife.delivery
-FLEETBASE_KEY=${{ secrets.FLEETBASE_KEY }}
-GOOGLE_MAPS_API_KEY=${{ secrets.GOOGLE_MAPS_API_KEY }}
-DEFAULT_COORDINATES=36.5399,52.6783
-FACEBOOK_APP_ID=dummy
-FACEBOOK_CLIENT_TOKEN=dummy
-TRANSISTORSOFT_LICENSE_KEY=dummy
-STOREFRONT_KEY=dummy
-ANDROID_VERSION_NAME=$VERSION
-"@ | Out-File -FilePath .env -Encoding utf8
-                  
+
+                  $envContent = @"
+                  APP_NAME=EtemadLife
+                  APP_IDENTIFIER=delivery.etemadlife.platform.drivers
+                  APP_LINK_PREFIX=royalstars-el
+                  FLEETBASE_HOST=https://api.platform.etemadlife.delivery
+                  FLEETBASE_KEY=${{ secrets.FLEETBASE_KEY }}
+                  GOOGLE_MAPS_API_KEY=${{ secrets.GOOGLE_MAPS_API_KEY }}
+                  DEFAULT_COORDINATES=36.5399,52.6783
+                  FACEBOOK_APP_ID=dummy
+                  FACEBOOK_CLIENT_TOKEN=dummy
+                  TRANSISTORSOFT_LICENSE_KEY=dummy
+                  STOREFRONT_KEY=dummy
+                  ANDROID_VERSION_NAME=$VERSION
+                  "@
+                  $envContent | Out-File -FilePath .env -Encoding utf8
+
                   Write-Host "Created .env with VERSION=$VERSION"
                   Get-Content .env
 
