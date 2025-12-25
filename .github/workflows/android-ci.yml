@@ -4,8 +4,6 @@ on:
     push:
         tags:
             - 'v*'
-    # Manual trigger to populate caches on main branch
-    # Run this once on main, then all tag builds will use those caches
     workflow_dispatch:
         inputs:
             clean_build:
@@ -19,7 +17,6 @@ env:
     GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
     TRANSISTORSOFT_LICENSE_KEY: ${{ secrets.TRANSISTORSOFT_LICENSE_KEY }}
     ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
-    # Set CLEAN_BUILD=true if tag ends with -new (e.g., v1.0.0-new)
     CLEAN_BUILD: ${{ endsWith(github.ref_name, '-new') }}
 
 jobs:
@@ -37,8 +34,8 @@ jobs:
             - name: Enable Corepack
               run: corepack enable
 
-            - name: Activate Yarn 3.6.4
-              run: corepack prepare yarn@3.6.4 --activate
+            - name: Activate Yarn 1.22.22
+              run: corepack prepare yarn@1.22.22 --activate
 
             # ============================================
             # NODE_MODULES CACHE - Restore only (no save on tags to prevent duplicates)

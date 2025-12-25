@@ -1,7 +1,9 @@
 name: Navigator Android App CI (Windows Runner)
 
 on:
-    # Manual trigger only - for testing on local Windows runner
+    push:
+        tags:
+            - 'v*'
     workflow_dispatch:
         inputs:
             clean_build:
@@ -14,9 +16,8 @@ env:
     FLEETBASE_KEY: ${{ secrets.FLEETBASE_KEY }}
     GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
     TRANSISTORSOFT_LICENSE_KEY: ${{ secrets.TRANSISTORSOFT_LICENSE_KEY }}
-    # Windows Android SDK path
     ANDROID_SDK_ROOT: ${{ vars.ANDROID_SDK_ROOT || 'D:\Android\Sdk' }}
-    CLEAN_BUILD: ${{ inputs.clean_build }}
+    CLEAN_BUILD: ${{ endsWith(github.ref_name, '-new') }}
 
 jobs:
     android_build:
@@ -34,9 +35,9 @@ jobs:
               shell: pwsh
               run: corepack enable
 
-            - name: Activate Yarn 3.6.4
+            - name: Activate Yarn 1.22.22
               shell: pwsh
-              run: corepack prepare yarn@3.6.4 --activate
+              run: corepack prepare yarn@1.22.22 --activate
 
             # ============================================
             # LOCAL RUNNER: No GitHub cache needed - use local disk
