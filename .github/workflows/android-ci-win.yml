@@ -103,6 +103,12 @@ jobs:
                   echo Cleaned all build directories
 
             # ============================================
+            # BUILD TAMAGUI - Required before bundling
+            # ============================================
+            - name: Build Tamagui
+              run: yarn tamagui:build
+
+            # ============================================
             # Always clean JS bundle to ensure fresh code
             # ============================================
             - name: Clean stale JS bundle

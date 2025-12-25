@@ -182,6 +182,12 @@ jobs:
               run: cd android && chmod +x ./gradlew
 
             # ============================================
+            # BUILD TAMAGUI - Required before bundling
+            # ============================================
+            - name: Build Tamagui
+              run: yarn tamagui:build
+
+            # ============================================
             # CLEAN JS BUNDLE - Forces Metro to rebuild from source
             # This ensures your TSX/JS changes are ALWAYS included
             # ============================================
