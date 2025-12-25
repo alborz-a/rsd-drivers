@@ -217,7 +217,7 @@ jobs:
               if: env.CLEAN_BUILD == 'true'
               run: |
                   cd android
-                  ./gradlew clean
+                  ./gradlew clean --scan --stacktrace --info
                   echo "✓ Gradle clean completed"
 
             # ============================================

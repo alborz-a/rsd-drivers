@@ -98,7 +98,7 @@ jobs:
               shell: cmd
               run: |
                   cd android
-                  gradlew.bat clean --no-watch-fs --info
+                  gradlew.bat clean --scan --stacktrace --info --no-watch-fs --info
                   echo ✓ Gradle clean completed
 
             # ============================================
@@ -153,7 +153,7 @@ jobs:
               shell: cmd
               run: |
                   cd android
-                  gradlew.bat assembleDebug --build-cache --console=plain --no-watch-fs --info
+                  gradlew.bat assembleDebug --build-cache --console=plain --no-watch-fs --info --scan
 
             - name: Upload Android APK
               uses: actions/upload-artifact@v4
