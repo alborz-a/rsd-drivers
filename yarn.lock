@@ -2472,7 +2472,7 @@ __metadata:
     react-native-fbsdk-next: ^13.4.0
     react-native-file-viewer: ^2.1.5
     react-native-fs: ^2.20.0
-    react-native-gesture-handler: ^2.21.2
+    react-native-gesture-handler: ^2.20.2
     react-native-get-random-values: ^1.11.0
     react-native-haptic-feedback: ^2.3.3
     react-native-i18n: ^2.0.15
@@ -14896,18 +14896,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-gesture-handler@npm:2.21.2":
-  version: 2.21.2
-  resolution: "react-native-gesture-handler@npm:2.21.2"
+"react-native-gesture-handler@npm:^2.20.2":
+  version: 2.30.0
+  resolution: "react-native-gesture-handler@npm:2.30.0"
   dependencies:
     "@egjs/hammerjs": ^2.0.17
     hoist-non-react-statics: ^3.3.0
     invariant: ^2.2.4
-    prop-types: ^15.7.2
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: 0a42cedb8860a326b465085d0f7622ba03f038b0f0bdd1b1fe5703e58d62cb08bfb82a686c069a1a1410705c2ae0d82971b0449d83796fdd6d071131cf88e68b
+  checksum: 130a1cc04879ea11808472dbe2f4e346baca0cb52713279f3d4b5fbd397324bef2379f1f60bf0ce1763e12a8656267abb0e879418fb37c81fc6bbdcdb7fc797d
   languageName: node
   linkType: hard
 
@@ -14956,6 +14955,16 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: fc85bc278c0ba5ccef8cbacfce3001e994b34b0895be34e0c884021d2215802c2e553c5e97ff7f21a30e502be60000f90cf9555e9c2a19c71fdc76120d30e158
+  languageName: node
+  linkType: hard
+
+"react-native-is-edge-to-edge@npm:1.1.7":
+  version: 1.1.7
+  resolution: "react-native-is-edge-to-edge@npm:1.1.7"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 4cdf2b2fb5b131f2015c26d2cb7688b4a0c5f3c8474b1bf0ddfa9eabb0263df440c87262ae8f812a6ecab0d5310df0373bddad4b51f53dabb2ffee01e9ef0f44
   languageName: node
   linkType: hard
 
@@ -15096,9 +15105,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-reanimated@npm:3.16.1":
-  version: 3.16.1
-  resolution: "react-native-reanimated@npm:3.16.1"
+"react-native-reanimated@npm:^3.16.1":
+  version: 3.19.5
+  resolution: "react-native-reanimated@npm:3.19.5"
   dependencies:
     "@babel/plugin-transform-arrow-functions": ^7.0.0-0
     "@babel/plugin-transform-class-properties": ^7.0.0-0
@@ -15111,11 +15120,12 @@ __metadata:
     "@babel/preset-typescript": ^7.16.7
     convert-source-map: ^2.0.0
     invariant: ^2.2.4
+    react-native-is-edge-to-edge: 1.1.7
   peerDependencies:
     "@babel/core": ^7.0.0-0
     react: "*"
     react-native: "*"
-  checksum: 7d969a24558c8dc7fb175610a867091a7dd04fd5998a09f2f02bfba5d7a59eee5918d2ee47722026a4ecbfb81c594dd28843962a7f01282172b478f7d451a909
+  checksum: d3e5e38c23bd0f86e19110c1e16353a3b58166cb3a13ec1b600b5bbe287d8c57ab199023231b7960fd11b5c605f2a78428d7b80f28818e74eaecde1360dec4f6
   languageName: node
   linkType: hard
 
