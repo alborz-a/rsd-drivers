@@ -56,9 +56,9 @@ jobs:
             - name: Install dependencies
               run: yarn install --immutable
 
-            # Save cache if it wasn't restored AND (on main branch OR manual dispatch)
+            # Save cache if it wasn't restored (tags, main branch, or manual dispatch all save)
             - name: Save node_modules cache
-              if: steps.node-modules-cache.outputs.cache-hit != 'true' && (github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch')
+              if: steps.node-modules-cache.outputs.cache-hit != 'true'
               uses: actions/cache/save@v4
               with:
                   path: |
