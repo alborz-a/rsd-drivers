@@ -29,7 +29,7 @@ jobs:
             - name: Setup Node.js
               uses: actions/setup-node@v4
               with:
-                  node-version: '18'
+                  node-version: '20'
 
             - name: Enable Corepack
               run: corepack enable
@@ -48,7 +48,9 @@ jobs:
                   path: |
                       node_modules
                       .yarn/cache
-                  key: Linux-node-v1-${{ hashFiles('**/yarn.lock') }}
+                  key: Linux-node-v2-${{ hashFiles('**/yarn.lock') }}
+                  restore-keys: |
+                      Linux-node-v2-
 
             - name: Install dependencies
               run: |
@@ -68,7 +70,7 @@ jobs:
                   path: |
                       node_modules
                       .yarn/cache
-                  key: Linux-node-v1-${{ hashFiles('**/yarn.lock') }}
+                  key: Linux-node-v2-${{ hashFiles('**/yarn.lock') }}
 
             - name: Create .env
               run: |
