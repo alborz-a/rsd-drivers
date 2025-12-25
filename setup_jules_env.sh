@@ -4,9 +4,6 @@ set -e
 echo "🚀 Starting Jules Environment Initialization..."
 
 # 1. Setup Environment Variables
-# Using a directory in the user's home to avoid repo pollution, or use a specific path.
-# Assuming this script is run by the user 'jules' (or equivalent) in the repo root.
-
 export ANDROID_HOME="$HOME/Android/Sdk"
 export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
 
@@ -122,12 +119,11 @@ else
     echo "✅ gradle.properties updated."
 fi
 
-# 8. Install Node Dependencies
-echo "📦 Installing Node dependencies..."
+# 8. Prepare Yarn (Tool only)
+echo "📦 Setting up Yarn..."
 corepack enable
 corepack prepare yarn@3.6.4 --activate
-yarn install --immutable
-echo "✅ Node dependencies installed."
+echo "✅ Yarn setup complete."
 
-echo "🎉 Environment initialization complete! You can now run the build."
-echo "👉 To build: cd android && ./gradlew assembleDebug"
+echo "🎉 Environment initialization complete!"
+echo "👉 You can now install dependencies (yarn install) and build the project."
