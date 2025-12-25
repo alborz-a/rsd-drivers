@@ -222,12 +222,12 @@ jobs:
 
             # ============================================
             # BUNDLE JS - Manually bundle to ensure standalone APK
-            # This is THE FIX for the "Unable to load script" error
+            # Using 'yarn' instead of 'npx' for Yarn 3 compatibility
             # ============================================
             - name: Bundle JS (Manual)
               run: |
                   mkdir -p android/app/src/main/assets
-                  npx react-native bundle \
+                  yarn react-native bundle \
                     --platform android \
                     --dev false \
                     --entry-file index.js \
@@ -235,6 +235,10 @@ jobs:
                     --assets-dest android/app/src/main/res
                   echo "✓ JS bundle created successfully"
                   ls -la android/app/src/main/assets/
+                  if [ ! -f android/app/src/main/assets/index.android.bundle ]; then
+                    echo "ERROR: Bundle file was not created!"
+                    exit 1
+                  fi
 
             # ============================================
             # BUILD
@@ -242,7 +246,7 @@ jobs:
             - name: Build Android Debug APK
               run: |
                   cd android
-                  ./gradlew assembleDebug --build-cache --console=plain
+                  ./gradlew assembleDebug --build-cache --console=plain --scan --stacktrace --info
 
             - name: Upload Android APK
               uses: actions/upload-artifact@v4

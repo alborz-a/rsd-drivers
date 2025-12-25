@@ -29,7 +29,7 @@ jobs:
             - name: Setup Node.js
               uses: actions/setup-node@v4
               with:
-                  node-version: '20'
+                  node-version: '18'
 
             - name: Enable Corepack
               shell: pwsh
@@ -88,20 +88,18 @@ jobs:
               uses: actions/setup-java@v4
               with:
                   distribution: 'temurin'
-                  java-version: '17'
+                  java-version: '21'
 
             # ============================================
-            # CLEAN BUILD - Only if requested
+            # GRADLE CLEAN - Conditional based on branch naming or input
             # ============================================
-            - name: Clean build directories
-              if: inputs.clean_build == true
+            - name: Gradle Clean
+              if: env.CLEAN_BUILD == 'true' || inputs.clean_build == true
               shell: cmd
               run: |
                   cd android
                   gradlew.bat clean --no-watch-fs --info
-                  if exist app\build rmdir /s /q app\build
-                  if exist .gradle rmdir /s /q .gradle
-                  echo Cleaned all build directories
+                  echo ✓ Gradle clean completed
 
             # ============================================
             # BUILD TAMAGUI - Required before bundling
@@ -127,12 +125,15 @@ jobs:
 
             # ============================================
             # BUNDLE JS - Manually bundle to ensure standalone APK
+            # Using 'yarn' instead of 'npx' for Yarn 3 compatibility
             # ============================================
             - name: Bundle JS (Manual)
               shell: pwsh
               run: |
-                  New-Item -ItemType Directory -Force -Path android\app\src\main\assets | Out-Null
-                  npx react-native bundle `
+                  if (!(Test-Path "android\app\src\main\assets")) {
+                      New-Item -ItemType Directory -Force -Path "android\app\src\main\assets" | Out-Null
+                  }
+                  yarn react-native bundle `
                     --platform android `
                     --dev false `
                     --entry-file index.js `
@@ -140,6 +141,10 @@ jobs:
                     --assets-dest android\app\src\main\res
                   Write-Host "✓ JS bundle created successfully"
                   Get-ChildItem android\app\src\main\assets
+                  if (!(Test-Path "android\app\src\main\assets\index.android.bundle")) {
+                      Write-Error "Bundle file was not created!"
+                      exit 1
+                  }
 
             # ============================================
             # BUILD
