@@ -33,7 +33,7 @@ android/*.hprof
 android/app/build
 android/.kotlin
 *.aab
-*.apk
+# *.apk
 android/app/src/main/assets/index.android.bundle
 
 # node.js
@@ -99,3 +99,5 @@ android/gradle/wrapper/daemon/
 android/gradle/wrapper/wrapper/dists/
 android/gradle/wrapper/caches/
 android/gradle/wrapper/native/
+build-error-*.log
+build-errors.log
