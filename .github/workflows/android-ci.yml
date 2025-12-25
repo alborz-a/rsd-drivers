@@ -16,7 +16,7 @@ env:
     FLEETBASE_KEY: ${{ secrets.FLEETBASE_KEY }}
     GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
     TRANSISTORSOFT_LICENSE_KEY: ${{ secrets.TRANSISTORSOFT_LICENSE_KEY }}
-    ANDROID_SDK_ROOT: ${{ github.workspace }}/android-sdk
+    ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
     CLEAN_BUILD: ${{ endsWith(github.ref_name, '-new') }}
 
 jobs:
@@ -133,43 +133,26 @@ jobs:
                   fi
 
             # ============================================
-            # ANDROID SDK CACHE - Cache SDK to avoid re-downloading
-            # ============================================
-            - name: Cache Android SDK
-              uses: actions/cache@v4
-              id: android-sdk-cache
-              with:
-                  path: ${{ env.ANDROID_SDK_ROOT }}
-                  key: android-sdk-35-ndk27-cmake322-v1
-
-            # ============================================
-            # ANDROID SDK/NDK/CMAKE - Install if not cached
+            # ANDROID SDK/NDK/CMAKE - Use pre-installed SDK, add missing components
             # ============================================
             - name: Ensure Android SDK/NDK/CMake toolchain
-              if: steps.android-sdk-cache.outputs.cache-hit != 'true'
               shell: bash
               run: |
                   set -e
-                  mkdir -p "$ANDROID_SDK_ROOT"
 
-                  # Download cmdline-tools if not present
-                  if [ ! -d "$ANDROID_SDK_ROOT/cmdline-tools" ]; then
-                    echo "Downloading Android cmdline-tools..."
-                    curl -L -o cmdline-tools.zip https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip
-                    unzip -q cmdline-tools.zip -d "$ANDROID_SDK_ROOT/cmdline-tools-temp"
-                    mkdir -p "$ANDROID_SDK_ROOT/cmdline-tools/latest"
-                    mv "$ANDROID_SDK_ROOT/cmdline-tools-temp/cmdline-tools"/* "$ANDROID_SDK_ROOT/cmdline-tools/latest/"
-                    rm -rf cmdline-tools.zip "$ANDROID_SDK_ROOT/cmdline-tools-temp"
+                  # Find sdkmanager in pre-installed SDK
+                  if [ -x "$ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager" ]; then
+                    SDKMGR="$ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager"
+                  else
+                    SDKMGR=$(ls -1d "$ANDROID_SDK_ROOT/cmdline-tools"/*/bin/sdkmanager 2>/dev/null | head -n1 || true)
                   fi
-
-                  SDKMGR="$ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager"
 
                   echo "Using sdkmanager at: $SDKMGR"
                   yes | "$SDKMGR" --licenses >/dev/null 2>&1 || true
 
                   need() {
                     local p="$1"
-                    if ! "$SDKMGR" --list_installed | grep -q "^  $p$"; then
+                    if ! "$SDKMGR" --list_installed | grep -q "$p"; then
                       echo "Installing $p"
                       "$SDKMGR" "$p"
                     else
