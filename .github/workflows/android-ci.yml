@@ -217,7 +217,7 @@ jobs:
               if: env.CLEAN_BUILD == 'true'
               run: |
                   cd android
-                  ./gradlew clean --scan --stacktrace --info
+                  ./gradlew clean --stacktrace --info
                   echo "✓ Gradle clean completed"
 
             # ============================================
@@ -246,7 +246,7 @@ jobs:
             - name: Build Android Debug APK
               run: |
                   cd android
-                  ./gradlew assembleDebug --build-cache --console=plain --scan --stacktrace --info
+                  ./gradlew assembleDebug --build-cache --console=plain --stacktrace --info
 
             - name: Upload Android APK
               uses: actions/upload-artifact@v4
