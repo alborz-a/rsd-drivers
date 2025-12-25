@@ -50,25 +50,22 @@ jobs:
             - name: Create .env
               shell: pwsh
               run: |
-                  # Extract version from ref name, fallback for manual runs
                   $VERSION = if ($env:GITHUB_REF_NAME -match '^v(.+)$') { $Matches[1] } else { "1.0.0-local" }
-
-                  $envContent = @"
-                  APP_NAME=EtemadLife
-                  APP_IDENTIFIER=delivery.etemadlife.platform.drivers
-                  APP_LINK_PREFIX=royalstars-el
-                  FLEETBASE_HOST=https://api.platform.etemadlife.delivery
-                  FLEETBASE_KEY=${{ secrets.FLEETBASE_KEY }}
-                  GOOGLE_MAPS_API_KEY=${{ secrets.GOOGLE_MAPS_API_KEY }}
-                  DEFAULT_COORDINATES=36.5399,52.6783
-                  FACEBOOK_APP_ID=dummy
-                  FACEBOOK_CLIENT_TOKEN=dummy
-                  TRANSISTORSOFT_LICENSE_KEY=dummy
-                  STOREFRONT_KEY=dummy
-                  ANDROID_VERSION_NAME=$VERSION
-                  "@
-                  $envContent | Out-File -FilePath .env -Encoding utf8
-
+                  $content = @(
+                    "APP_NAME=EtemadLife",
+                    "APP_IDENTIFIER=delivery.etemadlife.platform.drivers",
+                    "APP_LINK_PREFIX=royalstars-el",
+                    "FLEETBASE_HOST=https://api.platform.etemadlife.delivery",
+                    "FLEETBASE_KEY=${{ secrets.FLEETBASE_KEY }}",
+                    "GOOGLE_MAPS_API_KEY=${{ secrets.GOOGLE_MAPS_API_KEY }}",
+                    "DEFAULT_COORDINATES=36.5399,52.6783",
+                    "FACEBOOK_APP_ID=dummy",
+                    "FACEBOOK_CLIENT_TOKEN=dummy",
+                    "TRANSISTORSOFT_LICENSE_KEY=dummy",
+                    "STOREFRONT_KEY=dummy",
+                    "ANDROID_VERSION_NAME=$VERSION"
+                  ) -join "`n"
+                  $content | Out-File -FilePath .env -Encoding utf8 -NoNewline
                   Write-Host "Created .env with VERSION=$VERSION"
                   Get-Content .env
 
@@ -97,13 +94,13 @@ jobs:
             # ============================================
             - name: Clean build directories
               if: inputs.clean_build == true
-              shell: pwsh
+              shell: cmd
               run: |
-                  Set-Location android
-                  .\gradlew.bat clean
-                  Remove-Item -Recurse -Force app\build -ErrorAction SilentlyContinue
-                  Remove-Item -Recurse -Force .gradle -ErrorAction SilentlyContinue
-                  Write-Host "✓ Cleaned all build directories"
+                  cd android
+                  gradlew.bat clean --no-watch-fs --info
+                  if exist app\build rmdir /s /q app\build
+                  if exist .gradle rmdir /s /q .gradle
+                  echo Cleaned all build directories
 
             # ============================================
             # Always clean JS bundle to ensure fresh code
@@ -141,10 +138,10 @@ jobs:
             # BUILD
             # ============================================
             - name: Build Android Debug APK
-              shell: pwsh
+              shell: cmd
               run: |
-                  Set-Location android
-                  .\gradlew.bat assembleDebug --build-cache --console=plain
+                  cd android
+                  gradlew.bat assembleDebug --build-cache --console=plain --no-watch-fs --info
 
             - name: Upload Android APK
               uses: actions/upload-artifact@v4
