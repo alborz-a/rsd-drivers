@@ -29,7 +29,14 @@ jobs:
             - name: Setup Node.js
               uses: actions/setup-node@v4
               with:
-                  node-version: '20'
+                  node-version: '18'
+                  cache: 'yarn'
+
+            - name: Enable Corepack
+              run: corepack enable
+
+            - name: Activate Yarn 3.6.4
+              run: corepack prepare yarn@3.6.4 --activate
 
             # ============================================
             # NODE_MODULES CACHE - Restore only (no save on tags to prevent duplicates)
@@ -47,14 +54,7 @@ jobs:
                       Linux-node-v2-
 
             - name: Install dependencies
-              run: |
-                  # Retry up to 3 times for transient network failures
-                  for i in 1 2 3; do
-                    yarn install --frozen-lockfile && break || {
-                      echo "Attempt $i failed, retrying in 10s..."
-                      sleep 10
-                    }
-                  done
+              run: yarn install --immutable
 
             # Save cache if it wasn't restored AND (on main branch OR manual dispatch)
             - name: Save node_modules cache
@@ -101,11 +101,25 @@ jobs:
               run: |
                   python -c "import json,sys; json.load(open('android/app/google-services.json','rb')); print('google-services.json -> valid JSON')"
 
-            - name: Set up JDK 17
+            - name: Set up JDK 21
               uses: actions/setup-java@v4
               with:
                   distribution: 'temurin'
-                  java-version: '17'
+                  java-version: '21'
+
+            - name: Cache Gradle Wrapper
+              uses: actions/cache@v4
+              with:
+                  path: ~/.gradle/wrapper
+                  key: ${{ runner.os }}-gradle-wrapper-${{ hashFiles('**/gradle-wrapper.properties') }}
+
+            - name: Cache Gradle Dependencies
+              uses: actions/cache@v4
+              with:
+                  path: ~/.gradle/caches
+                  key: ${{ runner.os }}-gradle-caches-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+                  restore-keys: |
+                      ${{ runner.os }}-gradle-caches-
 
             # ============================================
             # NINJA - Check if pre-installed before installing

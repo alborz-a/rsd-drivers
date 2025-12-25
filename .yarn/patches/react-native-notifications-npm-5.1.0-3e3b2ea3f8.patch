@@ -1,0 +1,45 @@
+diff --git a/lib/android/app/build.gradle b/lib/android/app/build.gradle
+index 30bb01cef8203426f9ec7c45c5d980157c24caa7..473d9ed0e4271353d07930cd6106800e52dd50b6 100644
+--- a/lib/android/app/build.gradle
++++ b/lib/android/app/build.gradle
+@@ -62,9 +62,6 @@ android {
+         targetCompatibility JavaVersion.VERSION_1_8
+     }
+ 
+-    dexOptions {
+-        javaMaxHeapSize "4g"
+-    }
+     buildTypes {
+         release {
+             minifyEnabled false
+diff --git a/lib/android/app/src/main/java/com/wix/reactnativenotifications/fcm/FcmToken.java b/lib/android/app/src/main/java/com/wix/reactnativenotifications/fcm/FcmToken.java
+index 7db6e8d88f8cc46b264224d2adfe16b10ad67122..747e53f38436dc900547b5499c4d4e9a06165210 100644
+--- a/lib/android/app/src/main/java/com/wix/reactnativenotifications/fcm/FcmToken.java
++++ b/lib/android/app/src/main/java/com/wix/reactnativenotifications/fcm/FcmToken.java
+@@ -5,12 +5,14 @@ import android.os.Bundle;
+ import android.util.Log;
+ 
+ import com.facebook.react.ReactApplication;
+-import com.facebook.react.ReactInstanceManager;
+ import com.facebook.react.bridge.ReactContext;
+ import com.google.firebase.messaging.FirebaseMessaging;
+ import com.wix.reactnativenotifications.BuildConfig;
+ import com.wix.reactnativenotifications.core.JsIOHelper;
+ 
++import com.wix.reactnativenotifications.core.AppLifecycleFacade;
++import com.wix.reactnativenotifications.core.AppLifecycleFacadeHolder;
++
+ import static com.wix.reactnativenotifications.Defs.LOGTAG;
+ import static com.wix.reactnativenotifications.Defs.TOKEN_RECEIVED_EVENT_NAME;
+ 
+@@ -88,8 +90,8 @@ public class FcmToken implements IFcmToken {
+     }
+ 
+     protected void sendTokenToJS() {
+-        final ReactInstanceManager instanceManager = ((ReactApplication) mAppContext).getReactNativeHost().getReactInstanceManager();
+-        final ReactContext reactContext = instanceManager.getCurrentReactContext();
++        AppLifecycleFacade facade = AppLifecycleFacadeHolder.get();
++        final ReactContext reactContext = facade.getRunningReactContext();
+ 
+         // Note: Cannot assume react-context exists cause this is an async dispatched service.
+         if (reactContext != null && reactContext.hasActiveCatalystInstance()) {

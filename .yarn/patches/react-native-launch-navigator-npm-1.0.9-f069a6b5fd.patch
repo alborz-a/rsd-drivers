@@ -1,7 +1,7 @@
-diff --git a/node_modules/react-native-launch-navigator/ios/RNLaunchNavigator/LN_LaunchNavigator.m b/node_modules/react-native-launch-navigator/ios/RNLaunchNavigator/LN_LaunchNavigator.m
-index 7b0072a..1463042 100644
---- a/node_modules/react-native-launch-navigator/ios/RNLaunchNavigator/LN_LaunchNavigator.m
-+++ b/node_modules/react-native-launch-navigator/ios/RNLaunchNavigator/LN_LaunchNavigator.m
+diff --git a/ios/RNLaunchNavigator/LN_LaunchNavigator.m b/ios/RNLaunchNavigator/LN_LaunchNavigator.m
+index 7b0072addf177349c5e54778721e0f98e3a00602..14630420473ba3d90e99cea26c06bb9ef7cdff1b 100644
+--- a/ios/RNLaunchNavigator/LN_LaunchNavigator.m
++++ b/ios/RNLaunchNavigator/LN_LaunchNavigator.m
 @@ -1320,13 +1320,17 @@ - (BOOL)isMapAppInstalled:(LNApp)mapApp {
      return [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:urlPrefix]];
  }

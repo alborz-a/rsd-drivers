@@ -35,9 +35,9 @@ jobs:
               shell: pwsh
               run: corepack enable
 
-            - name: Activate Yarn 1.22.22
+            - name: Activate Yarn 3.6.4
               shell: pwsh
-              run: corepack prepare yarn@1.22.22 --activate
+              run: corepack prepare yarn@3.6.4 --activate
 
             # ============================================
             # LOCAL RUNNER: No GitHub cache needed - use local disk
