@@ -153,7 +153,7 @@ jobs:
               shell: cmd
               run: |
                   cd android
-                  gradlew.bat assembleDebug --build-cache --console=plain --no-watch-fs --info
+                  gradlew.bat assembleDebug --build-cache --stacktrace --debug --console=plain --info
 
             - name: Upload Android APK
               uses: actions/upload-artifact@v4
