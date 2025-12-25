@@ -31,12 +31,6 @@ jobs:
               with:
                   node-version: '20'
 
-            - name: Enable Corepack
-              run: corepack enable
-
-            - name: Activate Yarn 3.6.4
-              run: corepack prepare yarn@3.6.4 --activate
-
             # ============================================
             # NODE_MODULES CACHE - Restore only (no save on tags to prevent duplicates)
             # ============================================
@@ -56,7 +50,7 @@ jobs:
               run: |
                   # Retry up to 3 times for transient network failures
                   for i in 1 2 3; do
-                    yarn install --immutable && break || {
+                    yarn install --frozen-lockfile && break || {
                       echo "Attempt $i failed, retrying in 10s..."
                       sleep 10
                     }
