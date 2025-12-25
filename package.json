@@ -73,7 +73,7 @@
         "react-native-fbsdk-next": "^13.4.0",
         "react-native-file-viewer": "^2.1.5",
         "react-native-fs": "^2.20.0",
-        "react-native-gesture-handler": "^2.20.2",
+        "react-native-gesture-handler": "^2.21.2",
         "react-native-get-random-values": "^1.11.0",
         "react-native-haptic-feedback": "^2.3.3",
         "react-native-i18n": "^2.0.15",
@@ -151,7 +151,7 @@
         "react-native-notifications@^5.1.0": "patch:react-native-notifications@npm%3A5.1.0#./.yarn/patches/react-native-notifications-npm-5.1.0-3e3b2ea3f8.patch",
         "react-native-screens": "4.3.0",
         "react-native-reanimated": "3.16.1",
-        "react-native-gesture-handler": "2.20.2"
+        "react-native-gesture-handler": "2.21.2"
     },
     "packageManager": "yarn@3.6.4"
 }
