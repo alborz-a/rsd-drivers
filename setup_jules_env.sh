@@ -3,12 +3,6 @@ set -e
 
 echo "🚀 Starting Jules Environment Initialization..."
 
-# 0. Clean Repository State (As requested)
-# WARNING: This discards all uncommitted changes.
-echo "🧹 Resetting git working tree..."
-git reset --hard HEAD
-echo "✅ Git working tree reset."
-
 # 1. Setup Environment Variables
 # Using a directory in the user's home to avoid repo pollution, or use a specific path.
 # Assuming this script is run by the user 'jules' (or equivalent) in the repo root.
@@ -132,9 +126,6 @@ fi
 echo "📦 Installing Node dependencies..."
 corepack enable
 corepack prepare yarn@3.6.4 --activate
-# Using --no-immutable to avoid failing on lockfile mismatches if user env is weird,
-# but user error showed YN0066 patch failure which is usually immutable related or patch related.
-# Sticking to immutable as it's safer for CI/reproducibility.
 yarn install --immutable
 echo "✅ Node dependencies installed."
 
