@@ -2481,7 +2481,7 @@ __metadata:
     react-native-launch-navigator: ^1.0.9
     react-native-linear-gradient: ^2.8.3
     react-native-localize: ^3.3.0
-    react-native-maps: ^1.20.0
+    react-native-maps: 1.20.1
     react-native-maps-directions: ^1.9.0
     react-native-mmkv-storage: ^0.11.0
     react-native-notifications: ^5.1.0
@@ -15024,19 +15024,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-maps@npm:^1.20.0":
-  version: 1.26.20
-  resolution: "react-native-maps@npm:1.26.20"
+"react-native-maps@npm:1.20.1":
+  version: 1.20.1
+  resolution: "react-native-maps@npm:1.20.1"
   dependencies:
     "@types/geojson": ^7946.0.13
   peerDependencies:
-    react: ">= 18.3.1"
-    react-native: ">= 0.76.0"
+    react: ">= 17.0.1"
+    react-native: ">= 0.64.3"
     react-native-web: ">= 0.11"
   peerDependenciesMeta:
     react-native-web:
       optional: true
-  checksum: 924b54da9c0adf203d51db91396c0389b9bc7cf08ca818df729aed42ebe12ec15c74a5b901e6edf6a2c30d2798eb70bc2b9f911c95775a6335c28fa1f38dba99
+  checksum: 3451f2cb98a0cfcac973d73d8a5bd8bc3673490ca1b3c85f6bd54110028201a7cbbcffbac56ccb931acb31e02bca8aac5805269bc13e94d93bfef868035074a7
   languageName: node
   linkType: hard
 
