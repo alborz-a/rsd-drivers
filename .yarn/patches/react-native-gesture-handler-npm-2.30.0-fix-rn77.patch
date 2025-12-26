@@ -1,0 +1,27 @@
+diff -urN a/android/paper/src/main/java/com/facebook/react/viewmanagers/RNGestureHandlerButtonManagerInterface.java b/android/paper/src/main/java/com/facebook/react/viewmanagers/RNGestureHandlerButtonManagerInterface.java
+--- a/android/paper/src/main/java/com/facebook/react/viewmanagers/RNGestureHandlerButtonManagerInterface.java
++++ b/android/paper/src/main/java/com/facebook/react/viewmanagers/RNGestureHandlerButtonManagerInterface.java
+@@ -11,9 +11,8 @@
+
+ import android.view.View;
+ import androidx.annotation.Nullable;
+-import com.facebook.react.uimanager.ViewManagerWithGeneratedInterface;
+
+-public interface RNGestureHandlerButtonManagerInterface<T extends View> extends ViewManagerWithGeneratedInterface {
++public interface RNGestureHandlerButtonManagerInterface<T extends View> {
+   void setExclusive(T view, boolean value);
+   void setForeground(T view, boolean value);
+   void setBorderless(T view, boolean value);
+diff -urN a/android/paper/src/main/java/com/facebook/react/viewmanagers/RNGestureHandlerRootViewManagerInterface.java b/android/paper/src/main/java/com/facebook/react/viewmanagers/RNGestureHandlerRootViewManagerInterface.java
+--- a/android/paper/src/main/java/com/facebook/react/viewmanagers/RNGestureHandlerRootViewManagerInterface.java
++++ b/android/paper/src/main/java/com/facebook/react/viewmanagers/RNGestureHandlerRootViewManagerInterface.java
+@@ -10,8 +10,7 @@
+ package com.facebook.react.viewmanagers;
+
+ import android.view.View;
+-import com.facebook.react.uimanager.ViewManagerWithGeneratedInterface;
+
+-public interface RNGestureHandlerRootViewManagerInterface<T extends View> extends ViewManagerWithGeneratedInterface {
++public interface RNGestureHandlerRootViewManagerInterface<T extends View> {
+   void setUnstable_forceActive(T view, boolean value);
+ }
