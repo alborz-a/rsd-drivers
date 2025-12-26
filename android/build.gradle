@@ -1,12 +1,16 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     ext {
+        googlePlayServicesVersion = "+"
+        playServicesLocationVersion = "21.0.1"
+        firebaseMessagingVersion = "22.0.0"
+        firebaseVersion = "22.0.0"
         buildToolsVersion = "35.0.0"
         minSdkVersion = 24
         compileSdkVersion = 35
         targetSdkVersion = 35
         ndkVersion = "27.1.12297006"
-        kotlinVersion = "1.9.22"
+        kotlinVersion = "2.0.21"
         appCompatVersion = "1.4.2"
     }
     repositories {
@@ -18,10 +22,10 @@ buildscript {
         }
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:8.2.2")
+        classpath("com.android.tools.build:gradle:8.1.1")
         classpath("com.facebook.react:react-native-gradle-plugin")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
-        classpath('com.google.gms:google-services:4.4.1')
+        classpath('com.google.gms:google-services:4.3.15')
     }
 }
 
@@ -29,8 +33,7 @@ allprojects {
     repositories {
         // Required for react-native-background-geolocation
         maven { url("${project(':react-native-background-geolocation').projectDir}/libs") }
-        // Huawei repo - disabled for faster builds (enable for Huawei device support)
-        // maven { url 'https://developer.huawei.com/repo/' }
+        maven { url 'https://developer.huawei.com/repo/' }
         // Required for react-native-background-fetch
         maven { url("${project(':react-native-background-fetch').projectDir}/libs") }
     }
