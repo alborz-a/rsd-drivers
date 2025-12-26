@@ -1,9 +1,9 @@
 name: Navigator Android App CI (Windows Runner)
 
 on:
-    push:
-        tags:
-            - 'v*'
+    # push:
+    # tags:
+    #     - 'v*'
     workflow_dispatch:
         inputs:
             clean_build:
