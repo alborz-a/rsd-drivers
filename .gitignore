@@ -101,3 +101,10 @@ android/gradle/wrapper/caches/
 android/gradle/wrapper/native/
 build-error-*.log
 build-errors.log
+results/
+
+diff_package.txt
+new_package.json
+old_package.json
+old_rn_versions.txt
+old_yarn.lock
