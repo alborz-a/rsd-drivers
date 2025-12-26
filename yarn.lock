@@ -2472,7 +2472,7 @@ __metadata:
     react-native-fbsdk-next: ^13.4.0
     react-native-file-viewer: ^2.1.5
     react-native-fs: ^2.20.0
-    react-native-gesture-handler: ^2.30.0
+    react-native-gesture-handler: 2.23.0
     react-native-get-random-values: ^1.11.0
     react-native-haptic-feedback: ^2.3.3
     react-native-i18n: ^2.0.15
@@ -14896,9 +14896,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-gesture-handler@npm:^2.30.0":
-  version: 2.30.0
-  resolution: "react-native-gesture-handler@npm:2.30.0"
+"react-native-gesture-handler@npm:2.23.0":
+  version: 2.23.0
+  resolution: "react-native-gesture-handler@npm:2.23.0"
   dependencies:
     "@egjs/hammerjs": ^2.0.17
     hoist-non-react-statics: ^3.3.0
@@ -14906,7 +14906,7 @@ __metadata:
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: 130a1cc04879ea11808472dbe2f4e346baca0cb52713279f3d4b5fbd397324bef2379f1f60bf0ce1763e12a8656267abb0e879418fb37c81fc6bbdcdb7fc797d
+  checksum: f26400a851f62deed090cdd5e96db42ff8932c5a342f1abe8d2185ed4c7dc52b67da8e685148f2240300bda9cc8fbfbbb053541a8c27110ebff803add42bc7ea
   languageName: node
   linkType: hard
 

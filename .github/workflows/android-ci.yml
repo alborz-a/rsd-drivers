@@ -101,7 +101,7 @@ jobs:
               run: |
                   python -c "import json,sys; json.load(open('android/app/google-services.json','rb')); print('google-services.json -> valid JSON')"
 
-            - name: Set up JDK 21
+            - name: Set up JDK 17
               uses: actions/setup-java@v4
               with:
                   distribution: 'temurin'
