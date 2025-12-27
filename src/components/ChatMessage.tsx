@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Button, Avatar, YStack, XStack, Text, useTheme } from 'tamagui';
-import { Platfrom } from 'react-native';
+import { Platform } from 'react-native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { abbreviateName } from '../utils';

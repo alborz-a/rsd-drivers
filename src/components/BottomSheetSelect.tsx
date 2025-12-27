@@ -4,6 +4,7 @@ import BottomSheet, { BottomSheetView, BottomSheetFlatList, BottomSheetTextInput
 import { useTheme, View, Text, Button, XStack, YStack, Input } from 'tamagui';
 import { Portal } from '@gorhom/portal';
 import { titleize as titleizeString } from 'inflected';
+import { isObject } from '../utils';
 import useAppTheme from '../hooks/use-app-theme';
 
 const BottomSheetSelect = forwardRef(

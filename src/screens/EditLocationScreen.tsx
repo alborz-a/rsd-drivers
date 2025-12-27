@@ -50,7 +50,7 @@ const EditLocationScreen = ({ route }) => {
     const { customer, isAuthenticated } = useAuth();
     const { runWithLoading, isLoading, isAnyLoading } = usePromiseWithLoading();
     const { currentLocation, updateDefaultLocationPromise } = useCurrentLocation();
-    // const { savedLocations, addLocation, deleteLocation } = useSavedLocations();
+    const { savedLocations, addLocation, deleteLocation } = useSavedLocations();
     const [place, setPlace] = useState({ ...params.place });
     const [name, setName] = useState(place.name);
     const [street1, setStreet1] = useState(place.street1);

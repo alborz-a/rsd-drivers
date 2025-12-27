@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { StyleSheet, Dimensions } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import { Spinner, Button, Text, XStack, YStack, useTheme } from 'tamagui';
+import { toast } from '@backpackapp-io/react-native-toast';
 import { Place, Point } from '@fleetbase/sdk';
 import { useNavigation } from '@react-navigation/native';
 import { restoreFleetbasePlace, getCoordinates } from '../utils/location';
