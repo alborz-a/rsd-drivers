@@ -12,7 +12,7 @@ import BottomSheetSelect from '../components/BottomSheetSelect';
 import TextAreaSheet from '../components/TextAreaSheet';
 import { useLanguage } from '../contexts/LanguageContext';
 
-const IssueForm = ({ value = {}, onSubmit, isSubmitting = false, submitText = 'Publish Issue' }) => {
+const IssueForm = ({ value = {}, onSubmit, isSubmitting = false, submitText }) => {
     const theme = useTheme();
     const navigation = useNavigation();
     const insets = useSafeAreaInsets();

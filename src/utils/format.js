@@ -155,14 +155,16 @@ export function formatCurrency(amount = 0, currency = 'USD', currencyDisplay = '
     return formatMoney(!currencyData.decimalSeparator ? amount : amount / 100, currencyData.symbol, currencyData.precision, currencyData.thousandSeparator, currencyData.decimalSeparator);
 }
 
-export function formatMeters(meters) {
+export function formatMeters(meters, t) {
     if (meters < 1000) {
-        return `${meters} meters`;
+        const unit = typeof t === 'function' ? t('units.meters') : 'meters';
+        return `${meters} ${unit}`;
     } else {
         const km = meters / 1000;
         // Round to one decimal place
         const roundedKm = Math.round(km * 10) / 10;
-        return `${roundedKm} km`;
+        const unit = typeof t === 'function' ? t('units.km') : 'km';
+        return `${roundedKm} ${unit}`;
     }
 }
 

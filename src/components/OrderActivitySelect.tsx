@@ -143,7 +143,7 @@ const OrderActivitySelect = forwardRef(({ onChange, waypoint, activities = [], s
                                     keyExtractor={(item, index) => index.toString()}
                                     showsVerticalScrollIndicator={false}
                                     showsHorizontalScrollIndicator={false}
-                                    contentContainerStyle={{ paddingLeft: 18, paddingRight: 18 }}
+                                    contentContainerStyle={{ paddingHorizontal: 18 }}
                                     renderItem={renderActivity}
                                     ListFooterComponent={<Spacer height={200} />}
                                 />

@@ -1,6 +1,7 @@
 import Config from 'react-native-config';
 import { Platform, ActionSheetIOS, Alert, Dimensions } from 'react-native';
 import { Collection, lookup } from '@fleetbase/sdk';
+import { translate } from './localize';
 import storage, { getString } from './storage';
 import { capitalize } from './format';
 import { themes } from '../../tamagui.config';
@@ -470,7 +471,7 @@ export function showActionSheet({ title, message, options, cancelButtonIndex, de
             style: index === cancelButtonIndex ? 'cancel' : index === destructiveButtonIndex ? 'destructive' : 'default',
         }));
 
-        Alert.alert(title || 'Choose an option', message || '', buttons, { cancelable: true });
+        Alert.alert(title || translate('common.chooseAnOption'), message || '', buttons, { cancelable: true });
     }
 }
 

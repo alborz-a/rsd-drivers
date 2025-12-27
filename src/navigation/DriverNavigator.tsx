@@ -491,8 +491,9 @@ const DriverAccountTab = createNativeStackNavigator({
         DriverAccount: {
             screen: DriverAccountScreen,
             options: ({ route, navigation }) => {
+                const { t } = useLanguage();
                 return {
-                    title: '',
+                    headerTitle: t('AccountScreen.account'),
                     headerTransparent: true,
                     headerShadowVisible: false,
                     headerLeft: () => {
@@ -585,7 +586,7 @@ const DriverNavigator = createBottomTabNavigator({
                 return {
                     marginTop: isAndroid ? 4 : 15,
                     fontSize: isAndroid ? 13 : 15,
-                    fontWeight: focued ? 600 : 300,
+                    fontWeight: focused ? 600 : 300,
                 };
             },
         };

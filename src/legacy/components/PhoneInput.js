@@ -118,7 +118,7 @@ const PhoneInput = ({
                         height: windowHeight / 2,
                     },
                     textInput: {
-                        paddingLeft: 15,
+                        paddingStart: 15,
                     },
                 }}
             />

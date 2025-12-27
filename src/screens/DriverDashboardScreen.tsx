@@ -34,7 +34,7 @@ const DriverDashboardScreen = () => {
                                 <Text color='$textPrimary'>{t('DriverDashboardScreen.tracking')}</Text>
                             </YStack>
                             <YStack flex={1} alignItems='flex-end'>
-                                <Text color={isTracking ? '$successBorder' : '$textSecondary'}>{isTracking ? 'Yes' : 'No'}</Text>
+                                <Text color={isTracking ? '$successBorder' : '$textSecondary'}>{isTracking ? t('common.yes') : t('common.no')}</Text>
                             </YStack>
                         </XStack>
                     </WidgetContainer>

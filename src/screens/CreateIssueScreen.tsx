@@ -3,12 +3,14 @@ import { useNavigation } from '@react-navigation/native';
 import { YStack } from 'tamagui';
 import { underscore } from 'inflected';
 import { useAuth } from '../contexts/AuthContext';
+import { useLanguage } from '../contexts/LanguageContext';
 import useCurrentLocation from '../hooks/use-current-location';
 import useFleetbase from '../hooks/use-fleetbase';
 import IssueForm from '../components/IssueForm';
 
 const CreateIssueScreen = () => {
     const navigation = useNavigation();
+    const { t } = useLanguage();
     const { driver } = useAuth();
     const { adapter } = useFleetbase();
     const { liveLocation } = useCurrentLocation();
@@ -39,7 +41,7 @@ const CreateIssueScreen = () => {
 
     return (
         <YStack flex={1} bg='$background'>
-            <IssueForm onSubmit={handleCreateIssue} isSubmitting={isLoading} />
+            <IssueForm onSubmit={handleCreateIssue} isSubmitting={isLoading} submitText={t('IssueForm.publishIssue')} />
         </YStack>
     );
 };

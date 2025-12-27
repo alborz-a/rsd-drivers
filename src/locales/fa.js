@@ -2,6 +2,7 @@ export default {
     common: {
         apiKey: "کلید API",
         cancel: "لغو",
+        chooseAnOption: "یک گزینه را انتخاب کنید",
         close: "بستن",
         delete: "حذف",
         done: "انجام شد",
@@ -16,7 +17,12 @@ export default {
         save: "ذخیره",
         select: "انتخاب",
         storefront: "فروشگاه",
+        selectAnOption: "یک گزینه انتخاب کنید",
+        searchOptions: "جستجوی گزینه‌ها",
+        yes: "فعال",
+        no: "غیرفعال",
     },
+
     BootScreen: {
         missingRequiredConfigurationKeys: "کلیدهای پیکربندی مورد نیاز ناقص هستند",
     },
@@ -30,6 +36,32 @@ export default {
         permissionDeniedPrompt: "دسترسی به موقعیت مکانی رد شد. لطفاً دوباره تلاش کنید.",
         locationBlockedPrompt: "دسترسی به موقعیت مکانی مسدود شده است. لطفاً از تنظیمات فعال کنید.",
         goToSettings: "رفتن به تنظیمات",
+    },
+    AccountScreen: {
+        account: "حساب",
+        cacheCleared: "حافظه پنهان پاک شد",
+        changeProfilePhotoOptions: {
+            deleteProfilePhoto: "حذف عکس پروفایل",
+            photoLibrary: "کتابخانه عکس",
+            takePhoto: "گرفتن عکس",
+        },
+        clearCache: "پاک کردن حافظه پنهان",
+        dataProtection: "حفاظت از داده ها",
+        email: "پست الکترونیک",
+        language: "زبان",
+        languageChanged: "زبان به {{selectedLanguage}} تغییر کرد",
+        name: "نام",
+        phoneNumber: "شماره تلفن",
+        photoChanged: "عکس تغییر کرد",
+        photoRemoved: "عکس حذف شد",
+        privacyPolicy: "سیاست حفظ حریم خصوصی",
+        profilePhoto: "عکس پروفایل",
+        schemeChanged: "طرح به {{selectedScheme}} تغییر کرد",
+        signOut: "خروج",
+        signedOut: "خارج شدید",
+        termsOfService: "شرایط خدمات",
+        theme: "موضوع",
+        tracking: "پیگیری",
     },
     Buttons: {
         continueWithPhone: "ادامه با تلفن",
@@ -149,6 +181,7 @@ export default {
         issueReport: "گزارش مشکل",
         issueStatus: "وضعیت مشکل",
         issueType: "نوع مشکل",
+        publishIssue: "ثبت مشکل",
         selectIssueCategory: "دسته بندی مشکل را انتخاب کنید",
         selectIssuePriority: "اولویت مشکل را انتخاب کنید",
         selectIssueStatus: "وضعیت مشکل را انتخاب کنید",
@@ -350,4 +383,36 @@ export default {
         warning: "هشدار!",
         waypointCompleted: "ایستگاه بین راهی تکمیل شد",
     },
+    enums: {
+        status: {
+            pending: "در انتظار",
+            inProgress: "در حال انجام",
+            completed: "تکمیل شده",
+            canceled: "لغو شده",
+            backlogged: "در لیست انتظار",
+            inReview: "در حال بررسی",
+            draft: "پیش‌نویس",
+            approved: "تأیید شده",
+            rejected: "رد شده",
+            submitted: "ارسال شده"
+        },
+        priority: {
+            low: "کم",
+            medium: "متوسط",
+            high: "زیاد",
+            critical: "بحرانی"
+        }
+    },
+    units: {
+        meters: "متر",
+        km: "کیلومتر",
+        miles: "مایل",
+        seconds: "ثانیه",
+        minutes: "دقیقه",
+        hours: "ساعت",
+        order: "سفارش",
+        orders: "سفارشات",
+        stopLeft: "ایستگاه باقیمانده",
+        stopsLeft: "ایستگاه‌های باقیمانده",
+    }
 };
