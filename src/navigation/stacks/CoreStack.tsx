@@ -27,6 +27,13 @@ export const LocationPermission = {
     },
 };
 
+export const Test = {
+    screen: TestScreen,
+    options: {
+        headerShown: false,
+    },
+};
+
 const CoreStack = {
     Boot,
     Test,
