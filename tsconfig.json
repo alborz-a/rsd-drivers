@@ -1,8 +1,18 @@
 {
+    "extends": "@react-native/typescript-config/tsconfig.json",
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
-            "*": ["*", "*.native", "*.web"]
-        }
+            "*": [
+                "*",
+                "*.native",
+                "*.web"
+            ]
+        },
+        "strict": false,
+        "noImplicitAny": false,
+        "lib": [
+            "esnext"
+        ]
     }
 }
