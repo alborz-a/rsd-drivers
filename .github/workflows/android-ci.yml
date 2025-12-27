@@ -49,9 +49,9 @@ jobs:
                   path: |
                       node_modules
                       .yarn/cache
-                  key: Linux-node-v2-${{ hashFiles('**/yarn.lock') }}
+                  key: node-modules-${{ hashFiles('**/yarn.lock') }}
                   restore-keys: |
-                      Linux-node-v2-
+                      node-modules-
 
             - name: Install dependencies
               run: yarn install --immutable
@@ -64,7 +64,7 @@ jobs:
                   path: |
                       node_modules
                       .yarn/cache
-                  key: Linux-node-v2-${{ hashFiles('**/yarn.lock') }}
+                  key: node-modules-${{ hashFiles('**/yarn.lock') }}
 
             - name: Create .env
               run: |
@@ -107,19 +107,29 @@ jobs:
                   distribution: 'temurin'
                   java-version: '17'
 
-            - name: Cache Gradle Wrapper
-              uses: actions/cache@v4
+            # ============================================
+            # GRADLE CACHES - Use restore/save pattern to prevent per-tag duplication
+            # Caches are only saved when yarn.lock or gradle files change
+            # ============================================
+            - name: Restore Gradle Wrapper cache
+              if: env.CLEAN_BUILD != 'true'
+              uses: actions/cache/restore@v4
+              id: gradle-wrapper-cache
               with:
                   path: ~/.gradle/wrapper
-                  key: ${{ runner.os }}-gradle-wrapper-${{ hashFiles('**/gradle-wrapper.properties') }}
+                  key: gradle-wrapper-${{ hashFiles('**/gradle-wrapper.properties') }}
+                  restore-keys: |
+                      gradle-wrapper-
 
-            - name: Cache Gradle Dependencies
-              uses: actions/cache@v4
+            - name: Restore Gradle Dependencies cache
+              if: env.CLEAN_BUILD != 'true'
+              uses: actions/cache/restore@v4
+              id: gradle-deps-cache
               with:
                   path: ~/.gradle/caches
-                  key: ${{ runner.os }}-gradle-caches-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+                  key: gradle-caches-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
                   restore-keys: |
-                      ${{ runner.os }}-gradle-caches-
+                      gradle-caches-
 
             # ============================================
             # NINJA - Check if pre-installed before installing
@@ -248,6 +258,23 @@ jobs:
                   name: android-debug-${{ github.ref_name }}-apk
                   path: android/app/build/outputs/apk/debug/app-debug.apk
                   retention-days: 30
+
+            # ============================================
+            # SAVE CACHES - Only if not already cached (prevents duplicates)
+            # ============================================
+            - name: Save Gradle Wrapper cache
+              if: steps.gradle-wrapper-cache.outputs.cache-hit != 'true'
+              uses: actions/cache/save@v4
+              with:
+                  path: ~/.gradle/wrapper
+                  key: gradle-wrapper-${{ hashFiles('**/gradle-wrapper.properties') }}
+
+            - name: Save Gradle Dependencies cache
+              if: steps.gradle-deps-cache.outputs.cache-hit != 'true'
+              uses: actions/cache/save@v4
+              with:
+                  path: ~/.gradle/caches
+                  key: gradle-caches-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
 
     create_release:
         runs-on: ubuntu-latest
