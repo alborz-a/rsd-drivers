@@ -15,7 +15,7 @@ on:
 env:
     FLEETBASE_KEY: ${{ secrets.FLEETBASE_KEY }}
     GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
-    TRANSISTORSOFT_LICENSE_KEY: ${{ secrets.TRANSISTORSOFT_LICENSE_KEY }}
+    TRANSISTORSOFT_LICENSE_KEY: dummy-TRANSIS-1
     ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
     CLEAN_BUILD: ${{ endsWith(github.ref_name, '-new') }}
 
@@ -81,10 +81,10 @@ jobs:
                   FLEETBASE_KEY=${{ secrets.FLEETBASE_KEY }}
                   GOOGLE_MAPS_API_KEY=${{ secrets.GOOGLE_MAPS_API_KEY }}
                   DEFAULT_COORDINATES=36.5399,52.6783
-                  FACEBOOK_APP_ID=dummy
-                  FACEBOOK_CLIENT_TOKEN=dummy
-                  TRANSISTORSOFT_LICENSE_KEY=dummy
-                  STOREFRONT_KEY=dummy
+                  FACEBOOK_APP_ID=dummy-FB-APPID
+                  FACEBOOK_CLIENT_TOKEN=dummy-FB
+                  TRANSISTORSOFT_LICENSE_KEY=dummy-TRANSIS-2
+                  STOREFRONT_KEY=dummy-SF
                   ANDROID_VERSION_NAME=${VERSION}
                   EOF
                   echo "Created .env with VERSION=${VERSION}"
