@@ -1,3 +1,5 @@
+import { View } from 'react-native';
+
 const AppLayout = ({ children, state, descriptors, navigation: tabNavigation }) => {
     return (
         <>
