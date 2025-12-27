@@ -7,7 +7,7 @@ export default {
         done: "انجام شد",
         edit: "ویرایش",
         error: "خطا",
-        fleetbase: "فلیتبیس",
+        fleetbase: "اعتمادلایف",
         loading: "در حال بارگذاری",
         remove: "حذف",
         reset: "بازنشانی",
