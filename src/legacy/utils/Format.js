@@ -1,11 +1,11 @@
-import React from 'react';
-import { isVoid } from './Helper';
-import { isValid as isValidDate, format as formatDate } from 'date-fns';
-import FastImage from 'react-native-fast-image';
-import getCurrency from './get-currency';
 import countryLocaleMap from 'country-locale-map';
+import { format as formatDate, isValid as isValidDate } from 'date-fns';
 import Inflector from 'inflector-js';
+import React from 'react';
+import FastImage from 'react-native-fast-image';
 import tailwind from 'tailwind';
+import getCurrency from './get-currency';
+import { isVoid } from './Helper';
 
 /**
  *  Utility class for formatting strings.
@@ -152,6 +152,10 @@ export default class FormatUtil {
      * @memberof FormatUtil
      */
     static pluralize(num, word) {
+        const isFarsi = /[\u0600-\u06FF]/.test(word);
+        if (isFarsi) {
+            return `${num} ${word}`;
+        }
         return num === 1 ? `${num} ${Inflector.singularize(word)}` : `${num} ${Inflector.pluralize(word)}`;
     }
 
@@ -310,4 +314,5 @@ const humanize = FormatUtil.humanize;
 const formatMetaValue = FormatUtil.formatMetaValue;
 const getStatusColors = FormatUtil.getStatusColors;
 
-export { formatCurrency, formatKm, formatMetersToKilometers, formatDuration, capitalize, pluralize, titleize, humanize, formatMetaValue, getStatusColors };
+export { capitalize, formatCurrency, formatDuration, formatKm, formatMetaValue, formatMetersToKilometers, getStatusColors, humanize, pluralize, titleize };
+

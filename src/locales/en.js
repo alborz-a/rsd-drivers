@@ -22,6 +22,14 @@ export default {
     yes: 'Yes',
     no: 'No',
   },
+  time: {
+    justNow: 'Just now',
+    minutesAgo: '{{count}} minute ago',
+    minutesAgo_plural: '{{count}} minutes ago',
+    hoursAgo: '{{count}} hour ago',
+    hoursAgo_plural: '{{count}} hours ago',
+    yesterday: 'Yesterday',
+  },
 
   BootScreen: {
     missingRequiredConfigurationKeys: 'Missing required configuration keys',

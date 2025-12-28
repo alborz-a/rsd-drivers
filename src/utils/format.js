@@ -1,7 +1,8 @@
-import getCurrency from './currencies';
 import countryLocaleMap from 'country-locale-map';
-import { isNone, isArray, isObject, defaults } from './';
-import { isToday, isYesterday, isThisWeek, isThisYear, format, differenceInMinutes, differenceInHours } from 'date-fns';
+import { differenceInHours, differenceInMinutes, format, isThisWeek, isThisYear, isToday, isYesterday } from 'date-fns';
+import { defaults, isArray, isNone, isObject } from './';
+import getCurrency from './currencies';
+import { translate } from './localize';
 
 export const defaultCurrenyOptions = {
     symbol: '$', // default currency symbol is '$'
@@ -380,12 +381,12 @@ export function formatWhatsAppTimestamp(date) {
 
     // Less than 1 minute ago
     if (minutesDiff < 1) {
-        return 'Just now';
+        return translate('time.justNow');
     }
 
     // Less than 60 minutes ago
     if (minutesDiff < 60) {
-        return `${minutesDiff} minute${minutesDiff > 1 ? 's' : ''} ago`;
+        return translate('time.minutesAgo', { count: minutesDiff });
     }
 
     // Same day
@@ -395,7 +396,7 @@ export function formatWhatsAppTimestamp(date) {
 
     // Yesterday
     if (isYesterday(date)) {
-        return 'Yesterday';
+        return translate('time.yesterday');
     }
 
     // Within the current week (not including today or yesterday)

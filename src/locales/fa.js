@@ -22,6 +22,14 @@ export default {
         yes: "فعال",
         no: "غیرفعال",
     },
+    time: {
+        justNow: "همین الان",
+        minutesAgo: "{{count}} دقیقه پیش",
+        minutesAgo_plural: "{{count}} دقیقه پیش",
+        hoursAgo: "{{count}} ساعت پیش",
+        hoursAgo_plural: "{{count}} ساعت پیش",
+        yesterday: "دیروز",
+    },
 
     BootScreen: {
         missingRequiredConfigurationKeys: "کلیدهای پیکربندی مورد نیاز ناقص هستند",
