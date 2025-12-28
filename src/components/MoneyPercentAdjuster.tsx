@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { Text, XStack, YStack, Button, useTheme } from 'tamagui';
+import { faMinus, faMoneyBill, faPercent, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faPlus, faMinus, faPercent, faMoneyBill } from '@fortawesome/free-solid-svg-icons';
-import { formatCurrency } from '../utils/format';
+import React, { useEffect, useState } from 'react';
+import { Button, Text, useTheme, XStack, YStack } from 'tamagui';
 import NavigatorConfig from '../../navigator.config';
+import { formatCurrency } from '../utils/format';
 
-const MoneyPercentAdjuster = ({ value: initialValue = 100, currency = 'USD', isPercent: initialIsPercent = false, style, onChange }) => {
+const MoneyPercentAdjuster = ({ value: initialValue = 100, currency = 'IRT', isPercent: initialIsPercent = false, style, onChange }) => {
     const theme = useTheme();
     const [value, setValue] = useState(initialValue);
     const [isPercent, setIsPercent] = useState(initialIsPercent);

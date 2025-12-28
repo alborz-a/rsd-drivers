@@ -42,7 +42,7 @@ const getOrderCurrency = (order) => {
             currency = entities[0].currency;
         }
     }
-    return currency ?? 'USD';
+    return currency ?? 'IRT';
 };
 
 const OrderScreen = ({ navigation, route }) => {

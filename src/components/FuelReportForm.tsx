@@ -1,17 +1,16 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { useNavigation } from '@react-navigation/native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { TouchableWithoutFeedback, Keyboard } from 'react-native';
-import { Text, YStack, Button, Spinner, Input, useTheme } from 'tamagui';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faSave } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { PortalHost } from '@gorhom/portal';
+import { useNavigation } from '@react-navigation/native';
 import { underscore } from 'inflected';
-import { uppercase } from '../utils/format';
-import { getDriverFuelReportStatuses, FuelReportStatus } from '../constants/Enums';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import { Keyboard, TouchableWithoutFeedback } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { Button, Input, Spinner, Text, useTheme, YStack } from 'tamagui';
 import BottomSheetSelect from '../components/BottomSheetSelect';
-import UnitInput from '../components/UnitInput';
 import MoneyInput from '../components/MoneyInput';
+import UnitInput from '../components/UnitInput';
+import { FuelReportStatus, getDriverFuelReportStatuses } from '../constants/Enums';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const FuelReportForm = ({ value = {}, onSubmit, isSubmitting = false, submitText = 'Publish Fuel Report' }) => {
@@ -24,7 +23,7 @@ const FuelReportForm = ({ value = {}, onSubmit, isSubmitting = false, submitText
         odometer: '',
         volume: '',
         cost: '',
-        currency: 'USD',
+        currency: 'IRT',
         ...value,
     });
     const [isBottomSheetPresenting, setIsBottomSheetPresenting] = useState(false);

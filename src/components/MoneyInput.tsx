@@ -1,20 +1,18 @@
-import React, { useState, useEffect, useMemo, useRef, useCallback } from 'react';
-import { FlatList, TextInput, Keyboard } from 'react-native';
-import { countries, getEmojiFlag } from 'countries-list';
-import BottomSheet, { BottomSheetView, BottomSheetFlatList, BottomSheetTextInput } from '@gorhom/bottom-sheet';
-import { useTheme, View, Text, Button, XStack, YStack, Input } from 'tamagui';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import BottomSheet, { BottomSheetFlatList, BottomSheetTextInput, BottomSheetView } from '@gorhom/bottom-sheet';
 import { Portal } from '@gorhom/portal';
-import { debounce } from '../utils';
-import { currencies, getCurrency } from '../utils/currencies';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { Keyboard } from 'react-native';
+import { Button, Input, Text, useTheme, XStack, YStack } from 'tamagui';
 import { useLanguage } from '../contexts/LanguageContext';
+import { currencies, getCurrency } from '../utils/currencies';
 
 const MoneyInput = ({
     value: _value,
     onChange,
     width = '100%',
-    defaultCurrency = 'USD',
+    defaultCurrency = 'IRT',
     type = 'volume',
     snapTo = '100%',
     backgroundColor = '$surface',

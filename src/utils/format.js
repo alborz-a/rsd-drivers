@@ -5,8 +5,8 @@ import getCurrency from './currencies';
 import { translate } from './localize';
 
 export const defaultCurrenyOptions = {
-    symbol: '$', // default currency symbol is '$'
-    format: '%s%v', // controls output: %s = symbol, %v = value (can be object, see docs)
+    symbol: ' تومان', // default currency symbol is 'تومان'
+    format: '%v%s', // controls output: %s = symbol, %v = value (can be object, see docs)
     decimal: '.', // decimal point separator
     thousand: ',', // thousands separator
     precision: 2, // decimal places
@@ -44,10 +44,10 @@ export function formatNumber(number, precision = 2, thousand = ',', decimal = '.
         isObject(precision)
             ? precision
             : {
-                  precision: precision,
-                  thousand: thousand,
-                  decimal: decimal,
-              },
+                precision: precision,
+                thousand: thousand,
+                decimal: decimal,
+            },
         defaultNumberOptions
     );
 
@@ -140,9 +140,9 @@ export function checkPrecision(val, base) {
     return isNaN(val) ? base : val;
 }
 
-export function formatCurrency(amount = 0, currency = 'USD', currencyDisplay = 'symbol', options = {}) {
+export function formatCurrency(amount = 0, currency = 'IRT', currencyDisplay = 'symbol', options = {}) {
     if (isNone(currency)) {
-        currency = 'USD';
+        currency = 'IRT';
     }
 
     const currencyData = getCurrency(currency);
@@ -204,12 +204,12 @@ export function formatMoney(number, symbol = '$', precision = 2, thousand = ',',
         isObject(symbol)
             ? symbol
             : {
-                  symbol: symbol,
-                  precision: precision,
-                  thousand: thousand,
-                  decimal: decimal,
-                  format: format,
-              },
+                symbol: symbol,
+                precision: precision,
+                thousand: thousand,
+                decimal: decimal,
+                format: format,
+            },
         defaultCurrenyOptions
     );
 

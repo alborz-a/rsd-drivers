@@ -24,10 +24,10 @@ export default class FormatUtil {
      * @return {string}
      * @memberof FormatUtil
      */
-    static currency(amount = 0, currency = 'USD', currencyDisplay = 'symbol', options = {}) {
+    static currency(amount = 0, currency = 'IRT', currencyDisplay = 'symbol', options = {}) {
         if (isVoid(currency)) {
-            // default back to usd
-            currency = 'USD';
+            // default back to irt
+            currency = 'IRT';
         }
 
         const currencyData = getCurrency(currency);
