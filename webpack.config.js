@@ -18,18 +18,24 @@ const compileNodeModules = [
   'react-native-web',
   'react-native-svg',
   'react-native-launch-navigator',
-  '@gorhom/bottom-sheet',
   'react-native-date-picker',
-  '@react-native-community/datetimepicker'
+  '@react-native-community/datetimepicker',
+  '@react-native-community/blur',
+  '@react-native/assets-registry',
+  '@backpackapp-io/react-native-toast',
+  '@bam.tech/react-native-image-resizer',
+  '@react-native-camera-roll/camera-roll',
+  'react-native-mmkv-storage'
 ].map(moduleName => path.resolve(appDirectory, `node_modules/${moduleName}`));
 
 module.exports = {
   entry: './index.web.tsx',
   mode: 'development',
   resolve: {
-    extensions: ['.web.js', '.js', '.jsx', '.tsx', '.ts', '.mjs'],
+    extensions: ['.web.tsx', '.web.ts', '.web.js', '.js', '.jsx', '.tsx', '.ts', '.mjs'],
     alias: {
       'react-native$': 'react-native-web',
+      'react-native-bootsplash': path.resolve(__dirname, 'webpack/mocks/react-native-bootsplash.js'),
       'react-native-background-geolocation': path.resolve(__dirname, 'webpack/mocks/react-native-background-geolocation.js'),
       'react-native-vision-camera': path.resolve(__dirname, 'webpack/mocks/react-native-vision-camera.js'),
       'react-native-permissions': path.resolve(__dirname, 'webpack/mocks/react-native-permissions.js'),
@@ -41,10 +47,17 @@ module.exports = {
       'react-native-fast-image': path.resolve(__dirname, 'webpack/mocks/react-native-fast-image.js'),
       'react-native-linear-gradient': path.resolve(__dirname, 'webpack/mocks/react-native-linear-gradient.js'),
       'react-native-image-picker': path.resolve(__dirname, 'webpack/mocks/empty-mock.js'),
-      'react-native-notifications': path.resolve(__dirname, 'webpack/mocks/empty-mock.js'),
+      'react-native-notifications': path.resolve(__dirname, 'webpack/mocks/react-native-notifications.js'),
       'react-native-fbsdk-next': path.resolve(__dirname, 'webpack/mocks/empty-mock.js'),
       '@react-native-google-signin/google-signin': path.resolve(__dirname, 'webpack/mocks/empty-mock.js'),
       '@invertase/react-native-apple-authentication': path.resolve(__dirname, 'webpack/mocks/empty-mock.js'),
+      '@react-native-community/blur': path.resolve(__dirname, 'webpack/mocks/react-native-community-blur.js'),
+      'react-native-mmkv-storage': path.resolve(__dirname, 'webpack/mocks/react-native-mmkv-storage.js'),
+      '@gorhom/bottom-sheet': path.resolve(__dirname, 'webpack/mocks/gorhom-bottom-sheet.js'),
+      'react-native-share': path.resolve(__dirname, 'webpack/mocks/react-native-share.js'),
+      'react-native-launch-navigator': path.resolve(__dirname, 'webpack/mocks/react-native-launch-navigator.js'),
+      '@react-native-camera-roll/camera-roll': path.resolve(__dirname, 'webpack/mocks/react-native-camera-roll.js'),
+      'react-native-background-fetch': path.resolve(__dirname, 'webpack/mocks/react-native-background-fetch.js'),
     },
   },
   output: {
@@ -55,12 +68,23 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.m?js/,
+        resolve: {
+          fullySpecified: false
+        }
+      },
+      {
+        test: /node_modules\/@fleetbase\/.*\.js$/,
+        type: 'javascript/auto',
+      },
+      {
         test: /\.(js|ts|tsx)$/,
         include: [
           path.resolve(__dirname, 'index.web.tsx'),
           path.resolve(__dirname, 'App.tsx'),
           path.resolve(__dirname, 'src'),
           path.resolve(__dirname, 'tamagui.config.ts'),
+          path.resolve(__dirname, 'webpack/mocks'),
           ...compileNodeModules
         ],
         use: {
@@ -106,6 +130,9 @@ module.exports = {
     compress: true,
     port: 8080,
     hot: true,
+    client: {
+        overlay: false,
+    },
   },
   plugins: [
     new webpack.DefinePlugin({

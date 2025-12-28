@@ -9,89 +9,90 @@
 <i> [webpack-dev-server] 404s will fallback to '/index.html'
  native  |       OrderManagerContext   ·    0 found   ·    0 opt   ·    0 flat     4ms
  native  |               ChatContext   ·    0 found   ·    0 opt   ·    0 flat     2ms
- native  |           DriverNavigator   ·   18 found   ·   15 opt   ·    3 flat    55ms
+ native  |           DriverNavigator   ·   18 found   ·   15 opt   ·    3 flat    60ms
  native  |                 CoreStack   ·    0 found   ·    0 opt   ·    0 flat     0ms
- native  |     DriverDashboardScreen   ·   21 found   ·   14 opt   ·   11 flat    41ms
- native  |    DriverOrderManagementS   ·   25 found   ·   21 opt   ·    7 flat    80ms
- native  |               OrderScreen   ·   54 found   ·   31 opt   ·   20 flat   238ms
- native  |     ProofOfDeliveryScreen   ·    4 found   ·    4 opt   ·    3 flat    13ms
- native  |              EntityScreen   ·   13 found   ·    6 opt   ·    2 flat    23ms
- native  |         CreateIssueScreen   ·    1 found   ·    1 opt   ·    0 flat     2ms
+ native  |    DriverOrderManagementS   ·   25 found   ·   21 opt   ·    7 flat    81ms
+ native  |     DriverDashboardScreen   ·   21 found   ·   14 opt   ·   11 flat    37ms
+ native  |     ProofOfDeliveryScreen   ·    4 found   ·    4 opt   ·    3 flat    14ms
+ native  |               OrderScreen   ·   54 found   ·   31 opt   ·   20 flat   257ms
+ native  |        DriverReportScreen   ·   70 found   ·   49 opt   ·   23 flat   148ms
+ native  |              EntityScreen   ·   13 found   ·    6 opt   ·    2 flat    26ms
  native  |           EditIssueScreen   ·    1 found   ·    1 opt   ·    0 flat     2ms
- native  |        DriverReportScreen   ·   70 found   ·   49 opt   ·   23 flat   131ms
+ native  |         CreateIssueScreen   ·    1 found   ·    1 opt   ·    0 flat     2ms
+ native  |               IssueScreen   ·   41 found   ·   34 opt   ·   14 flat    50ms
  native  |    CreateFuelReportScreen   ·    1 found   ·    1 opt   ·    0 flat     2ms
- native  |               IssueScreen   ·   41 found   ·   34 opt   ·   14 flat    47ms
- native  |      EditFuelReportScreen   ·    1 found   ·    1 opt   ·    0 flat     2ms
- native  |          FuelReportScreen   ·   36 found   ·   30 opt   ·   12 flat    49ms
- native  |            ChatHomeScreen   ·   16 found   ·   12 opt   ·    5 flat    39ms
- native  |         ChatChannelScreen   ·    8 found   ·    8 opt   ·    4 flat    31ms
- native  |    ChatParticipantsScreen   ·   25 found   ·   15 opt   ·   14 flat    59ms
- native  |    CreateChatChannelScree   ·   26 found   ·   20 opt   ·    8 flat    70ms
- native  |       DriverProfileScreen   ·   13 found   ·   11 opt   ·    2 flat    17ms
- native  |       DriverAccountScreen   ·   26 found   ·   18 opt   ·    6 flat    58ms
+ native  |      EditFuelReportScreen   ·    1 found   ·    1 opt   ·    0 flat     3ms
+ native  |            ChatHomeScreen   ·   16 found   ·   12 opt   ·    5 flat    38ms
+ native  |    ChatParticipantsScreen   ·   25 found   ·   15 opt   ·   14 flat    63ms
+ native  |         ChatChannelScreen   ·    8 found   ·    8 opt   ·    4 flat    22ms
+ native  |    CreateChatChannelScree   ·   26 found   ·   20 opt   ·    8 flat    68ms
+ native  |       DriverProfileScreen   ·   13 found   ·   11 opt   ·    2 flat    19ms
+ native  |          FuelReportScreen   ·   36 found   ·   30 opt   ·   12 flat    45ms
+ native  |       DriverAccountScreen   ·   26 found   ·   18 opt   ·    6 flat    67ms
  native  |        DriverOnlineToggle   ·    3 found   ·    3 opt   ·    1 flat    16ms
- native  |                BootScreen   ·    5 found   ·    5 opt   ·    1 flat    13ms
- native  |              HeaderButton   ·    1 found   ·    1 opt   ·    0 flat    12ms
- native  |                     Badge   ·    3 found   ·    2 opt   ·    1 flat    29ms
- native  |                TestScreen   ·    2 found   ·    2 opt   ·    0 flat     1ms
- native  |    LocationPermissionScre   ·   11 found   ·   10 opt   ·    1 flat    35ms
- native  |               LoginScreen   ·    6 found   ·    6 opt   ·    1 flat    20ms
- native  |    PhoneLoginVerifyScreen   ·   14 found   ·   14 opt   ·    5 flat    26ms
- native  |    CreateAccountVerifyScr   ·    6 found   ·    6 opt   ·    1 flat    17ms
- native  |       CreateAccountScreen   ·   10 found   ·    9 opt   ·    2 flat    26ms
- native  |          PhoneLoginScreen   ·    8 found   ·    8 opt   ·    1 flat    21ms
- native  |                 OrderCard   ·   37 found   ·   26 opt   ·   19 flat    63ms
- native  |             PastOrderCard   ·   12 found   ·   11 opt   ·    6 flat    31ms
- native  |            AdhocOrderCard   ·   20 found   ·   20 opt   ·    9 flat    39ms
+ native  |              HeaderButton   ·    1 found   ·    1 opt   ·    0 flat    15ms
+ native  |                     Badge   ·    3 found   ·    2 opt   ·    1 flat    39ms
+ native  |                BootScreen   ·    5 found   ·    5 opt   ·    1 flat    16ms
+ native  |                TestScreen   ·    2 found   ·    2 opt   ·    0 flat     2ms
+ native  |    LocationPermissionScre   ·   11 found   ·   10 opt   ·    1 flat    43ms
+ native  |               LoginScreen   ·    6 found   ·    6 opt   ·    1 flat    22ms
+ native  |          PhoneLoginScreen   ·    8 found   ·    8 opt   ·    1 flat    25ms
+ native  |    PhoneLoginVerifyScreen   ·   14 found   ·   14 opt   ·    5 flat    31ms
+ native  |       CreateAccountScreen   ·   10 found   ·    9 opt   ·    2 flat    35ms
+ native  |    CreateAccountVerifyScr   ·    6 found   ·    6 opt   ·    1 flat    19ms
+ native  |                 OrderCard   ·   37 found   ·   26 opt   ·   19 flat    65ms
+ native  |             PastOrderCard   ·   12 found   ·   11 opt   ·    6 flat    27ms
+ native  |            AdhocOrderCard   ·   20 found   ·   20 opt   ·    9 flat    43ms
  native  |                    Spacer   ·    1 found   ·    1 opt   ·    0 flat     4ms
- native  |         OrderWaypointList   ·   21 found   ·   18 opt   ·    7 flat    69ms
- native  |      OrderPayloadEntities   ·   17 found   ·   12 opt   ·    9 flat    26ms
- native  |            LiveOrderRoute   ·    7 found   ·    6 opt   ·    1 flat    21ms
+ native  |              CustomHeader   ·    5 found   ·    2 opt   ·    0 flat    13ms
+ native  |             CameraCapture   ·   20 found   ·   16 opt   ·    7 flat    69ms
+ native  |            LoadingOverlay   ·    5 found   ·    3 opt   ·    3 flat    18ms
+ native  |            LiveOrderRoute   ·    7 found   ·    6 opt   ·    1 flat    24ms
+ native  |         OrderWaypointList   ·   21 found   ·   18 opt   ·    7 flat    81ms
+ native  |      OrderPayloadEntities   ·   17 found   ·   12 opt   ·    9 flat    34ms
  native  |        OrderDocumentFiles   ·   13 found   ·   10 opt   ·    2 flat    23ms
- native  |          OrderProgressBar   ·    7 found   ·    7 opt   ·    2 flat    27ms
- native  |      OrderProofOfDelivery   ·   12 found   ·   11 opt   ·    5 flat    27ms
- native  |    CurrentDestinationSele   ·   33 found   ·   28 opt   ·   19 flat    88ms
- native  |            LoadingOverlay   ·    5 found   ·    3 opt   ·    3 flat    16ms
- native  |    DestinationChangedAler   ·   14 found   ·   13 opt   ·    4 flat    17ms
- native  |       OrderActivitySelect   ·   18 found   ·   13 opt   ·    6 flat    41ms
- native  |         OrderCustomerCard   ·   15 found   ·   10 opt   ·    5 flat    12ms
+ native  |         OrderCustomerCard   ·   15 found   ·   10 opt   ·    5 flat    13ms
+ native  |      OrderProofOfDelivery   ·   12 found   ·   11 opt   ·    5 flat    30ms
+ native  |          OrderProgressBar   ·    7 found   ·    7 opt   ·    2 flat    29ms
+ native  |    CurrentDestinationSele   ·   33 found   ·   28 opt   ·   19 flat   102ms
+ native  |       OrderActivitySelect   ·   18 found   ·   13 opt   ·    6 flat    46ms
+ native  |    DestinationChangedAler   ·   14 found   ·   13 opt   ·    4 flat    18ms
  native  |                   Content   ·   13 found   ·    8 opt   ·    8 flat    24ms
- native  |             CameraCapture   ·   20 found   ·   16 opt   ·    7 flat    66ms
- native  |              CustomHeader   ·    5 found   ·    2 opt   ·    0 flat    12ms
+ native  |                 TabSwitch   ·    3 found   ·    2 opt   ·    1 flat    23ms
  native  |                 IssueForm   ·   16 found   ·   16 opt   ·    2 flat    30ms
- native  |                 TabSwitch   ·    3 found   ·    2 opt   ·    1 flat    17ms
- native  |            FuelReportForm   ·   15 found   ·   15 opt   ·    2 flat    36ms
- native  |              PlaceMapView   ·    1 found   ·    1 opt   ·    0 flat     7ms
- native  |                  ChatFeed   ·    1 found   ·    1 opt   ·    1 flat     4ms
- native  |     ChatParticipantAvatar   ·    3 found   ·    3 opt   ·    1 flat     7ms
- native  |          ChatParticipants   ·    7 found   ·    6 opt   ·    2 flat    29ms
- native  |              ChatKeyboard   ·   10 found   ·    9 opt   ·    5 flat    40ms
- native  |         BottomSheetSelect   ·    7 found   ·    5 opt   ·    3 flat    21ms
- native  |                   Buttons   ·    5 found   ·    5 opt   ·    0 flat    18ms
- native  |                PhoneInput   ·    6 found   ·    2 opt   ·    0 flat    24ms
+ native  |            FuelReportForm   ·   15 found   ·   15 opt   ·    2 flat    38ms
+ native  |              PlaceMapView   ·    1 found   ·    1 opt   ·    0 flat     8ms
+ native  |     ChatParticipantAvatar   ·    3 found   ·    3 opt   ·    1 flat     8ms
+ native  |         BottomSheetSelect   ·    7 found   ·    5 opt   ·    3 flat    24ms
+ native  |              ChatKeyboard   ·   10 found   ·    9 opt   ·    5 flat    44ms
+ native  |          ChatParticipants   ·    7 found   ·    6 opt   ·    2 flat    33ms
+ native  |                  ChatFeed   ·    1 found   ·    1 opt   ·    1 flat     5ms
+ native  |        SetupWarningScreen   ·   14 found   ·   14 opt   ·    5 flat    22ms
+ native  |                PhoneInput   ·    6 found   ·    2 opt   ·    0 flat    29ms
+ native  |                   Buttons   ·    5 found   ·    5 opt   ·    0 flat    19ms
  native  |                     Input   ·    1 found   ·    1 opt   ·    1 flat     3ms
- native  |        SetupWarningScreen   ·   14 found   ·   14 opt   ·    5 flat    15ms
- native  |    MultipleCustomerAvatar   ·    4 found   ·    4 opt   ·    2 flat    55ms
- native  |               LoadingText   ·    3 found   ·    2 opt   ·    1 flat    11ms
- native  |            LocationMarker   ·    6 found   ·    5 opt   ·    1 flat   123ms
- native  |              WaypointList   ·    4 found   ·    3 opt   ·    3 flat    52ms
- native  |             CommentThread   ·    9 found   ·    5 opt   ·    2 flat    80ms
- native  |                MoneyInput   ·   13 found   ·    9 opt   ·    3 flat   101ms
- native  |             TextAreaSheet   ·    7 found   ·    6 opt   ·    4 flat    21ms
- native  |                 UnitInput   ·   10 found   ·    8 opt   ·    2 flat    87ms
- native  |                   ChatLog   ·    3 found   ·    2 opt   ·    1 flat     4ms
+ native  |    MultipleCustomerAvatar   ·    4 found   ·    4 opt   ·    2 flat    11ms
+ native  |               LoadingText   ·    3 found   ·    2 opt   ·    1 flat     5ms
+ native  |            LocationMarker   ·    6 found   ·    5 opt   ·    1 flat    50ms
+ native  |             CommentThread   ·    9 found   ·    5 opt   ·    2 flat    30ms
+ native  |              WaypointList   ·    4 found   ·    3 opt   ·    3 flat    26ms
+ native  |                 UnitInput   ·   10 found   ·    8 opt   ·    2 flat    41ms
+ native  |             TextAreaSheet   ·    7 found   ·    6 opt   ·    4 flat    22ms
+ native  |                MoneyInput   ·   13 found   ·    9 opt   ·    3 flat    44ms
+ native  |                   ChatLog   ·    3 found   ·    2 opt   ·    1 flat     3ms
+ native  |               ChatMessage   ·   17 found   ·   15 opt   ·    8 flat    39ms
  native  |            ChatAttachment   ·    1 found   ·    0 opt   ·    1 flat     2ms
- native  |               ChatMessage   ·   17 found   ·   15 opt   ·    8 flat    45ms
- native  |            TrackingMarker   ·    4 found   ·    1 opt   ·    1 flat    13ms
- native  |                   Comment   ·   25 found   ·   21 opt   ·    4 flat    91ms
+ native  |                   Comment   ·   25 found   ·   21 opt   ·    4 flat    75ms
+ native  |            TrackingMarker   ·    4 found   ·    1 opt   ·    1 flat    11ms
+<i> [webpack-dev-middleware] wait until bundle finished: /
 asset bundle.js 14.5 MiB [emitted] (name: main)
 asset 7229777db752d8405b4f4e1c8a3b34ad.png 384 KiB [emitted] [immutable] [from: assets/images/isometric-geolocation-1.png] (auxiliary name: main)
 asset index.html 3.2 KiB [emitted]
 runtime modules 27.7 KiB 15 modules
 orphan modules 8.47 KiB [orphan] 13 modules
-modules by path ./node_modules/ 11.3 MiB 2147 modules
-modules by path ./src/ 891 KiB 119 modules
-modules by path ./webpack/mocks/*.js 2.48 KiB 10 modules
+modules by path ./node_modules/ 11.4 MiB 2134 modules
+modules by path ./src/ 907 KiB 120 modules
+modules by path ./webpack/mocks/*.js 9.39 KiB 19 modules
 modules by path ./assets/ 14.1 KiB
   ./assets/navigator-icon-transparent.png 6.17 KiB [built] [code generated]
   + 4 modules
@@ -102,89 +103,4 @@ modules by path ./*.ts 6.92 KiB
   ./tamagui.config.ts 6.82 KiB [built] [code generated]
   ./navigator.config.ts 99 bytes [built] [code generated]
 ./config/default.js 692 bytes [built] [code generated]
-
-WARNING in ./node_modules/@backpackapp-io/react-native-toast/lib/module/index.js 4:0-65
-export 'ToastAnimationType' (reexported as 'ToastAnimationType') was not found in './core/types' (possible exports: ToastPosition, resolveValue)
- @ ./App.tsx 1:343-388
- @ ./index.web.tsx 1:115-131
-
-WARNING in ./node_modules/@bam.tech/react-native-image-resizer/lib/module/NativeImageResizer.js 2:15-47
-export 'TurboModuleRegistry' (imported as 'TurboModuleRegistry') was not found in 'react-native' (possible exports: AccessibilityInfo, ActivityIndicator, Alert, Animated, AppRegistry, AppState, Appearance, BackHandler, Button, CheckBox, Clipboard, DeviceEventEmitter, Dimensions, Easing, FlatList, I18nManager, Image, ImageBackground, InteractionManager, Keyboard, KeyboardAvoidingView, LayoutAnimation, Linking, LogBox, Modal, NativeEventEmitter, NativeModules, PanResponder, Picker, PixelRatio, Platform, Pressable, ProgressBar, RefreshControl, SafeAreaView, ScrollView, SectionList, Share, StatusBar, StyleSheet, Switch, Text, TextInput, Touchable, TouchableHighlight, TouchableNativeFeedback, TouchableOpacity, TouchableWithoutFeedback, UIManager, Vibration, View, VirtualizedList, YellowBox, __esModule, findNodeHandle, processColor, render, unmountComponentAtNode, unstable_createElement, useColorScheme, useLocaleContext, useWindowDimensions)
- @ ./node_modules/@bam.tech/react-native-image-resizer/lib/module/index.js 4:44-83
- @ ./src/utils/index.js 1:2773-2820
- @ ./src/contexts/AuthContext.tsx 1:868-887
- @ ./App.tsx 1:567-604
- @ ./index.web.tsx 1:115-131
-
-WARNING in ./node_modules/@react-native-camera-roll/camera-roll/lib/module/NativeCameraRollModule.js 5:15-47
-export 'TurboModuleRegistry' (imported as 'TurboModuleRegistry') was not found in 'react-native' (possible exports: AccessibilityInfo, ActivityIndicator, Alert, Animated, AppRegistry, AppState, Appearance, BackHandler, Button, CheckBox, Clipboard, DeviceEventEmitter, Dimensions, Easing, FlatList, I18nManager, Image, ImageBackground, InteractionManager, Keyboard, KeyboardAvoidingView, LayoutAnimation, Linking, LogBox, Modal, NativeEventEmitter, NativeModules, PanResponder, Picker, PixelRatio, Platform, Pressable, ProgressBar, RefreshControl, SafeAreaView, ScrollView, SectionList, Share, StatusBar, StyleSheet, Switch, Text, TextInput, Touchable, TouchableHighlight, TouchableNativeFeedback, TouchableOpacity, TouchableWithoutFeedback, UIManager, Vibration, View, VirtualizedList, YellowBox, __esModule, findNodeHandle, processColor, render, unmountComponentAtNode, unstable_createElement, useColorScheme, useLocaleContext, useWindowDimensions)
- @ ./node_modules/@react-native-camera-roll/camera-roll/lib/module/CameraRoll.js 8:0-53 36:73-86 54:11-37 86:11-41 101:11-34 120:11-34 136:11-45 147:11-42
- @ ./node_modules/@react-native-camera-roll/camera-roll/lib/module/index.js 2:0-29 2:0-29
- @ ./src/components/OrderDocumentFiles.tsx 1:710-758
- @ ./src/screens/OrderScreen.tsx 1:2348-2391
- @ ./src/navigation/DriverNavigator.tsx 1:1075-1108
- @ ./src/navigation/AppNavigator.tsx 1:525-553
- @ ./App.tsx 1:918-958
- @ ./index.web.tsx 1:115-131
-
-WARNING in ./node_modules/@react-native-camera-roll/camera-roll/lib/module/NativeCameraRollPermissionModule.js 4:15-38
-export 'TurboModuleRegistry' (imported as 'TurboModuleRegistry') was not found in 'react-native' (possible exports: AccessibilityInfo, ActivityIndicator, Alert, Animated, AppRegistry, AppState, Appearance, BackHandler, Button, CheckBox, Clipboard, DeviceEventEmitter, Dimensions, Easing, FlatList, I18nManager, Image, ImageBackground, InteractionManager, Keyboard, KeyboardAvoidingView, LayoutAnimation, Linking, LogBox, Modal, NativeEventEmitter, NativeModules, PanResponder, Picker, PixelRatio, Platform, Pressable, ProgressBar, RefreshControl, SafeAreaView, ScrollView, SectionList, Share, StatusBar, StyleSheet, Switch, Text, TextInput, Touchable, TouchableHighlight, TouchableNativeFeedback, TouchableOpacity, TouchableWithoutFeedback, UIManager, Vibration, View, VirtualizedList, YellowBox, __esModule, findNodeHandle, processColor, render, unmountComponentAtNode, unstable_createElement, useColorScheme, useLocaleContext, useWindowDimensions)
- @ ./node_modules/@react-native-camera-roll/camera-roll/lib/module/CameraRollIOSPermission.js 2:0-76 8:13-39 11:69-95 14:9-51 18:9-62 22:9-60 26:9-57
- @ ./node_modules/@react-native-camera-roll/camera-roll/lib/module/index.js 3:0-42 3:0-42
- @ ./src/components/OrderDocumentFiles.tsx 1:710-758
- @ ./src/screens/OrderScreen.tsx 1:2348-2391
- @ ./src/navigation/DriverNavigator.tsx 1:1075-1108
- @ ./src/navigation/AppNavigator.tsx 1:525-553
- @ ./App.tsx 1:918-958
- @ ./index.web.tsx 1:115-131
-
-ERROR in ./node_modules/@react-native-community/blur/lib/module/index.js 1:0-52
-Module not found: Error: Can't resolve './components/BlurView' in '/app/node_modules/@react-native-community/blur/lib/module'
- @ ./src/navigation/DriverNavigator.tsx 1:413-452
- @ ./src/navigation/AppNavigator.tsx 1:525-553
- @ ./App.tsx 1:918-958
- @ ./index.web.tsx 1:115-131
-
-ERROR in ./node_modules/@react-native-community/blur/lib/module/index.js 2:0-60
-Module not found: Error: Can't resolve './components/VibrancyView' in '/app/node_modules/@react-native-community/blur/lib/module'
- @ ./src/navigation/DriverNavigator.tsx 1:413-452
- @ ./src/navigation/AppNavigator.tsx 1:525-553
- @ ./App.tsx 1:918-958
- @ ./index.web.tsx 1:115-131
-
-ERROR in ./node_modules/@react-native/assets-registry/registry.js 13:7
-Module parse failed: Unexpected token (13:7)
-You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
-| 'use strict';
-|
-> export type AssetDestPathResolver = 'android' | 'generic';
-|
-| export type PackagerAsset = {
- @ ./node_modules/react-native-svg/lib/module/lib/resolveAssetUri.js 1:327-376
- @ ./node_modules/react-native-svg/lib/module/css/LocalSvg.js 1:1635-1668
- @ ./node_modules/react-native-svg/lib/module/css/index.js 1:980-1001
- @ ./src/components/TrackingMarker.tsx 1:612-643
- @ ./src/components/DriverMarker.tsx 1:1010-1037
- @ ./src/components/LiveOrderRoute.tsx 1:1420-1445
- @ ./src/screens/OrderScreen.tsx 1:2074-2113
- @ ./src/navigation/DriverNavigator.tsx 1:1075-1108
- @ ./src/navigation/AppNavigator.tsx 1:525-553
- @ ./App.tsx 1:918-958
- @ ./index.web.tsx 1:115-131
-
-ERROR in ./App.tsx 1:631-677
-Module not found: Error: Can't resolve './src/contexts/SocketClusterContext' in '/app'
- @ ./index.web.tsx 1:115-131
-
-ERROR in ./src/hooks/use-socket-cluster-client.ts 1:397-440
-Module not found: Error: Can't resolve '../contexts/SocketClusterContext' in '/app/src/hooks'
- @ ./src/screens/DriverOrderManagementScreen.tsx 1:1048-1093
- @ ./src/navigation/DriverNavigator.tsx 1:984-1033
- @ ./src/navigation/AppNavigator.tsx 1:525-553
- @ ./App.tsx 1:918-958
- @ ./index.web.tsx 1:115-131
-
-4 errors have detailed information that is not shown.
-Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
-
-webpack 5.97.1 compiled with 5 errors and 4 warnings in 64978 ms
+webpack 5.97.1 compiled successfully in 52485 ms
