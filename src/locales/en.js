@@ -144,6 +144,10 @@ export default {
   DriverDashboardScreen: {
     activeOrders: 'Active Orders',
     location: 'Location:',
+    latitude: 'Latitude',
+    longitude: 'Longitude',
+    heading: 'Heading',
+    altitude: 'Altitude',
     speed: 'Speed',
     tracking: 'Tracking:',
   },

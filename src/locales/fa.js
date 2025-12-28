@@ -284,6 +284,10 @@ export default {
     DriverDashboardScreen: {
         activeOrders: "سفارشات فعال",
         location: "موقعیت مکانی:",
+        latitude: "عرض جغرافیایی",
+        longitude: "طول جغرافیایی",
+        heading: "جهت",
+        altitude: "ارتفاع",
         speed: "سرعت",
         tracking: "در حال ردیابی:",
     },

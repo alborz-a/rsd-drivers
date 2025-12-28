@@ -1,12 +1,10 @@
-import { useNavigation } from '@react-navigation/native';
-import { Text, YStack, XStack, useTheme } from 'tamagui';
+import { Text, XStack, YStack, useTheme } from 'tamagui';
+import OdometerNumber from '../components/OdometerNumber';
+import { useLanguage } from '../contexts/LanguageContext';
 import { useLocation } from '../contexts/LocationContext';
 import { useOrderManager } from '../contexts/OrderManagerContext';
-import { humanize } from 'inflected';
-import { get } from '../utils';
-import OdometerNumber from '../components/OdometerNumber';
 import useAppTheme from '../hooks/use-app-theme';
-import { useLanguage } from '../contexts/LanguageContext';
+import { get } from '../utils';
 
 const WidgetContainer = ({ px = '$4', py = '$4', children, ...props }) => {
     const { isDarkMode } = useAppTheme();
@@ -19,7 +17,6 @@ const WidgetContainer = ({ px = '$4', py = '$4', children, ...props }) => {
 
 const DriverDashboardScreen = () => {
     const theme = useTheme();
-    const navigation = useNavigation();
     const { isTracking, location } = useLocation();
     const { allActiveOrders } = useOrderManager();
     const { t } = useLanguage();
@@ -36,23 +33,6 @@ const DriverDashboardScreen = () => {
                             <YStack flex={1} alignItems='flex-end'>
                                 <Text color={isTracking ? '$successBorder' : '$textSecondary'}>{isTracking ? t('common.yes') : t('common.no')}</Text>
                             </YStack>
-                        </XStack>
-                    </WidgetContainer>
-                    <WidgetContainer>
-                        <Text color='$textPrimary' fontWeight='bold' mb='$3'>
-                            {t('DriverDashboardScreen.location')}
-                        </Text>
-                        <XStack flexWrap='wrap' gap='$3'>
-                            {['latitude', 'longitude', 'heading', 'altitude'].map((key, index) => {
-                                return (
-                                    <YStack key={index} width='45%' overflow='hidden'>
-                                        <Text color='$textSecondary'>{humanize(key)}:</Text>
-                                        <Text color='$textPrimary' numberOfLines={1}>
-                                            {get(location, `coords.${key}`)}
-                                        </Text>
-                                    </YStack>
-                                );
-                            })}
                         </XStack>
                     </WidgetContainer>
                 </YStack>
