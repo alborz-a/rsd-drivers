@@ -16,5 +16,8 @@
     },
     "[swift]": {
         "editor.defaultFormatter": "vknabel.vscode-swiftformat"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
     }
 }
