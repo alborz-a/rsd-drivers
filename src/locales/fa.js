@@ -333,7 +333,9 @@ export default {
         selectParticipants: "انتخاب شرکت کنندگان:",
         unselect: "لغو انتخاب",
     },
-    EditAccountPropertyScreen: {},
+    EditAccountPropertyScreen: {
+        changesSaved: "تغییرات ذخیره شد.",
+    },
     TestScreen: {
         helloWorld: "سلام دنیا",
     },
@@ -347,6 +349,7 @@ export default {
     },
     OrderScreen: {
         acceptAdHocOrder: "پذیرش سفارش موقت؟",
+        accept: "پذیرفتن",
         acceptOrder: "قبول سفارش",
         byAcceptingThisAdHocOrderItWillBecomeAssignedToYouAndTheOrderWillStartImmediatley: "با پذیرش این سفارش موقت، به شما واگذار می شود و سفارش بلافاصله شروع می شود.",
         byDimissingThisAdHocOrderItWillNoLongerDisplayAsAnAvailableOrder: "با رد این سفارش موقت، دیگر به عنوان یک سفارش موجود نمایش داده نخواهد شد.",
@@ -362,6 +365,7 @@ export default {
         id: "شناسه",
         internalId: "شناسه داخلی",
         nextDestination: "مقصد بعدی",
+        ok: "باشه",
         orderComments: "نظرات سفارش",
         orderDocumentsFiles: "اسناد و فایل های سفارش",
         orderInformation: "اطلاعات سفارش",
@@ -371,6 +375,7 @@ export default {
         orderProgress: "پیشرفت سفارش",
         orderProof: "اثبات سفارش",
         orderRoute: "مسیر سفارش",
+        orderStatusUpdatedTo: "وضعیت سفارش به روز شد: {{status}}",
         proofOfDelivery: "اثبات تحویل",
         startNavigation: "شروع ناوبری",
         startOrder: "شروع سفارش",
@@ -380,7 +385,9 @@ export default {
         trackingNumber: "شماره پیگیری",
         type: "نوع",
         updateActivity: "به روز رسانی فعالیت",
+        updatingActivity: "در حال به روز رسانی فعالیت:",
         warning: "هشدار!",
+        waypointActivityCompleted: "فعالیت ایستگاه بین راهی برای مقصد {{previousDestinationAddress}} تکمیل شد. مقصد فعلی شما اکنون {{currentDestinationAddress}} است. شما می توانید مقصد را در هر زمان با فشار دادن دکمه 'مقصد فعلی' تغییر دهید.",
         waypointCompleted: "ایستگاه بین راهی تکمیل شد",
     },
     enums: {
@@ -414,5 +421,18 @@ export default {
         orders: "سفارشات",
         stopLeft: "ایستگاه باقیمانده",
         stopsLeft: "ایستگاه‌های باقیمانده",
-    }
+    },
+    ProofOfDeliveryScreen: {
+        capturingProofOfDelivery: "در حال ثبت اثبات تحویل...",
+        unableToValidateQrCode: "امکان تأیید کد QR گرفته شده وجود ندارد.",
+        signatureSaveError: "در ذخیره امضا مشکلی پیش آمد.",
+        unableToUploadPhotos: "امکان بارگذاری عکس‌های گرفته شده وجود ندارد.",
+    },
+    LoginScreen: {
+        loggedInWith: "با موفقیت وارد شدید",
+    },
+    OAuth: {
+        appleSignInNotSupported: "ورود با اپل در این دستگاه پشتیبانی نمی‌شود",
+        appleSignInFailed: "ورود با اپل ناموفق بود: توکن یا کد مجوز وجود ندارد.",
+    },
 };

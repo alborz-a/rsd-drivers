@@ -8,10 +8,12 @@ import { useAuth } from '../contexts/AuthContext';
 import { useNotification } from '../contexts/NotificationContext';
 import { Settings as FacebookSDKSettings, LoginManager as FacebookLoginManager, Profile as FacebookProfile } from 'react-native-fbsdk-next';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const APP_LINK_PREFIX = config('APP_LINK_PREFIX');
 
 const useOAuth = () => {
+    const { t } = useLanguage();
     const { adapter } = useFleetbase();
     const { createCustomerSession } = useAuth();
     const [authState, setAuthState] = useState(null);
@@ -46,7 +48,7 @@ const useOAuth = () => {
 
         try {
             if (!appleAuth.isSupported) {
-                return toast.error('Apple Sign-In is not supported on this device');
+                return toast.error(t('OAuth.appleSignInNotSupported'));
             }
 
             // Perform Apple Sign-In
@@ -58,7 +60,7 @@ const useOAuth = () => {
 
             const { identityToken, authorizationCode, email, fullName, user: appleUserId } = appleAuthResponse;
             if (!identityToken || !authorizationCode) {
-                return toast.error('Apple Sign-In failed: Missing token or authorization code.');
+                return toast.error(t('OAuth.appleSignInFailed'));
             }
 
             // Get the user's name

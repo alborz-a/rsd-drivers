@@ -37,7 +37,7 @@ const EditAccountPropertyScreen = ({ route }) => {
         try {
             const updatedCustomer = await runWithLoading(customer.update({ [property.key]: value }));
             setCustomer(updatedCustomer);
-            toast.success(t('EditAccountPropertyScreen.' + property.name) + ' changes saved.');
+            toast.success(`${t('EditAccountPropertyScreen.' + property.name)} ${t('EditAccountPropertyScreen.changesSaved')}`);
             navigation.goBack();
         } catch (error) {
             toast.error(error.message);

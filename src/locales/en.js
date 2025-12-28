@@ -170,6 +170,7 @@ export default {
     volume: 'Volume:',
   },
   EditAccountPropertyScreen: {
+    changesSaved: 'changes saved.',
   },
   EditLocationCoordScreen: {
     savePosition: 'Save Position',
@@ -319,6 +320,7 @@ export default {
   },
   OrderScreen: {
     acceptAdHocOrder: 'Accept Ad-Hoc order?',
+    accept: 'Accept',
     acceptOrder: 'Accept Order',
     byAcceptingThisAdHocOrderItWillBecomeAssignedToYouAndTheOrderWillStartImmediatley: 'By accepting this ad-hoc order it will become assigned to you and the order will start immediatley.',
     byDimissingThisAdHocOrderItWillNoLongerDisplayAsAnAvailableOrder: 'By dimissing this ad-hoc order it will no longer display as an available order.',
@@ -334,6 +336,7 @@ export default {
     id: 'ID',
     internalId: 'Internal ID',
     nextDestination: 'Next Destination',
+    ok: 'OK',
     orderComments: 'Order Comments',
     orderDocumentsFiles: 'Order Documents & Files',
     orderInformation: 'Order Information',
@@ -343,6 +346,7 @@ export default {
     orderProgress: 'Order Progress',
     orderProof: 'Order Proof',
     orderRoute: 'Order Route',
+    orderStatusUpdatedTo: 'Order status updated to: {{status}}',
     proofOfDelivery: 'Proof of Delivery',
     startNavigation: 'Start Navigation',
     startOrder: 'Start Order',
@@ -352,7 +356,9 @@ export default {
     trackingNumber: 'Tracking Number',
     type: 'Type',
     updateActivity: 'Update Activity',
+    updatingActivity: 'Updating Activity:',
     warning: 'Warning!',
+    waypointActivityCompleted: 'Waypoint activity completed for destination {{previousDestinationAddress}}. Your current destination is now {{currentDestinationAddress}}. You can change the destination at anytime by pressing the "Current Destination" button.',
     waypointCompleted: 'Waypoint Completed',
   },
   PastOrderCard: {
@@ -415,5 +421,18 @@ export default {
     orders: 'orders',
     stopLeft: 'stop left',
     stopsLeft: 'stops left',
+  },
+  ProofOfDeliveryScreen: {
+    capturingProofOfDelivery: 'Capturing Proof of Delivery...',
+    unableToValidateQrCode: 'Unable to validate captured QR Code.',
+    signatureSaveError: 'Something went wrong saving the signature.',
+    unableToUploadPhotos: 'Unable to upload captured photos.',
+  },
+  LoginScreen: {
+    loggedInWith: 'Logged in with',
+  },
+  OAuth: {
+    appleSignInNotSupported: 'Apple Sign-In is not supported on this device',
+    appleSignInFailed: 'Apple Sign-In failed: Missing token or authorization code.',
   },
 };
