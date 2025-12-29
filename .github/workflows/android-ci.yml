@@ -108,30 +108,6 @@ jobs:
                   java-version: '17'
 
             # ============================================
-            # GRADLE CACHES - Use restore/save pattern to prevent per-tag duplication
-            # Caches are only saved when yarn.lock or gradle files change
-            # ============================================
-            - name: Restore Gradle Wrapper cache
-              if: env.CLEAN_BUILD != 'true'
-              uses: actions/cache/restore@v4
-              id: gradle-wrapper-cache
-              with:
-                  path: ~/.gradle/wrapper
-                  key: gradle-wrapper-${{ hashFiles('**/gradle-wrapper.properties') }}
-                  restore-keys: |
-                      gradle-wrapper-
-
-            - name: Restore Gradle Dependencies cache
-              if: env.CLEAN_BUILD != 'true'
-              uses: actions/cache/restore@v4
-              id: gradle-deps-cache
-              with:
-                  path: ~/.gradle/caches
-                  key: gradle-caches-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
-                  restore-keys: |
-                      gradle-caches-
-
-            # ============================================
             # NINJA - Check if pre-installed before installing
             # ============================================
             - name: Check/Install Ninja
@@ -180,14 +156,15 @@ jobs:
 
             # ============================================
             # GRADLE SETUP WITH CACHING
-            # cache-overwrite: true prevents creating duplicate entries
+            # gradle/actions handles all Gradle caching automatically
+            # Removed cache-read-only to allow saving on tag builds
             # ============================================
             - name: Setup Gradle
               uses: gradle/actions/setup-gradle@v4
               with:
                   cache-disabled: ${{ env.CLEAN_BUILD == 'true' }}
-                  cache-read-only: ${{ github.ref != 'refs/heads/main' && env.CLEAN_BUILD != 'true' }}
                   cache-overwrite-existing: true
+                  gradle-home-cache-cleanup: true
 
             - name: Make Gradlew Executable
               run: cd android && chmod +x ./gradlew
@@ -258,23 +235,6 @@ jobs:
                   name: android-debug-${{ github.ref_name }}-apk
                   path: android/app/build/outputs/apk/debug/app-debug.apk
                   retention-days: 30
-
-            # ============================================
-            # SAVE CACHES - Only if not already cached (prevents duplicates)
-            # ============================================
-            - name: Save Gradle Wrapper cache
-              if: steps.gradle-wrapper-cache.outputs.cache-hit != 'true'
-              uses: actions/cache/save@v4
-              with:
-                  path: ~/.gradle/wrapper
-                  key: gradle-wrapper-${{ hashFiles('**/gradle-wrapper.properties') }}
-
-            - name: Save Gradle Dependencies cache
-              if: steps.gradle-deps-cache.outputs.cache-hit != 'true'
-              uses: actions/cache/save@v4
-              with:
-                  path: ~/.gradle/caches
-                  key: gradle-caches-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
 
     create_release:
         runs-on: ubuntu-latest
