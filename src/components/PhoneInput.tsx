@@ -16,10 +16,10 @@ const PhoneInput = ({ value, onChange, bg, width = '100%', size = '$5', wrapperP
     // Initialize phone number state
     const [phoneNumber, setPhoneNumber] = useState(() => {
         if (typeof value === 'string' && value.startsWith('+98')) {
-            return value.substring(3);
+            return `0${value.substring(3)}`;
         }
         // Return raw value (without country code) or empty string
-        return typeof value === 'string' ? value.replace(/^\+\d+/, '') : '';
+        return value || '';
     });
 
     const phoneInputRef = useRef(null);
@@ -31,39 +31,33 @@ const PhoneInput = ({ value, onChange, bg, width = '100%', size = '$5', wrapperP
 
     useEffect(() => {
         if (onChange) {
-            const combinedValue = `+${IRAN_COUNTRY.phone}${phoneNumber}`;
-            onChange(combinedValue, phoneNumber, IRAN_COUNTRY);
+            const rawPhoneNumber = phoneNumber.startsWith('0') ? phoneNumber.substring(1) : phoneNumber;
+            const combinedValue = `+${IRAN_COUNTRY.phone}${rawPhoneNumber}`;
+            onChange(combinedValue, rawPhoneNumber, IRAN_COUNTRY);
         }
     }, [phoneNumber, onChange]);
 
     return (
         <YStack space='$4' {...wrapperProps}>
-            <XStack width='100%' paddingHorizontal={0} shadowOpacity={0} shadowRadius={0} borderWidth={1} borderColor='$borderColorWithShadow' borderRadius='$5' bg={backgroundColor} direction='ltr'>
-                {/* Static Country Code Display - No longer a button */}
-                <XStack alignItems='center' space='$2' paddingHorizontal='$3' borderRightWidth={1} borderRightColor='$borderColor' justifyContent='center' width={80} maxWidth={80} direction='ltr'>
-                    <Text fontSize={size}>{IRAN_COUNTRY.emoji}</Text>
-                    <Text fontSize={size}>+{IRAN_COUNTRY.phone}</Text>
-                </XStack>
-                
-                <Input
-                    size={size}
-                    ref={phoneInputRef}
-                    flex={1}
-                    placeholder={t('PhoneInput.enterPhoneNumber')}
-                    keyboardType='phone-pad'
-                    value={phoneNumber}
-                    onChangeText={setPhoneNumber}
-                    onFocus={handleInputFocus}
-                    bg={backgroundColor}
-                    color='$textPrimary'
-                    textAlign='left'
-                    borderRadius={0}
-                    borderTopRightRadius='$3'
-                    borderBottomRightRadius='$3'
-                    overflow='hidden'
-                    placeholderTextColor={isDarkMode ? '$gray-700' : '$gray-400'}
-                />
-            </XStack>
+            <Input
+                size={size}
+                ref={phoneInputRef}
+                width='100%'
+                placeholder={t('PhoneInput.enterFullPhoneNumber', 'Enter phone number, e.g. 0912...')}
+                keyboardType='phone-pad'
+                value={phoneNumber}
+                onChangeText={setPhoneNumber}
+                onFocus={handleInputFocus}
+                bg={backgroundColor}
+                color='$textPrimary'
+                textAlign='left'
+                borderRadius='$5'
+                borderWidth={1}
+                borderColor='$borderColorWithShadow'
+                overflow='hidden'
+                placeholderTextColor={isDarkMode ? '$gray-700' : '$gray-400'}
+                direction='ltr'
+            />
         </YStack>
     );
 };

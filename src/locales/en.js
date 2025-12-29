@@ -387,8 +387,10 @@ export default {
     sendVerificationCode: 'Send Verification Code',
   },
   PhoneLoginVerifyScreen: {
+    title: 'Verify your mobile number',
+    subtitle: 'Verification code sent to {{phone}}',
     unableToSendSms: 'Unable to send SMS.',
-    verifyCode: 'Verify Code',
+    verifyCode: 'Verify',
   },
   QrCodeScanner: {
     noCameraAvailable: 'No camera available',

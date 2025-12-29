@@ -52,6 +52,7 @@ import HeaderButton from '../components/HeaderButton';
 import Badge from '../components/Badge';
 import DeviceInfo from 'react-native-device-info';
 import { useLanguage } from '../contexts/LanguageContext';
+import DirectionalIcon from '../components/DirectionalIcon';
 
 const isAndroid = Platform.OS === 'android';
 const importedIconsMap = {
@@ -155,7 +156,7 @@ function getDefaultTabIcon(routeName) {
     let icon;
     switch (routeName) {
         case 'DriverDashboardTab':
-            icon = faGaugeHigh;
+            icon = faHome;
             break;
         case 'DriverTaskTab':
             icon = faClipboardList;
@@ -580,7 +581,7 @@ const DriverNavigator = createBottomTabNavigator({
             tabBarIcon: ({ focused }) => {
                 const icon = getDefaultTabIcon(route.name);
 
-                return <FontAwesomeIcon icon={icon} size={isAndroid ? 18 : 20} color={focused ? focusedColor : blurredColor} />;
+                return <DirectionalIcon icon={icon} size={isAndroid ? 18 : 20} color={focused ? focusedColor : blurredColor} />;
             },
             tabBarLabelStyle: ({ focused }) => {
                 return {

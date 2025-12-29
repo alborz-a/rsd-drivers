@@ -264,8 +264,10 @@ export default {
         sendVerificationCode: "ارسال کد تأیید",
     },
     PhoneLoginVerifyScreen: {
+        title: "تایید شماره موبایل",
+        subtitle: "کد تایید به شماره {{phone}} ارسال شد",
         unableToSendSms: "ارسال پیامک امکان‌پذیر نیست.",
-        verifyCode: "تأیید کد",
+        verifyCode: "تأیید",
     },
     CreateAccountScreen: {
         createAccount: "ایجاد حساب کاربری",

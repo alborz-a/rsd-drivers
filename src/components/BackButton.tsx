@@ -1,6 +1,6 @@
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { useNavigation } from '@react-navigation/native';
-import { getRTLIconStyle } from '../utils/localization';
+import DirectionalIcon from './DirectionalIcon';
 import HeaderButton from './HeaderButton';
 
 const BackButton = ({ ...props }) => {
@@ -15,7 +15,7 @@ const BackButton = ({ ...props }) => {
         }
     };
 
-    return <HeaderButton onPress={handlePress} icon={faArrowLeft} iconStyle={getRTLIconStyle()} {...props} />;
+    return <HeaderButton onPress={handlePress} icon={faArrowLeft} iconComponent={DirectionalIcon} {...props} />;
 };
 
 export default BackButton;
