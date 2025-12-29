@@ -39,7 +39,6 @@ const DriverOnlineToggle = ({ showLabel = false, ...props }) => {
             >
                 <Switch.Thumb animation='quick' bg={isDarkMode ? '$gray-200' : '$white'} borderColor={isDarkMode ? '$gray-700' : '$gray-500'} borderWidth={1} />
             </Switch>
-            {showLabel && (
                 <Label htmlFor='driverOnline' color='$gray-500' size='$2' lineHeight='$4'>
                     {checked ? t('common.online') : t('common.offline')}
                 </Label>
