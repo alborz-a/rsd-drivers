@@ -5,6 +5,7 @@ const path = require('path');
 // Use the new logo for app icons (NOT splash screen)
 const LOGO_SVG_PATH = 'assets/Logo-Drivers.svg';
 const ANDROID_RES_PATH = 'android/app/src/main/res';
+const ANDROID_DEBUG_RES_PATH = 'android/app/src/debug/res';
 
 // Android standard mipmap icon sizes
 const DENSITIES = {
@@ -33,34 +34,41 @@ async function generateAppIcons() {
     console.log(`Generating app icons from ${LOGO_SVG_PATH}...`);
     console.log('NOTE: This is for app icons only, NOT splash screen');
 
-    // Generate Android mipmap icons
-    for (const [dir, size] of Object.entries(DENSITIES)) {
-        const outDir = path.join(ANDROID_RES_PATH, dir);
-        if (!fs.existsSync(outDir)) {
-            console.log(`Creating directory: ${outDir}`);
-            fs.mkdirSync(outDir, { recursive: true });
-        }
+    // Generate icons for both main and debug
+    const resPaths = [ANDROID_RES_PATH, ANDROID_DEBUG_RES_PATH];
 
-        const iconPath = path.join(outDir, 'ic_launcher.png');
-        const roundIconPath = path.join(outDir, 'ic_launcher_round.png');
+    for (const resPath of resPaths) {
+        console.log(`\nGenerating icons for: ${resPath}`);
 
-        try {
-            // Generate ic_launcher.png with high density rendering
-            await sharp(LOGO_SVG_PATH, { density: 300 })
-                .resize(size, size, { fit: 'contain', background: { r: 255, g: 204, b: 0, alpha: 1 } })
-                .png({ quality: 100, compressionLevel: 9 })
-                .toFile(iconPath);
-            console.log(`Generated ${iconPath} (${size}x${size})`);
+        // Generate Android mipmap icons
+        for (const [dir, size] of Object.entries(DENSITIES)) {
+            const outDir = path.join(resPath, dir);
+            if (!fs.existsSync(outDir)) {
+                console.log(`Creating directory: ${outDir}`);
+                fs.mkdirSync(outDir, { recursive: true });
+            }
 
-            // Generate ic_launcher_round.png 
-            await sharp(LOGO_SVG_PATH, { density: 300 })
-                .resize(size, size, { fit: 'contain', background: { r: 255, g: 204, b: 0, alpha: 1 } })
-                .png({ quality: 100, compressionLevel: 9 })
-                .toFile(roundIconPath);
-            console.log(`Generated ${roundIconPath} (${size}x${size})`);
+            const iconPath = path.join(outDir, 'ic_launcher.png');
+            const roundIconPath = path.join(outDir, 'ic_launcher_round.png');
 
-        } catch (err) {
-            console.error(`Error generating for ${dir}:`, err);
+            try {
+                // Generate ic_launcher.png with high density rendering
+                await sharp(LOGO_SVG_PATH, { density: 300 })
+                    .resize(size, size, { fit: 'contain', background: { r: 255, g: 204, b: 0, alpha: 1 } })
+                    .png({ quality: 100, compressionLevel: 9 })
+                    .toFile(iconPath);
+                console.log(`Generated ${iconPath} (${size}x${size})`);
+
+                // Generate ic_launcher_round.png 
+                await sharp(LOGO_SVG_PATH, { density: 300 })
+                    .resize(size, size, { fit: 'contain', background: { r: 255, g: 204, b: 0, alpha: 1 } })
+                    .png({ quality: 100, compressionLevel: 9 })
+                    .toFile(roundIconPath);
+                console.log(`Generated ${roundIconPath} (${size}x${size})`);
+
+            } catch (err) {
+                console.error(`Error generating for ${dir}:`, err);
+            }
         }
     }
 
