@@ -517,9 +517,18 @@ const DriverNavigator = createBottomTabNavigator({
         return {
             headerTitle: '',
             headerLeft: (props) => {
+                const { t } = useLanguage();
                 return (
                     <View pl='$3'>
-                        <Image source={require('../../assets/logo-etemad.png')} style={{ width: 100, height: 25 }} />
+                        <XStack alignItems='center'>
+                            <Image source={require('../../assets/navigator-icon-transparent.png')} style={{ width: 18, height: 18, marginRight: 5 }} />
+                            <Text color='$textPrimary' fontSize={20} fontWeight='bold'>
+                                {t('DriverNavigator.navigator')}
+                            </Text>
+                        </XStack>
+                        <Text color='$textSecondary' fontSize={8} ml={25}>
+                            v{DeviceInfo.getVersion()} #{DeviceInfo.getBuildNumber()}
+                        </Text>
                     </View>
                 );
             },
