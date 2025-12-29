@@ -1,15 +1,15 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { useNavigation } from '@react-navigation/native';
-import { SafeAreaView, Pressable, Keyboard, StyleSheet, Alert } from 'react-native';
-import { Spinner, Button, Input, Stack, Text, YStack, XStack, useTheme } from 'tamagui';
-import { toast, ToastPosition } from '@backpackapp-io/react-native-toast';
+import { toast } from '@backpackapp-io/react-native-toast';
+import { faArrowRotateRight, faCheck, faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faCheck, faArrowRotateRight, faCircleInfo } from '@fortawesome/free-solid-svg-icons';
-import { OtpInput } from 'react-native-otp-entry';
-import { useAuth } from '../contexts/AuthContext';
-import { navigatorConfig } from '../utils';
+import { useNavigation } from '@react-navigation/native';
+import React, { useState } from 'react';
+import { Keyboard, Pressable, SafeAreaView, StyleSheet } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import { OtpInput } from 'react-native-otp-entry';
+import { Button, Spinner, Text, useTheme, XStack, YStack } from 'tamagui';
+import { useAuth } from '../contexts/AuthContext';
 import { useLanguage } from '../contexts/LanguageContext';
+import { navigatorConfig } from '../utils';
 
 const PhoneLoginVerifyScreen = () => {
     const navigation = useNavigation();
@@ -43,7 +43,7 @@ const PhoneLoginVerifyScreen = () => {
             <YStack flex={1} space='$3' padding='$5'>
                 <YStack mb='$4'>
                     <Text color='$gray-300' fontSize={20} fontWeight='bold'>
-                        {t('PhoneLoginVerifyScreen.verifyCode')} {phone}
+                        {t('PhoneLoginVerifyScreen.verifyCode')} <Text style={{ writingDirection: 'ltr' }}>{phone}</Text>
                     </Text>
                 </YStack>
                 <OtpInput

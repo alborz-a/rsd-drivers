@@ -232,6 +232,15 @@ export function removeNonNumber(string = '') {
     return string.replace(/[^\d]/g, '');
 }
 
+export function formatPhoneForDisplay(phone) {
+    if (!phone) {
+        return phone;
+    }
+    // \u202A is LRE (Left-to-Right Embedding)
+    // \u202C is PDF (Pop Directional Formatting)
+    return `\u202A${phone}\u202C`;
+}
+
 export function removeLeadingSpaces(string = '') {
     return string.replace(/^\s+/g, '');
 }

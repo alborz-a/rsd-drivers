@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Text, XStack, YStack, Input } from 'tamagui';
-import useAppTheme from '../hooks/use-app-theme';
+import React, { useEffect, useRef, useState } from 'react';
+import { Input, Text, XStack, YStack } from 'tamagui';
 import { useLanguage } from '../contexts/LanguageContext';
+import useAppTheme from '../hooks/use-app-theme';
 
 const IRAN_COUNTRY = {
     code: 'IR',
@@ -38,9 +38,9 @@ const PhoneInput = ({ value, onChange, bg, width = '100%', size = '$5', wrapperP
 
     return (
         <YStack space='$4' {...wrapperProps}>
-            <XStack width='100%' paddingHorizontal={0} shadowOpacity={0} shadowRadius={0} borderWidth={1} borderColor='$borderColorWithShadow' borderRadius='$5' bg={backgroundColor}>
+            <XStack width='100%' paddingHorizontal={0} shadowOpacity={0} shadowRadius={0} borderWidth={1} borderColor='$borderColorWithShadow' borderRadius='$5' bg={backgroundColor} direction='ltr'>
                 {/* Static Country Code Display - No longer a button */}
-                <XStack alignItems='center' space='$2' paddingHorizontal='$3' borderRightWidth={1} borderRightColor='$borderColor' justifyContent='center' width={80} maxWidth={80}>
+                <XStack alignItems='center' space='$2' paddingHorizontal='$3' borderRightWidth={1} borderRightColor='$borderColor' justifyContent='center' width={80} maxWidth={80} direction='ltr'>
                     <Text fontSize={size}>{IRAN_COUNTRY.emoji}</Text>
                     <Text fontSize={size}>+{IRAN_COUNTRY.phone}</Text>
                 </XStack>
@@ -56,6 +56,7 @@ const PhoneInput = ({ value, onChange, bg, width = '100%', size = '$5', wrapperP
                     onFocus={handleInputFocus}
                     bg={backgroundColor}
                     color='$textPrimary'
+                    textAlign='left'
                     borderRadius={0}
                     borderTopRightRadius='$3'
                     borderBottomRightRadius='$3'

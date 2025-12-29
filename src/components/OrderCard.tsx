@@ -1,20 +1,19 @@
-import React, { FC, useEffect, useState, useMemo } from 'react';
-import { Pressable } from 'react-native';
-import { YStack, XStack, Text, styled, useTheme } from 'tamagui';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faBox } from '@fortawesome/free-solid-svg-icons';
-import { formatDuration, titleize } from '../utils/format';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { format as formatDate } from 'date-fns';
-import useFleetbase from '../hooks/use-fleetbase';
-import useOrderResource from '../hooks/use-order-resource';
-import useAppTheme from '../hooks/use-app-theme';
-import OrderProgressBar from './OrderProgressBar';
-import LiveOrderRoute from './LiveOrderRoute';
-import OrderWaypointList from './OrderWaypointList';
-import MultipleCustomerAvatars from './MultipleCustomerAvatars';
-import LoadingText from './LoadingText';
-import Badge from './Badge';
+import React, { useMemo } from 'react';
+import { Pressable } from 'react-native';
+import { Text, XStack, YStack, useTheme } from 'tamagui';
 import { useLanguage } from '../contexts/LanguageContext';
+import useAppTheme from '../hooks/use-app-theme';
+import useOrderResource from '../hooks/use-order-resource';
+import { formatDuration, titleize } from '../utils/format';
+import Badge from './Badge';
+import LiveOrderRoute from './LiveOrderRoute';
+import LoadingText from './LoadingText';
+import MultipleCustomerAvatars from './MultipleCustomerAvatars';
+import OrderProgressBar from './OrderProgressBar';
+import OrderWaypointList from './OrderWaypointList';
 
 const INFO_FIELD_VALUE_MIN_HEIGHT = 30;
 export const OrderCard = ({ order, onPress }) => {
@@ -100,6 +99,7 @@ export const OrderCard = ({ order, onPress }) => {
                                                                 numberOfLines={1}
                                                                 color='$textSecondary'
                                                                 fontSize={12}
+                                                                style={{ writingDirection: 'ltr' }}
                                                             />
                                                         </>
                                                     ) : (

@@ -4,6 +4,7 @@ import { Text, XStack } from 'tamagui';
 
 type LoadingTextProps = {
     text?: string | null;
+    [key: string]: any;
 };
 
 type BouncingDotProps = {

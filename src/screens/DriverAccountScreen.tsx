@@ -232,7 +232,7 @@ const DriverAccountScreen = () => {
         {
             title: t('AccountScreen.phoneNumber'),
             rightComponent: (
-                <Text color='$textSecondary' opacity={0.5}>
+                <Text color='$textSecondary' opacity={0.5} style={{ writingDirection: 'ltr' }}>
                     {driver.getAttribute('phone')}
                 </Text>
             ),

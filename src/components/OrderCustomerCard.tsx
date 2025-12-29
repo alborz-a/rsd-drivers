@@ -1,7 +1,6 @@
-import { YStack, XStack, Text, Avatar, Separator, Button, useTheme } from 'tamagui';
+import { faEnvelope, faMessage, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faPhone, faEnvelope, faMessage } from '@fortawesome/free-solid-svg-icons';
-import FastImage from 'react-native-fast-image';
+import { Avatar, Button, Separator, Text, useTheme, XStack, YStack } from 'tamagui';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const OrderCustomerCard = ({ customer }) => {
@@ -22,7 +21,7 @@ const OrderCustomerCard = ({ customer }) => {
                             {customer.name}
                         </Text>
                         <YStack>
-                            {customer.phone && <Text color='$textSecondary'>{customer.phone}</Text>}
+                            {customer.phone && <Text color='$textSecondary' style={{ writingDirection: 'ltr' }}>{customer.phone}</Text>}
                             {customer.email && <Text color='$textSecondary'>{customer.email}</Text>}
                         </YStack>
                     </YStack>

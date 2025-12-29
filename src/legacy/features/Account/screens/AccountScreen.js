@@ -1,4 +1,4 @@
-import { faBuilding, faChevronRight, faIdBadge, faLink, faUser, faFileAlt } from '@fortawesome/free-solid-svg-icons';
+import { faBuilding, faChevronRight, faIdBadge, faLink, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { useFleetbase } from 'hooks';
 import React, { useEffect, useState } from 'react';
@@ -119,7 +119,7 @@ const AccountScreen = ({ navigation }) => {
                                         })}
                                     </Text>
                                     <Text style={tailwind('text-gray-50 mb-1')}>{currentOrganization && currentOrganization.getAttribute('name')}</Text>
-                                    <Text style={tailwind('text-gray-50')}>{driver.getAttribute('phone')}</Text>
+                                    <Text style={[tailwind('text-gray-50'), { writingDirection: 'ltr' }]}>{driver.getAttribute('phone')}</Text>
                                 </View>
                             </View>
                         </View>
