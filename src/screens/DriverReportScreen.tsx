@@ -29,8 +29,8 @@ const DriverReportScreen = () => {
     const [isRefreshing, setIsRefreshing] = useState(false);
     const { t } = useLanguage();
     const reportOptions = [
-        { value: 'issue', label: t('DriverReportScreen.issueOn') === 'Issue on:' ? 'Issues' : t('DriverReportScreen.issueOn') },
-        { value: 'fuel-report', label: t('DriverReportScreen.fuelReported') === 'Fuel Reported:' ? 'Fuel Reports' : t('DriverReportScreen.fuelReported') },
+        { value: 'issue', label: t('DriverReportScreen.tabs.issues') },
+        { value: 'fuel-report', label: t('DriverReportScreen.tabs.fuelReports') },
     ];
     const currentIndex = reportOptions.findIndex((option) => option.value === currentTab);
     const content = useMemo(() => (currentTab === 'issue' ? issues : fuelReports), [currentTab, issues, fuelReports]);
@@ -263,7 +263,7 @@ const DriverReportScreen = () => {
                             <FontAwesomeIcon icon={faPenToSquare} color={theme['$infoText'].val} size={16} />
                         </Button.Icon>
                         <Button.Text color='$infoText' fontSize={15}>
-                            {t('common.edit')} a new {singularize(reportOptions[currentIndex].label)}
+                            {currentTab === 'issue' ? t('DriverReportScreen.createNewIssue') : t('DriverReportScreen.createNewFuelReport')}
                         </Button.Text>
                     </Button>
                 </YStack>

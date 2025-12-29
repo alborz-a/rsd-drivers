@@ -21,6 +21,8 @@ export default {
         searchOptions: "جستجوی گزینه‌ها",
         yes: "فعال",
         no: "غیرفعال",
+        online: "آنلاین",
+        offline: "آفلاین",
     },
     time: {
         justNow: "همین الان",
@@ -315,6 +317,9 @@ export default {
         type: "نوع:",
         vehicle: "وسیله نقلیه:",
         volume: "حجم:",
+        tabs: { issues: "مشکلات", fuelReports: "گزارش‌های سوخت" },
+        createNewIssue: "ایجاد مشکل جدید",
+        createNewFuelReport: "ایجاد گزارش سوخت جدید",
     },
     FleetScreen: {
         fleetscreen: "صفحه ناوگان",
@@ -352,8 +357,10 @@ export default {
         helloWorld: "سلام دنیا",
     },
     DriverNavigator: {
+        editFuelReportTitle: "ویرایش گزارش سوخت - {{date}}",
+        editIssueTitle: "ویرایش مشکل - {{date}}",
         createANewFuelReport: "ایجاد گزارش سوخت جدید",
-        createANewIssue: "ایجاد شماره جدید",
+        createANewIssue: "ایجاد مشکل جدید",
         navigator: "ناوبر",
     },
     CoreStack: {
