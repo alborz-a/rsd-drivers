@@ -11,6 +11,8 @@
         },
         "strict": false,
         "noImplicitAny": false,
+        "skipLibCheck": true,
+        "noEmit": true,
         "lib": [
             "esnext"
         ]
