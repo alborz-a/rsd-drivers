@@ -108,3 +108,4 @@ new_package.json
 old_package.json
 old_rn_versions.txt
 old_yarn.lock
+.idea*
