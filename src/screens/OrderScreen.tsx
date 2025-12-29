@@ -9,7 +9,8 @@ import { PortalHost } from '@gorhom/portal';
 import LaunchNavigator from 'react-native-launch-navigator';
 import FastImage from 'react-native-fast-image';
 import { Order, Place } from '@fleetbase/sdk';
-import { format as formatDate, formatDistance, add } from 'date-fns';
+import { formatDistance, add } from 'date-fns';
+import { formatLocalizedDate } from '../utils/dateUtils';
 import { titleize } from 'inflected';
 import { formatCurrency, formatMeters, formatDuration, smartHumanize } from '../utils/format';
 import { restoreFleetbasePlace, getCoordinates } from '../utils/location';
@@ -511,7 +512,7 @@ const OrderScreen = ({ route }) => {
                                         {order.getAttribute('tracking_number.tracking_number')}
                                     </Text>
                                     <Text color={isDarkMode ? '$textPrimary' : '$gray-200'} fontSize={15}>
-                                        {formatDate(new Date(order.getAttribute('created_at')), 'PP HH:mm')}
+                                        {formatLocalizedDate(new Date(order.getAttribute('created_at')), 'PP HH:mm')}
                                     </Text>
                                 </YStack>
                                 <YStack>
@@ -604,11 +605,11 @@ const OrderScreen = ({ route }) => {
                     <Separator />
                     <SectionInfoLine title={t('OrderScreen.type')} value={titleize(order.getAttribute('type'))} />
                     <Separator />
-                    <SectionInfoLine title={t('OrderScreen.dateCreated')} value={formatDate(new Date(order.getAttribute('created_at')), 'PP HH:mm')} />
+                    <SectionInfoLine title={t('OrderScreen.dateCreated')} value={formatLocalizedDate(new Date(order.getAttribute('created_at')), 'PP HH:mm')} />
                     <Separator />
-                    <SectionInfoLine title={t('OrderScreen.dateScheduled')} value={order.getAttribute('scheduled_at') ? formatDate(new Date(order.getAttribute('scheduled_at')), 'PP HH:mm') : '-'} />
+                    <SectionInfoLine title={t('OrderScreen.dateScheduled')} value={order.getAttribute('scheduled_at') ? formatLocalizedDate(new Date(order.getAttribute('scheduled_at')), 'PP HH:mm') : '-'} />
                     <Separator />
-                    <SectionInfoLine title={t('OrderScreen.dateDispatched')} value={order.getAttribute('dispatched_at') ? formatDate(new Date(order.getAttribute('dispatched_at')), 'PP HH:mm') : '-'} />
+                    <SectionInfoLine title={t('OrderScreen.dateDispatched')} value={order.getAttribute('dispatched_at') ? formatLocalizedDate(new Date(order.getAttribute('dispatched_at')), 'PP HH:mm') : '-'} />
                     {customFieldKeys.map((key, index) => (
                         <YStack key={index}>
                             <Separator />

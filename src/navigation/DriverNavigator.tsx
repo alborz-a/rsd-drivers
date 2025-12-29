@@ -20,7 +20,7 @@ import {
 import { useTheme, Text, View, XStack, Image } from 'tamagui';
 import { navigatorConfig, get, config, toArray, getTheme } from '../utils';
 import { configCase } from '../utils/format';
-import { format } from 'date-fns';
+import { formatLocalizedDate } from '../utils/dateUtils';
 import { PortalHost } from '@gorhom/portal';
 import { useIsNotAuthenticated, useIsAuthenticated } from '../contexts/AuthContext';
 import { useTempStore } from '../contexts/TempStoreContext';
@@ -334,7 +334,7 @@ const DriverReportTab = createNativeStackNavigator({
                     headerTitle: '',
                     headerLeft: (props) => (
                         <Text color='$textPrimary' fontSize={18} fontWeight='bold' numberOfLines={1}>
-                            {t('common.edit')} Fuel Report from {format(new Date(fuelReport.created_at), 'MMM dd, yyyy HH:mm')}
+                            {t('common.edit')} Fuel Report from {formatLocalizedDate(new Date(fuelReport.created_at), 'MMM dd, yyyy HH:mm')}
                         </Text>
                     ),
                     headerRight: (props) => <HeaderButton icon={faTimes} onPress={() => navigation.goBack()} />,
@@ -357,7 +357,7 @@ const DriverReportTab = createNativeStackNavigator({
                     headerTitle: '',
                     headerLeft: (props) => (
                         <Text color='$textPrimary' fontSize={18} fontWeight='bold' numberOfLines={1}>
-                            {format(new Date(fuelReport.created_at), 'MMM dd, yyyy HH:mm')}
+                            {formatLocalizedDate(new Date(fuelReport.created_at), 'MMM dd, yyyy HH:mm')}
                         </Text>
                     ),
                     headerRight: (props) => <PortalHost name='FuelReportScreenHeaderRightPortal' />,
@@ -400,7 +400,7 @@ const DriverReportTab = createNativeStackNavigator({
                     headerTitle: '',
                     headerLeft: (props) => (
                         <Text color='$textPrimary' fontSize={18} fontWeight='bold' numberOfLines={1}>
-                            {t('common.edit')} Issue from {format(new Date(issue.created_at), 'MMM dd, yyyy HH:mm')}
+                            {t('common.edit')} Issue from {formatLocalizedDate(new Date(issue.created_at), 'MMM dd, yyyy HH:mm')}
                         </Text>
                     ),
                     headerRight: (props) => <HeaderButton icon={faTimes} onPress={() => navigation.goBack()} />,
@@ -423,7 +423,7 @@ const DriverReportTab = createNativeStackNavigator({
                     headerTitle: '',
                     headerLeft: (props) => (
                         <Text color='$textPrimary' fontSize={18} fontWeight='bold' numberOfLines={1}>
-                            {format(new Date(issue.created_at), 'MMM dd, yyyy HH:mm')}
+                            {formatLocalizedDate(new Date(issue.created_at), 'MMM dd, yyyy HH:mm')}
                         </Text>
                     ),
                     headerRight: (props) => <PortalHost name='IssueScreenHeaderRightPortal' />,
