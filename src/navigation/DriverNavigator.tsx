@@ -79,7 +79,7 @@ function getTabConfig(name, key, defaultValue = null) {
 }
 
 function createTabScreens() {
-    const tabs = toArray(navigatorConfig('driverNavigator.tabs', 'DriverTaskTab,DriverReportTab,DriverDashboardTab,DriverChatTab,DriverAccountTab'));
+    const tabs = toArray(navigatorConfig('driverNavigator.tabs', 'DriverAccountTab,DriverChatTab,DriverDashboardTab,DriverReportTab,DriverTaskTab'));
     const screens = {
         DriverDashboardTab: {
             screen: DriverDashboardTab,
@@ -89,8 +89,14 @@ function createTabScreens() {
         },
         DriverTaskTab: {
             screen: DriverTaskTab,
+            listeners: {
+                tabPress: (e) => {
+                    e.preventDefault();
+                },
+            },
             options: () => {
                 const { allActiveOrders } = useOrderManager();
+                const theme = useTheme();
 
                 return {
                     tabBarLabel: config('DRIVER_ORDER_TAB_LABEL', 'درخواست‌ها'),
@@ -99,6 +105,8 @@ function createTabScreens() {
                         marginRight: -5,
                         opacity: allActiveOrders.length ? 1 : 0.5,
                     },
+                    tabBarActiveTintColor: theme['$gray-400']?.val ?? '#ccc',
+                    tabBarInactiveTintColor: theme['$gray-400']?.val ?? '#ccc',
                 };
             },
         },
@@ -112,8 +120,14 @@ function createTabScreens() {
         },
         DriverChatTab: {
             screen: DriverChatTab,
+            listeners: {
+                tabPress: (e) => {
+                    e.preventDefault();
+                },
+            },
             options: () => {
                 const { unreadCount } = useChat();
+                const theme = useTheme();
 
                 return {
                     tabBarLabel: config('DRIVER_CHAT_TAB_LABEL', 'چت'),
@@ -122,6 +136,8 @@ function createTabScreens() {
                         marginRight: -5,
                         opacity: unreadCount ? 1 : 0.5,
                     },
+                    tabBarActiveTintColor: theme['$gray-400']?.val ?? '#ccc',
+                    tabBarInactiveTintColor: theme['$gray-400']?.val ?? '#ccc',
                 };
             },
         },
