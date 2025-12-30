@@ -378,6 +378,7 @@ export default {
   },
   PhoneInput: {
     enterPhoneNumber: 'Enter phone number',
+    enterFullPhoneNumber: 'Enter your phone number, e.g. 0912...',
     searchCountry: 'Search country',
   },
   PhoneLoginScreen: {

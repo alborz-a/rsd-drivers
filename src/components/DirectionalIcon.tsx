@@ -12,9 +12,10 @@ interface DirectionalIconProps {
 
 const DirectionalIcon: React.FC<DirectionalIconProps> = ({ icon, style, ...props }) => {
     const rtlStyle = getRTLIconStyle();
-    const combinedStyle = rtlStyle ? [style, rtlStyle] : style;
+    // Combine styles - use type assertion to avoid complex type issues
+    const combinedStyle = rtlStyle ? [style, rtlStyle].flat() : style;
 
-    return <FontAwesomeIcon icon={icon} style={combinedStyle} {...props} />;
+    return <FontAwesomeIcon icon={icon} style={combinedStyle as any} {...props} />;
 };
 
 export default DirectionalIcon;

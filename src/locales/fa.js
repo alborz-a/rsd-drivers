@@ -128,6 +128,7 @@ export default {
     },
     PhoneInput: {
         enterPhoneNumber: "شماره تلفن را وارد کنید",
+        enterFullPhoneNumber: "شماره موبایل خود را وارد کنید...",
         searchCountry: "جستجوی کشور",
     },
     MoneyInput: {
@@ -260,7 +261,7 @@ export default {
     PhoneLoginScreen: {
         home: "خانه",
         invalidPhoneNumberProvided: "شماره تلفن نامعتبر است.",
-        loginViaSms: "ورود با پیامک",
+        loginViaSms: "ورود با شماره موبایل",
         sendVerificationCode: "ارسال کد تأیید",
     },
     PhoneLoginVerifyScreen: {

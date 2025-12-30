@@ -155,16 +155,39 @@ jobs:
                   test -f "$ANDROID_SDK_ROOT/ndk/27.1.12297006/source.properties" && echo "✅ NDK 27.1.12297006 installed"
 
             # ============================================
-            # GRADLE SETUP WITH CACHING
-            # gradle/actions handles all Gradle caching automatically
-            # Removed cache-read-only to allow saving on tag builds
+            # GRADLE CACHING - Explicit manual caching for visibility
             # ============================================
+            - name: Restore Gradle caches
+              if: env.CLEAN_BUILD != 'true'
+              id: gradle-cache
+              uses: actions/cache@v4
+              with:
+                  path: |
+                      ~/.gradle/caches
+                      ~/.gradle/wrapper
+                      android/.gradle
+                  key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties', '**/gradle.properties') }}
+                  restore-keys: |
+                      gradle-${{ runner.os }}-
+
+            # Gradle Build Cache (separate from dependencies for better cache hits)
+            - name: Restore Gradle Build Cache
+              if: env.CLEAN_BUILD != 'true'
+              id: gradle-build-cache
+              uses: actions/cache@v4
+              with:
+                  path: |
+                      android/app/build
+                      android/build
+                      ~/.gradle/caches/build-cache-1
+                  key: gradle-build-${{ runner.os }}-${{ github.sha }}
+                  restore-keys: |
+                      gradle-build-${{ runner.os }}-
+
             - name: Setup Gradle
               uses: gradle/actions/setup-gradle@v4
               with:
-                  cache-disabled: ${{ env.CLEAN_BUILD == 'true' }}
-                  cache-overwrite-existing: true
-                  gradle-home-cache-cleanup: true
+                  cache-disabled: true
 
             - name: Make Gradlew Executable
               run: cd android && chmod +x ./gradlew
@@ -235,6 +258,29 @@ jobs:
                   name: android-debug-${{ github.ref_name }}-apk
                   path: android/app/build/outputs/apk/debug/app-debug.apk
                   retention-days: 30
+
+            # ============================================
+            # SAVE CACHES - Always save after successful build
+            # ============================================
+            - name: Save Gradle caches
+              if: always() && steps.gradle-cache.outputs.cache-hit != 'true'
+              uses: actions/cache/save@v4
+              with:
+                  path: |
+                      ~/.gradle/caches
+                      ~/.gradle/wrapper
+                      android/.gradle
+                  key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties', '**/gradle.properties') }}
+
+            - name: Save Gradle Build Cache
+              if: always()
+              uses: actions/cache/save@v4
+              with:
+                  path: |
+                      android/app/build
+                      android/build
+                      ~/.gradle/caches/build-cache-1
+                  key: gradle-build-${{ runner.os }}-${{ github.sha }}
 
     create_release:
         runs-on: ubuntu-latest

@@ -3,7 +3,7 @@ import { Platform, ActionSheetIOS, Alert, Dimensions } from 'react-native';
 import { Collection, lookup } from '@fleetbase/sdk';
 import { translate } from './localize';
 import storage, { getString } from './storage';
-import { capitalize } from './format';
+import { capitalize, formatPhoneNumber, formatPhoneForDisplay } from './format';
 import { themes } from '../../tamagui.config';
 import { APP_THEME_KEY } from '../hooks/use-app-theme';
 import { pluralize } from 'inflected';
@@ -608,3 +608,6 @@ export function wasAccessedFromCartModal(navigation) {
 export function createDate(date) {
     return date instanceof Date ? date : parseISO(date);
 }
+
+// Re-export format functions
+export { formatPhoneNumber, formatPhoneForDisplay };
