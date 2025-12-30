@@ -79,7 +79,7 @@ function getTabConfig(name, key, defaultValue = null) {
 }
 
 function createTabScreens() {
-    const tabs = toArray(navigatorConfig('driverNavigator.tabs', 'DriverTaskTab,DriverReportTab,DriverChatTab,DriverAccountTab,DriverDashboardTab'));
+    const tabs = toArray(navigatorConfig('driverNavigator.tabs', 'DriverTaskTab,DriverReportTab,DriverDashboardTab,DriverChatTab,DriverAccountTab'));
     const screens = {
         DriverDashboardTab: {
             screen: DriverDashboardTab,
