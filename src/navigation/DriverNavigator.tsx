@@ -19,7 +19,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { useTheme, Text, View, XStack, Image } from 'tamagui';
 import { navigatorConfig, get, config, toArray, getTheme } from '../utils';
-import { configCase } from '../utils/format';
+import { configCase, formatLocalizedDate } from '../utils/format';
 import { format } from 'date-fns';
 import { PortalHost } from '@gorhom/portal';
 import { useIsNotAuthenticated, useIsAuthenticated } from '../contexts/AuthContext';
@@ -334,7 +334,7 @@ const DriverReportTab = createNativeStackNavigator({
                     headerTitle: '',
                     headerLeft: (props) => (
                         <Text color='$textPrimary' fontSize={18} fontWeight='bold' numberOfLines={1}>
-                            {t('common.edit')} Fuel Report from {format(new Date(fuelReport.created_at), 'MMM dd, yyyy HH:mm')}
+                            {t('DriverNavigator.editFuelReportTitle', { date: formatLocalizedDate(fuelReport.created_at) })}
                         </Text>
                     ),
                     headerRight: (props) => <HeaderButton icon={faTimes} onPress={() => navigation.goBack()} />,
@@ -400,7 +400,7 @@ const DriverReportTab = createNativeStackNavigator({
                     headerTitle: '',
                     headerLeft: (props) => (
                         <Text color='$textPrimary' fontSize={18} fontWeight='bold' numberOfLines={1}>
-                            {t('common.edit')} Issue from {format(new Date(issue.created_at), 'MMM dd, yyyy HH:mm')}
+                            {t('DriverNavigator.editIssueTitle', { date: formatLocalizedDate(issue.created_at) })}
                         </Text>
                     ),
                     headerRight: (props) => <HeaderButton icon={faTimes} onPress={() => navigation.goBack()} />,

@@ -352,8 +352,10 @@ export default {
         helloWorld: "سلام دنیا",
     },
     DriverNavigator: {
+        editFuelReportTitle: "ویرایش گزارش سوخت - {{date}}",
+        editIssueTitle: "ویرایش مشکل - {{date}}",
         createANewFuelReport: "ایجاد گزارش سوخت جدید",
-        createANewIssue: "ایجاد شماره جدید",
+        createANewIssue: "ایجاد مشکل جدید",
         navigator: "ناوبر",
     },
     CoreStack: {
