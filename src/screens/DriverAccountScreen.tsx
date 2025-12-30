@@ -179,7 +179,7 @@ const DriverAccountScreen = () => {
                 backgroundColor: pressed ? theme.secondary.val : theme.background.val,
                 paddingVertical: 12,
                 paddingHorizontal: 16,
-                flexDirection: 'row',
+                flexDirection: I18nManager.isRTL ? 'row-reverse' : 'row',
                 alignItems: 'center',
                 justifyContent: 'space-between',
             })}
@@ -192,12 +192,7 @@ const DriverAccountScreen = () => {
             </XStack>
             <XStack alignItems='center' space='$2'>
                 {item.rightComponent}
-                <FontAwesomeIcon 
-                    icon={faChevronRight} 
-                    size={16} 
-                    color={theme.textSecondary.val}
-                    style={I18nManager.isRTL ? { transform: [{ scaleX: -1 }] } : undefined}
-                />
+                <FontAwesomeIcon icon={faChevronRight} size={16} color={theme.textSecondary.val} style={I18nManager.isRTL ? { transform: [{ scaleX: -1 }] } : undefined} />
             </XStack>
         </Pressable>
     );
@@ -272,31 +267,12 @@ const DriverAccountScreen = () => {
         },
     ];
 
-    // Data Protection menu items
-    const dataProtectionMenu = [
-        {
-            title: t('AccountScreen.privacyPolicy'),
-            rightComponent: null,
-            onPress: handleOpenPrivacyPolicy,
-        },
-        {
-            title: t('AccountScreen.clearCache'),
-            rightComponent: null,
-            onPress: handleClearCache,
-        },
-        // {
-        //     title: t('AccountScreen.tracking'),
-        //     rightComponent: <Text color='$textSecondary'>Enabled</Text>, // Replace with dynamic value if available
-        //     onPress: () => navigation.navigate('TrackingSettings'),
-        // },
-    ];
-
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: theme.background.val }}>
             <ScrollView showsVerticalScrollIndicator={false} showsHorizontalScrollIndicator={false}>
                 <YStack flex={1} bg='$background' space='$8' pt={Platform.OS === 'android' ? '$10' : '$5'}>
                     <YStack space='$2'>
-                        <XStack px='$3' justifyContent='space-between'>
+                        <XStack px='$3' justifyContent='space-between' flexDirection={I18nManager.isRTL ? 'row-reverse' : 'row'}>
                             <YStack>
                                 <Text fontSize='$8' fontWeight='bold' color='$textPrimary' numberOfLines={1}>
                                     {t('AccountScreen.account')}
@@ -318,22 +294,7 @@ const DriverAccountScreen = () => {
                             showsHorizontalScrollIndicator={false}
                         />
                     </YStack>
-                    <YStack space='$2'>
-                        <YStack px='$3'>
-                            <Text color='$textPrimary' fontSize='$8' fontWeight='bold'>
-                                {t('AccountScreen.dataProtection')}
-                            </Text>
-                        </YStack>
-                        <FlatList
-                            data={dataProtectionMenu}
-                            keyExtractor={(item) => item.title}
-                            renderItem={renderMenuItem}
-                            ItemSeparatorComponent={() => <Separator borderBottomWidth={1} borderColor='$borderColorWithShadow' />}
-                            scrollEnabled={false}
-                            showsVerticalScrollIndicator={false}
-                            showsHorizontalScrollIndicator={false}
-                        />
-                    </YStack>
+
                     <YStack padding='$4' mb='$5'>
                         <Button marginTop='$4' bg='$error' borderWidth={1} borderColor='$errorBorder' size='$5' onPress={handleSignout} rounded width='100%'>
                             <Button.Icon>{isSigningOut ? <Spinner color={theme['$errorText'].val} /> : <YStack />}</Button.Icon>
