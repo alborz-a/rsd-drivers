@@ -170,7 +170,7 @@ jobs:
                   restore-keys: |
                       gradle-${{ runner.os }}-
 
-            # Gradle Build Cache (separate from dependencies for better cache hits)
+            # Gradle Build Cache (content-based key for cross-ref cache hits on tags)
             - name: Restore Gradle Build Cache
               if: env.CLEAN_BUILD != 'true'
               id: gradle-build-cache
@@ -180,14 +180,15 @@ jobs:
                       android/app/build
                       android/build
                       ~/.gradle/caches/build-cache-1
-                  key: gradle-build-${{ runner.os }}-${{ github.sha }}
+                  key: gradle-build-${{ runner.os }}-${{ hashFiles('android/app/build.gradle', 'android/build.gradle', 'android/settings.gradle') }}
                   restore-keys: |
                       gradle-build-${{ runner.os }}-
 
             - name: Setup Gradle
               uses: gradle/actions/setup-gradle@v4
               with:
-                  cache-disabled: true
+                  # Read-only on tags to avoid duplicate cache entries; write on main/branches
+                  cache-read-only: ${{ startsWith(github.ref, 'refs/tags/') }}
 
             - name: Make Gradlew Executable
               run: cd android && chmod +x ./gradlew
@@ -273,14 +274,14 @@ jobs:
                   key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties', '**/gradle.properties') }}
 
             - name: Save Gradle Build Cache
-              if: always()
+              if: always() && !startsWith(github.ref, 'refs/tags/')
               uses: actions/cache/save@v4
               with:
                   path: |
                       android/app/build
                       android/build
                       ~/.gradle/caches/build-cache-1
-                  key: gradle-build-${{ runner.os }}-${{ github.sha }}
+                  key: gradle-build-${{ runner.os }}-${{ hashFiles('android/app/build.gradle', 'android/build.gradle', 'android/settings.gradle') }}
 
     create_release:
         runs-on: ubuntu-latest
