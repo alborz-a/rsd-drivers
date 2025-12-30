@@ -22,11 +22,6 @@ const DriverAccountScreen = () => {
     const { driver, logout, isSigningOut, updateDriver } = useAuth();
     const [isUploadingPhoto, setIsUploadingPhoto] = useState(false);
 
-    const handleClearCache = () => {
-        storage.clearStore();
-        toast.success(t('AccountScreen.cacheCleared'), { position: ToastPosition.BOTTOM });
-    };
-
     const handleSignout = () => {
         logout();
         toast.success(t('AccountScreen.signedOut'));
@@ -34,17 +29,6 @@ const DriverAccountScreen = () => {
 
     const handleOpenTermsOfService = async () => {
         const url = 'https://www.fleetbase.io/terms';
-        const supported = await Linking.canOpenURL(url);
-
-        if (supported) {
-            await Linking.openURL(url);
-        } else {
-            console.warn(`Can't open URL: ${url}`);
-        }
-    };
-
-    const handleOpenPrivacyPolicy = async () => {
-        const url = 'https://www.fleetbase.io/privacy-policy';
         const supported = await Linking.canOpenURL(url);
 
         if (supported) {
@@ -179,7 +163,7 @@ const DriverAccountScreen = () => {
                 backgroundColor: pressed ? theme.secondary.val : theme.background.val,
                 paddingVertical: 12,
                 paddingHorizontal: 16,
-                flexDirection: I18nManager.isRTL ? 'row-reverse' : 'row',
+                flexDirection: 'row',
                 alignItems: 'center',
                 justifyContent: 'space-between',
             })}

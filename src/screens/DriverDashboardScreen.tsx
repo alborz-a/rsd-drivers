@@ -1,3 +1,4 @@
+import { ActionSheetIOS, I18nManager } from 'react-native'; // Actually just I18nManager
 import { Text, XStack, YStack, useTheme } from 'tamagui';
 import OdometerNumber from '../components/OdometerNumber';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -26,7 +27,7 @@ const DriverDashboardScreen = () => {
             <YStack flex={1} padding='$4' gap='$4'>
                 <YStack space='$4'>
                     <WidgetContainer>
-                        <XStack>
+                        <XStack flexDirection={I18nManager.isRTL ? 'row-reverse' : 'row'}>
                             <YStack flex={1}>
                                 <Text color='$textPrimary'>{t('DriverDashboardScreen.tracking')}</Text>
                             </YStack>

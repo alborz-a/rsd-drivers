@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
-import { Pressable, FlatList, RefreshControl } from 'react-native';
+import { Pressable, FlatList, RefreshControl, I18nManager } from 'react-native';
 import { Text, YStack, XStack, Button, Separator, Image, useTheme } from 'tamagui';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
@@ -98,7 +98,17 @@ const DriverReportScreen = () => {
             <Pressable onPress={() => handleOpenIssue(issue)}>
                 <YStack py='$3' px='$2'>
                     <YStack borderWidth={1} borderColor='$borderColor' borderRadius='$4' gap='$3'>
-                        <XStack bg='$surface' py='$3' px='$2' borderBottomWidth={1} borderColor='$borderColor' space='$2' borderTopLeftRadius='$4' borderTopRightRadius='$4'>
+                        <XStack
+                            bg='$surface'
+                            py='$3'
+                            px='$2'
+                            borderBottomWidth={1}
+                            borderColor='$borderColor'
+                            space='$2'
+                            borderTopLeftRadius='$4'
+                            borderTopRightRadius='$4'
+                            flexDirection={I18nManager.isRTL ? 'row-reverse' : 'row'}
+                        >
                             <Text size='$5' color='$textSecondary' fontWeight='bold' numberOfLines={1}>
                                 {t('DriverReportScreen.issueOn')}
                             </Text>
@@ -127,7 +137,7 @@ const DriverReportScreen = () => {
                         <Separator />
                         <YStack bg='$background' pb='$2' gap='$2' borderBottomLeftRadius='$4' borderBottomRightRadius='$4'>
                             <YStack gap='$3'>
-                                <XStack gap='$2' px='$3' justifyContent='space-between'>
+                                <XStack gap='$2' px='$3' justifyContent='space-between' flexDirection={I18nManager.isRTL ? 'row-reverse' : 'row'}>
                                     <Text fontWeight='bold'>{t('DriverReportScreen.type')}</Text>
                                     <Text numberOfLines={1}>{titleize(issue.type) ?? 'N/A'}</Text>
                                 </XStack>
@@ -142,7 +152,7 @@ const DriverReportScreen = () => {
                                     <Text numberOfLines={1}>{issue.vehicle_name ?? 'N/A'}</Text>
                                 </XStack>
                                 <Separator />
-                                <XStack gap='$2' px='$3' pb='$2' justifyContent='space-between'>
+                                <XStack gap='$2' px='$3' pb='$2' justifyContent='space-between' flexDirection={I18nManager.isRTL ? 'row-reverse' : 'row'}>
                                     <Text fontWeight='bold'>{t('DriverReportScreen.reporter')}</Text>
                                     <Text numberOfLines={1}>{issue.reporter_name ?? 'N/A'}</Text>
                                 </XStack>
@@ -170,6 +180,7 @@ const DriverReportScreen = () => {
                             space='$2'
                             borderTopLeftRadius='$4'
                             borderTopRightRadius='$4'
+                            flexDirection={I18nManager.isRTL ? 'row-reverse' : 'row'}
                         >
                             <XStack space='$2'>
                                 <Text size='$5' color='$textSecondary' fontWeight='bold' numberOfLines={1}>

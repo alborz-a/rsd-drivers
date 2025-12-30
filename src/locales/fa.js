@@ -364,7 +364,7 @@ export default {
         editIssueTitle: "ویرایش مشکل - {{date}}",
         createANewFuelReport: "ایجاد گزارش سوخت جدید",
         createANewIssue: "ایجاد مشکل جدید",
-        navigator: "ناوبر",
+        navigator: "سفیران",
     },
     CoreStack: {
         connectionConfig: "پیکربندی اتصال",

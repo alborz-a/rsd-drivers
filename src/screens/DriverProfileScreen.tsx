@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useCallback } from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { SafeAreaView, FlatList, Pressable } from 'react-native';
+import { SafeAreaView, FlatList, Pressable, I18nManager } from 'react-native';
 import { Avatar, Text, YStack, XStack, Separator, useTheme } from 'tamagui';
 import { toast, ToastPosition } from '@backpackapp-io/react-native-toast';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
@@ -76,7 +76,7 @@ const DriverProfileScreen = () => {
             style={({ pressed }) => ({
                 backgroundColor: pressed ? theme.secondary.val : theme.background.val,
                 padding: 16,
-                flexDirection: 'row',
+                flexDirection: I18nManager.isRTL ? 'row-reverse' : 'row',
                 alignItems: 'center',
                 justifyContent: 'space-between',
             })}
@@ -89,7 +89,7 @@ const DriverProfileScreen = () => {
             </XStack>
             <XStack flex={1} alignItems='center' justifyContent='flex-end' space='$2'>
                 {item.rightComponent}
-                <FontAwesomeIcon icon={faChevronRight} size={16} color={theme.textSecondary.val} />
+                <FontAwesomeIcon icon={faChevronRight} size={16} color={theme.textSecondary.val} style={I18nManager.isRTL ? { transform: [{ scaleX: -1 }] } : undefined} />
             </XStack>
         </Pressable>
     );
@@ -97,7 +97,7 @@ const DriverProfileScreen = () => {
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: theme.background.val }}>
             <YStack flex={1} bg='$background' space='$3' padding='$5'>
-                <XStack py='$3' space='$3' alignItems='flex-start' justifyContent='space-between'>
+                <XStack py='$3' space='$3' alignItems='flex-start' justifyContent='space-between' flexDirection={I18nManager.isRTL ? 'row-reverse' : 'row'}>
                     <YStack>
                         <Pressable onPress={handleViewProfile}>
                             <Avatar circular size='$4'>
