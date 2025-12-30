@@ -27,17 +27,6 @@ const DriverAccountScreen = () => {
         toast.success(t('AccountScreen.signedOut'));
     };
 
-    const handleOpenTermsOfService = async () => {
-        const url = 'https://www.fleetbase.io/terms';
-        const supported = await Linking.canOpenURL(url);
-
-        if (supported) {
-            await Linking.openURL(url);
-        } else {
-            console.warn(`Can't open URL: ${url}`);
-        }
-    };
-
     const handleChangeProfilePhoto = () => {
         showActionSheet({
             options: [
@@ -243,11 +232,6 @@ const DriverAccountScreen = () => {
                 </Text>
             ),
             onPress: handleSelectScheme,
-        },
-        {
-            title: t('AccountScreen.termsOfService'),
-            rightComponent: null,
-            onPress: handleOpenTermsOfService,
         },
     ];
 
