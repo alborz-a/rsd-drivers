@@ -236,9 +236,10 @@ export function formatPhoneForDisplay(phone) {
     if (!phone) {
         return phone;
     }
+    let formatted = phone.replace(/^\+98/, '0');
     // \u202A is LRE (Left-to-Right Embedding)
     // \u202C is PDF (Pop Directional Formatting)
-    return `\u202A${phone}\u202C`;
+    return `\u202A${formatted}\u202C`;
 }
 
 export function formatPhoneNumber(phoneNumber) {

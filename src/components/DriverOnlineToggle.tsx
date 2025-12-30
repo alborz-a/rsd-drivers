@@ -5,9 +5,9 @@ import { useLanguage } from '../contexts/LanguageContext';
 import useAppTheme from '../hooks/use-app-theme';
 
 const DriverOnlineToggle = ({ showLabel = false, ...props }) => {
+    const { t } = useLanguage();
     const { isDarkMode } = useAppTheme();
     const { isOnline, toggleOnline, isUpdating } = useAuth();
-    const { t } = useLanguage();
     const [checked, setChecked] = useState(isOnline);
 
     const onCheckedChange = async (checked) => {
@@ -39,7 +39,7 @@ const DriverOnlineToggle = ({ showLabel = false, ...props }) => {
             >
                 <Switch.Thumb animation='quick' bg={isDarkMode ? '$gray-200' : '$white'} borderColor={isDarkMode ? '$gray-700' : '$gray-500'} borderWidth={1} />
             </Switch>
-            {showLabel && (
+            {showLabel === true && (
                 <Label htmlFor='driverOnline' color='$gray-500' size='$2' lineHeight='$4'>
                     {checked ? t('common.online') : t('common.offline')}
                 </Label>

@@ -1,26 +1,21 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Input, Text, XStack, YStack } from 'tamagui';
+import { Input, YStack } from 'tamagui';
 import { useLanguage } from '../contexts/LanguageContext';
+import { formatPhoneForDisplay } from '../utils/format';
 import useAppTheme from '../hooks/use-app-theme';
 
 const IRAN_COUNTRY = {
     code: 'IR',
     phone: '98',
-    emoji: '🇮🇷'
+    emoji: '🇮🇷',
 };
 
 const PhoneInput = ({ value, onChange, bg, width = '100%', size = '$5', wrapperProps = {} }) => {
     const { t } = useLanguage();
     const { isDarkMode } = useAppTheme();
-    
+
     // Initialize phone number state
-    const [phoneNumber, setPhoneNumber] = useState(() => {
-        if (typeof value === 'string' && value.startsWith('+98')) {
-            return `0${value.substring(3)}`;
-        }
-        // Return raw value (without country code) or empty string
-        return value || '';
-    });
+    const [phoneNumber, setPhoneNumber] = useState(() => value?.replace(/^\+98/, '') || '');
 
     const phoneInputRef = useRef(null);
     const backgroundColor = bg ? bg : isDarkMode ? '$surface' : '$gray-200';
@@ -29,11 +24,16 @@ const PhoneInput = ({ value, onChange, bg, width = '100%', size = '$5', wrapperP
         // No bottom sheet to close anymore
     };
 
+    const handlePhoneNumberChange = (text) => {
+        // remove formatting for state update
+        const rawNumber = text.replace(/\u202A|\u202C/g, '').replace(/^0/, '');
+        setPhoneNumber(rawNumber);
+    };
+
     useEffect(() => {
         if (onChange) {
-            const rawPhoneNumber = phoneNumber.startsWith('0') ? phoneNumber.substring(1) : phoneNumber;
-            const combinedValue = `+${IRAN_COUNTRY.phone}${rawPhoneNumber}`;
-            onChange(combinedValue, rawPhoneNumber, IRAN_COUNTRY);
+            const combinedValue = `+${IRAN_COUNTRY.phone}${phoneNumber}`;
+            onChange(combinedValue, phoneNumber, IRAN_COUNTRY);
         }
     }, [phoneNumber, onChange]);
 
@@ -42,21 +42,20 @@ const PhoneInput = ({ value, onChange, bg, width = '100%', size = '$5', wrapperP
             <Input
                 size={size}
                 ref={phoneInputRef}
-                width='100%'
-                placeholder={t('PhoneInput.enterFullPhoneNumber', 'Enter phone number, e.g. 0912...')}
+                placeholder={t('PhoneInput.enterPhoneNumber')}
                 keyboardType='phone-pad'
-                value={phoneNumber}
-                onChangeText={setPhoneNumber}
+                value={phoneNumber ? formatPhoneForDisplay(`+98${phoneNumber}`) : ''}
+                onChangeText={handlePhoneNumberChange}
                 onFocus={handleInputFocus}
                 bg={backgroundColor}
                 color='$textPrimary'
-                textAlign='left'
+                textAlign='center'
                 borderRadius='$5'
                 borderWidth={1}
                 borderColor='$borderColorWithShadow'
                 overflow='hidden'
                 placeholderTextColor={isDarkMode ? '$gray-700' : '$gray-400'}
-                direction='ltr'
+                width={width}
             />
         </YStack>
     );
