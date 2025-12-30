@@ -31,6 +31,8 @@ buildscript {
 
 allprojects { 
     repositories {
+        google()
+        mavenCentral()
         // Required for react-native-background-geolocation
         maven { url("${project(':react-native-background-geolocation').projectDir}/libs") }
         maven { url 'https://developer.huawei.com/repo/' }
