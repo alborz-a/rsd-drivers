@@ -21,6 +21,8 @@ export default {
         searchOptions: "جستجوی گزینه‌ها",
         yes: "فعال",
         no: "غیرفعال",
+        online: "آنلاین",
+        offline: "آفلاین",
     },
     time: {
         justNow: "همین الان",
@@ -126,6 +128,7 @@ export default {
     },
     PhoneInput: {
         enterPhoneNumber: "شماره تلفن را وارد کنید",
+        enterFullPhoneNumber: "شماره موبایل خود را وارد کنید...",
         searchCountry: "جستجوی کشور",
     },
     MoneyInput: {
@@ -258,12 +261,14 @@ export default {
     PhoneLoginScreen: {
         home: "خانه",
         invalidPhoneNumberProvided: "شماره تلفن نامعتبر است.",
-        loginViaSms: "ورود با پیامک",
+        loginViaSms: "ورود با شماره موبایل",
         sendVerificationCode: "ارسال کد تأیید",
     },
     PhoneLoginVerifyScreen: {
+        title: "تایید شماره موبایل",
+        subtitle: "کد تایید به شماره {{phone}} ارسال شد",
         unableToSendSms: "ارسال پیامک امکان‌پذیر نیست.",
-        verifyCode: "تأیید کد",
+        verifyCode: "تأیید",
     },
     CreateAccountScreen: {
         createAccount: "ایجاد حساب کاربری",
@@ -315,6 +320,9 @@ export default {
         type: "نوع:",
         vehicle: "وسیله نقلیه:",
         volume: "حجم:",
+        tabs: { issues: "مشکلات", fuelReports: "گزارش‌های سوخت" },
+        createNewIssue: "ایجاد مشکل جدید",
+        createNewFuelReport: "ایجاد گزارش سوخت جدید",
     },
     FleetScreen: {
         fleetscreen: "صفحه ناوگان",

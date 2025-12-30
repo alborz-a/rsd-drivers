@@ -5,7 +5,7 @@ import { Text, YStack, XStack, Button, Separator, Image, useTheme } from 'tamagu
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 import { singularize } from 'inflected';
-import { format } from 'date-fns';
+import { formatLocalizedDate } from '../utils/dateUtils';
 import { titleize, formatCurrency } from '../utils/format';
 import { later } from '../utils';
 import { useAuth } from '../contexts/AuthContext';
@@ -29,8 +29,8 @@ const DriverReportScreen = () => {
     const [isRefreshing, setIsRefreshing] = useState(false);
     const { t } = useLanguage();
     const reportOptions = [
-        { value: 'issue', label: t('DriverReportScreen.issueOn') === 'Issue on:' ? 'Issues' : t('DriverReportScreen.issueOn') },
-        { value: 'fuel-report', label: t('DriverReportScreen.fuelReported') === 'Fuel Reported:' ? 'Fuel Reports' : t('DriverReportScreen.fuelReported') },
+        { value: 'issue', label: t('DriverReportScreen.tabs.issues') },
+        { value: 'fuel-report', label: t('DriverReportScreen.tabs.fuelReports') },
     ];
     const currentIndex = reportOptions.findIndex((option) => option.value === currentTab);
     const content = useMemo(() => (currentTab === 'issue' ? issues : fuelReports), [currentTab, issues, fuelReports]);
@@ -103,7 +103,7 @@ const DriverReportScreen = () => {
                                 {t('DriverReportScreen.issueOn')}
                             </Text>
                             <Text size='$5' color='$textPrimary' fontWeight='bold' numberOfLines={1}>
-                                {format(new Date(issue.created_at), 'MMM dd, yyyy HH:mm')}
+                                {formatLocalizedDate(new Date(issue.created_at), 'MMM dd, yyyy HH:mm')}
                             </Text>
                         </XStack>
                         <YStack pb='$2' px='$2' gap='$2'>
@@ -176,7 +176,7 @@ const DriverReportScreen = () => {
                                     {t('DriverReportScreen.fuelReported')}
                                 </Text>
                                 <Text size='$5' color='$textPrimary' fontWeight='bold' numberOfLines={1}>
-                                    {format(new Date(fuelReport.created_at), 'MMM dd, yyyy HH:mm')}
+                                    {formatLocalizedDate(new Date(fuelReport.created_at), 'MMM dd, yyyy HH:mm')}
                                 </Text>
                             </XStack>
                             <YStack></YStack>
@@ -263,7 +263,7 @@ const DriverReportScreen = () => {
                             <FontAwesomeIcon icon={faPenToSquare} color={theme['$infoText'].val} size={16} />
                         </Button.Icon>
                         <Button.Text color='$infoText' fontSize={15}>
-                            {t('common.edit')} a new {singularize(reportOptions[currentIndex].label)}
+                            {currentTab === 'issue' ? t('DriverReportScreen.createNewIssue') : t('DriverReportScreen.createNewFuelReport')}
                         </Button.Text>
                     </Button>
                 </YStack>

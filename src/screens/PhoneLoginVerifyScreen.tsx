@@ -9,7 +9,7 @@ import { OtpInput } from 'react-native-otp-entry';
 import { Button, Spinner, Text, useTheme, XStack, YStack } from 'tamagui';
 import { useAuth } from '../contexts/AuthContext';
 import { useLanguage } from '../contexts/LanguageContext';
-import { navigatorConfig } from '../utils';
+import { formatPhoneForDisplay, formatPhoneNumber, navigatorConfig } from '../utils';
 
 const PhoneLoginVerifyScreen = () => {
     const navigation = useNavigation();
@@ -43,7 +43,10 @@ const PhoneLoginVerifyScreen = () => {
             <YStack flex={1} space='$3' padding='$5'>
                 <YStack mb='$4'>
                     <Text color='$gray-300' fontSize={20} fontWeight='bold'>
-                        {t('PhoneLoginVerifyScreen.verifyCode')} <Text style={{ writingDirection: 'ltr' }}>{phone}</Text>
+                        {t('PhoneLoginVerifyScreen.title')}
+                    </Text>
+                    <Text color='$gray-300' fontSize={16}>
+                        {t('PhoneLoginVerifyScreen.subtitle', { phone: formatPhoneForDisplay(formatPhoneNumber(phone)) })}
                     </Text>
                 </YStack>
                 <OtpInput
@@ -53,13 +56,13 @@ const PhoneLoginVerifyScreen = () => {
                     focusColor={theme.primary.val}
                     theme={{ pinCodeContainerStyle: { borderColor: theme['blue-300'].val, height: 50, width: 50 }, pinCodeTextStyle: { color: theme.primary.val, fontSize: 25 } }}
                 />
-                <Button size='$5' onPress={() => handleVerifyCode(code)} bg='$primary' width='100%' opacity={isVerifyingCode ? 0.75 : 1} disabled={isVerifyingCode} rounded>
+                <Button size='$5' onPress={() => handleVerifyCode(code)} bg='$primary' width='100%' opacity={isVerifyingCode ? 0.75 : 1} disabled={isVerifyingCode} rounded space='$2'>
                     <Button.Icon>{isVerifyingCode ? <Spinner color='$white' /> : <FontAwesomeIcon icon={faCheck} color={theme.white.val} />}</Button.Icon>
                     <Button.Text color='$gray-200' fontWeight='bold'>
                         {t('PhoneLoginVerifyScreen.verifyCode')}
                     </Button.Text>
                 </Button>
-                <Button size='$5' onPress={handleRetry} bg='$secondary' width='100%' rounded>
+                <Button size='$5' onPress={handleRetry} bg='$secondary' width='100%' rounded space='$2'>
                     <Button.Icon>
                         <FontAwesomeIcon icon={faArrowRotateRight} color={theme['gray-500'].val} />
                     </Button.Icon>

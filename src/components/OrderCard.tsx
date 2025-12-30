@@ -1,6 +1,6 @@
 import { faBox } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { format as formatDate } from 'date-fns';
+import { formatLocalizedDate } from '../utils/dateUtils';
 import React, { useMemo } from 'react';
 import { Pressable } from 'react-native';
 import { Text, XStack, YStack, useTheme } from 'tamagui';
@@ -44,7 +44,7 @@ export const OrderCard = ({ order, onPress }) => {
                                 {order.getAttribute('tracking_number.tracking_number')}
                             </Text>
                             <Text color='$textPrimary' fontSize={12}>
-                                {formatDate(new Date(order.getAttribute('created_at')), 'PP HH:mm')}
+                                {formatLocalizedDate(new Date(order.getAttribute('created_at')), 'PP HH:mm')}
                             </Text>
                         </YStack>
                     </XStack>
@@ -117,7 +117,7 @@ export const OrderCard = ({ order, onPress }) => {
                                         </Text>
                                         <YStack minHeight={INFO_FIELD_VALUE_MIN_HEIGHT}>
                                             <LoadingText
-                                                text={order.getAttribute('scheduled_at') ? formatDate(new Date(order.getAttribute('scheduled_at')), 'PP HH:mm') : t('OrderCard.nA')}
+                                                text={order.getAttribute('scheduled_at') ? formatLocalizedDate(new Date(order.getAttribute('scheduled_at')), 'PP HH:mm') : t('OrderCard.nA')}
                                                 numberOfLines={1}
                                                 color='$textSecondary'
                                                 fontSize={12}
@@ -145,7 +145,7 @@ export const OrderCard = ({ order, onPress }) => {
                                         </Text>
                                         <YStack minHeight={INFO_FIELD_VALUE_MIN_HEIGHT}>
                                             <LoadingText
-                                                text={order.getAttribute('dispatched_at') ? formatDate(new Date(order.getAttribute('dispatched_at')), 'PP HH:mm') : t('OrderCard.nA')}
+                                                text={order.getAttribute('dispatched_at') ? formatLocalizedDate(new Date(order.getAttribute('dispatched_at')), 'PP HH:mm') : t('OrderCard.nA')}
                                                 numberOfLines={1}
                                                 color='$textSecondary'
                                                 fontSize={12}

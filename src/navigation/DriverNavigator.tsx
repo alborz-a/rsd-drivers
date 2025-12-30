@@ -52,6 +52,7 @@ import HeaderButton from '../components/HeaderButton';
 import Badge from '../components/Badge';
 import DeviceInfo from 'react-native-device-info';
 import { useLanguage } from '../contexts/LanguageContext';
+import DirectionalIcon from '../components/DirectionalIcon';
 
 const isAndroid = Platform.OS === 'android';
 const importedIconsMap = {
@@ -155,7 +156,7 @@ function getDefaultTabIcon(routeName) {
     let icon;
     switch (routeName) {
         case 'DriverDashboardTab':
-            icon = faGaugeHigh;
+            icon = faHome;
             break;
         case 'DriverTaskTab':
             icon = faClipboardList;
@@ -334,7 +335,7 @@ const DriverReportTab = createNativeStackNavigator({
                     headerTitle: '',
                     headerLeft: (props) => (
                         <Text color='$textPrimary' fontSize={18} fontWeight='bold' numberOfLines={1}>
-                            {t('DriverNavigator.editFuelReportTitle', { date: formatLocalizedDate(fuelReport.created_at) })}
+                            {t('DriverNavigator.editFuelReportTitle', { date: formatLocalizedDate(new Date(fuelReport.created_at), 'MMM dd, yyyy HH:mm') })}
                         </Text>
                     ),
                     headerRight: (props) => <HeaderButton icon={faTimes} onPress={() => navigation.goBack()} />,
@@ -357,7 +358,7 @@ const DriverReportTab = createNativeStackNavigator({
                     headerTitle: '',
                     headerLeft: (props) => (
                         <Text color='$textPrimary' fontSize={18} fontWeight='bold' numberOfLines={1}>
-                            {format(new Date(fuelReport.created_at), 'MMM dd, yyyy HH:mm')}
+                            {formatLocalizedDate(new Date(fuelReport.created_at), 'MMM dd, yyyy HH:mm')}
                         </Text>
                     ),
                     headerRight: (props) => <PortalHost name='FuelReportScreenHeaderRightPortal' />,
@@ -400,7 +401,7 @@ const DriverReportTab = createNativeStackNavigator({
                     headerTitle: '',
                     headerLeft: (props) => (
                         <Text color='$textPrimary' fontSize={18} fontWeight='bold' numberOfLines={1}>
-                            {t('DriverNavigator.editIssueTitle', { date: formatLocalizedDate(issue.created_at) })}
+                            {t('DriverNavigator.editIssueTitle', { date: formatLocalizedDate(new Date(issue.created_at), 'MMM dd, yyyy HH:mm') })}
                         </Text>
                     ),
                     headerRight: (props) => <HeaderButton icon={faTimes} onPress={() => navigation.goBack()} />,
@@ -423,7 +424,7 @@ const DriverReportTab = createNativeStackNavigator({
                     headerTitle: '',
                     headerLeft: (props) => (
                         <Text color='$textPrimary' fontSize={18} fontWeight='bold' numberOfLines={1}>
-                            {format(new Date(issue.created_at), 'MMM dd, yyyy HH:mm')}
+                            {formatLocalizedDate(new Date(issue.created_at), 'MMM dd, yyyy HH:mm')}
                         </Text>
                     ),
                     headerRight: (props) => <PortalHost name='IssueScreenHeaderRightPortal' />,
@@ -580,7 +581,7 @@ const DriverNavigator = createBottomTabNavigator({
             tabBarIcon: ({ focused }) => {
                 const icon = getDefaultTabIcon(route.name);
 
-                return <FontAwesomeIcon icon={icon} size={isAndroid ? 18 : 20} color={focused ? focusedColor : blurredColor} />;
+                return <DirectionalIcon icon={icon} size={isAndroid ? 18 : 20} color={focused ? focusedColor : blurredColor} />;
             },
             tabBarLabelStyle: ({ focused }) => {
                 return {

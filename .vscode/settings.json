@@ -1,0 +1,9 @@
+{
+    // Disable TypeScript validation completely for this React Native project
+    // Metro/Babel handles transpilation and ignores types anyway
+    "typescript.validate.enable": false,
+    "javascript.validate.enable": true,
+    
+    // Optional: If you want syntax highlighting but no type errors
+    // "typescript.tsserver.experimental.enableProjectDiagnostics": false
+}

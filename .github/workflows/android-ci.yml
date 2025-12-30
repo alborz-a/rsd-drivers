@@ -108,30 +108,6 @@ jobs:
                   java-version: '17'
 
             # ============================================
-            # GRADLE CACHES - Use restore/save pattern to prevent per-tag duplication
-            # Caches are only saved when yarn.lock or gradle files change
-            # ============================================
-            - name: Restore Gradle Wrapper cache
-              if: env.CLEAN_BUILD != 'true'
-              uses: actions/cache/restore@v4
-              id: gradle-wrapper-cache
-              with:
-                  path: ~/.gradle/wrapper
-                  key: gradle-wrapper-${{ hashFiles('**/gradle-wrapper.properties') }}
-                  restore-keys: |
-                      gradle-wrapper-
-
-            - name: Restore Gradle Dependencies cache
-              if: env.CLEAN_BUILD != 'true'
-              uses: actions/cache/restore@v4
-              id: gradle-deps-cache
-              with:
-                  path: ~/.gradle/caches
-                  key: gradle-caches-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
-                  restore-keys: |
-                      gradle-caches-
-
-            # ============================================
             # NINJA - Check if pre-installed before installing
             # ============================================
             - name: Check/Install Ninja
@@ -179,15 +155,39 @@ jobs:
                   test -f "$ANDROID_SDK_ROOT/ndk/27.1.12297006/source.properties" && echo "✅ NDK 27.1.12297006 installed"
 
             # ============================================
-            # GRADLE SETUP WITH CACHING
-            # cache-overwrite: true prevents creating duplicate entries
+            # GRADLE CACHING - Explicit manual caching for visibility
             # ============================================
+            - name: Restore Gradle caches
+              if: env.CLEAN_BUILD != 'true'
+              id: gradle-cache
+              uses: actions/cache@v4
+              with:
+                  path: |
+                      ~/.gradle/caches
+                      ~/.gradle/wrapper
+                      android/.gradle
+                  key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties', '**/gradle.properties') }}
+                  restore-keys: |
+                      gradle-${{ runner.os }}-
+
+            # Gradle Build Cache (separate from dependencies for better cache hits)
+            - name: Restore Gradle Build Cache
+              if: env.CLEAN_BUILD != 'true'
+              id: gradle-build-cache
+              uses: actions/cache@v4
+              with:
+                  path: |
+                      android/app/build
+                      android/build
+                      ~/.gradle/caches/build-cache-1
+                  key: gradle-build-${{ runner.os }}-${{ github.sha }}
+                  restore-keys: |
+                      gradle-build-${{ runner.os }}-
+
             - name: Setup Gradle
               uses: gradle/actions/setup-gradle@v4
               with:
-                  cache-disabled: ${{ env.CLEAN_BUILD == 'true' }}
-                  cache-read-only: ${{ github.ref != 'refs/heads/main' && env.CLEAN_BUILD != 'true' }}
-                  cache-overwrite-existing: true
+                  cache-disabled: true
 
             - name: Make Gradlew Executable
               run: cd android && chmod +x ./gradlew
@@ -260,21 +260,27 @@ jobs:
                   retention-days: 30
 
             # ============================================
-            # SAVE CACHES - Only if not already cached (prevents duplicates)
+            # SAVE CACHES - Always save after successful build
             # ============================================
-            - name: Save Gradle Wrapper cache
-              if: steps.gradle-wrapper-cache.outputs.cache-hit != 'true'
+            - name: Save Gradle caches
+              if: always() && steps.gradle-cache.outputs.cache-hit != 'true'
               uses: actions/cache/save@v4
               with:
-                  path: ~/.gradle/wrapper
-                  key: gradle-wrapper-${{ hashFiles('**/gradle-wrapper.properties') }}
+                  path: |
+                      ~/.gradle/caches
+                      ~/.gradle/wrapper
+                      android/.gradle
+                  key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties', '**/gradle.properties') }}
 
-            - name: Save Gradle Dependencies cache
-              if: steps.gradle-deps-cache.outputs.cache-hit != 'true'
+            - name: Save Gradle Build Cache
+              if: always()
               uses: actions/cache/save@v4
               with:
-                  path: ~/.gradle/caches
-                  key: gradle-caches-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+                  path: |
+                      android/app/build
+                      android/build
+                      ~/.gradle/caches/build-cache-1
+                  key: gradle-build-${{ runner.os }}-${{ github.sha }}
 
     create_release:
         runs-on: ubuntu-latest

@@ -241,6 +241,24 @@ export function formatPhoneForDisplay(phone) {
     return `\u202A${phone}\u202C`;
 }
 
+export function formatPhoneNumber(phoneNumber) {
+    if (!phoneNumber) {
+        return '';
+    }
+    // Remove the leading "+98"
+    let number = phoneNumber.replace(/^\+98/, '0');
+
+    // Add spaces for readability
+    if (number.length > 4) {
+        number = `${number.slice(0, 4)} ${number.slice(4)}`;
+    }
+    if (number.length > 8) {
+        number = `${number.slice(0, 8)} ${number.slice(8)}`;
+    }
+
+    return number;
+}
+
 export function removeLeadingSpaces(string = '') {
     return string.replace(/^\s+/g, '');
 }

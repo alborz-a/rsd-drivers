@@ -5,6 +5,7 @@ import { Spinner, Input, Stack, Text, YStack, useTheme, Button } from 'tamagui';
 import { toast, ToastPosition } from '@backpackapp-io/react-native-toast';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faPaperPlane, faKey, faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import DirectionalIcon from '../components/DirectionalIcon';
 import { isValidPhoneNumber, navigatorConfig } from '../utils';
 import { useAuth } from '../contexts/AuthContext';
 import useAppTheme from '../hooks/use-app-theme';
@@ -69,7 +70,7 @@ const PhoneLoginScreen = () => {
                 <YStack space='$4' width='100%' padding='$5'>
                     <Button size='$5' onPress={handleGoBackHome} bg={isDarkMode ? '$secondary' : '$gray-700'} width='100%' rounded>
                         <Button.Icon>
-                            <FontAwesomeIcon icon={faArrowLeft} color={isDarkMode ? theme['textPrimary'].val : theme['$gray-400'].val} />
+                            <DirectionalIcon icon={faArrowLeft} color={isDarkMode ? theme['textPrimary'].val : theme['$gray-400'].val} />
                         </Button.Icon>
                         <Button.Text color={isDarkMode ? theme['textPrimary'].val : theme['$gray-400'].val} fontWeight='bold'>
                             {t('PhoneLoginScreen.home')}
