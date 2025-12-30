@@ -1,4 +1,5 @@
 import React from 'react';
+import { Text, TextInput } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { TamaguiProvider, Theme } from 'tamagui';
 import { Toasts } from '@backpackapp-io/react-native-toast';
@@ -17,6 +18,17 @@ import { ChatProvider } from './src/contexts/ChatContext';
 import { LocationProvider } from './src/contexts/LocationContext';
 import { ConfigProvider } from './src/contexts/ConfigContext';
 import config from './tamagui.config';
+
+// Set Shabnam as the default font for all Text and TextInput components
+const defaultFontFamily = 'Shabnam';
+// @ts-ignore - Overriding defaultProps is a valid pattern for setting global defaults
+Text.defaultProps = Text.defaultProps || {};
+// @ts-ignore
+Text.defaultProps.style = { fontFamily: defaultFontFamily, ...(Text.defaultProps.style || {}) };
+// @ts-ignore
+TextInput.defaultProps = TextInput.defaultProps || {};
+// @ts-ignore
+TextInput.defaultProps.style = { fontFamily: defaultFontFamily, ...(TextInput.defaultProps.style || {}) };
 
 function AppContent(): React.JSX.Element {
     const { appTheme } = useThemeContext();

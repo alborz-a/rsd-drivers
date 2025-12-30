@@ -79,7 +79,7 @@ function getTabConfig(name, key, defaultValue = null) {
 }
 
 function createTabScreens() {
-    const tabs = toArray(navigatorConfig('driverNavigator.tabs', 'DriverDashboardTab,DriverTaskTab,DriverReportTab,DriverChatTab,DriverAccountTab'));
+    const tabs = toArray(navigatorConfig('driverNavigator.tabs', 'DriverAccountTab,DriverChatTab,DriverDashboardTab,DriverReportTab,DriverTaskTab'));
     const screens = {
         DriverDashboardTab: {
             screen: DriverDashboardTab,
@@ -93,7 +93,7 @@ function createTabScreens() {
                 const { allActiveOrders } = useOrderManager();
 
                 return {
-                    tabBarLabel: config('DRIVER_ORDER_TAB_LABEL', 'Orders'),
+                    tabBarLabel: config('DRIVER_ORDER_TAB_LABEL', 'درخواست‌ها'),
                     tabBarBadge: allActiveOrders.length,
                     tabBarBadgeStyle: {
                         marginRight: -5,
@@ -106,7 +106,7 @@ function createTabScreens() {
             screen: DriverReportTab,
             options: () => {
                 return {
-                    tabBarLabel: config('DRIVER_REPORT_TAB_LABEL', 'Reports'),
+                    tabBarLabel: config('DRIVER_REPORT_TAB_LABEL', 'گزارشات'),
                 };
             },
         },
@@ -116,7 +116,7 @@ function createTabScreens() {
                 const { unreadCount } = useChat();
 
                 return {
-                    tabBarLabel: config('DRIVER_CHAT_TAB_LABEL', 'Chat'),
+                    tabBarLabel: config('DRIVER_CHAT_TAB_LABEL', 'چت'),
                     tabBarBadge: unreadCount,
                     tabBarBadgeStyle: {
                         marginRight: -5,
@@ -129,7 +129,7 @@ function createTabScreens() {
             screen: DriverAccountTab,
             options: () => {
                 return {
-                    tabBarLabel: config('DRIVER_ACCOUNT_TAB_LABEL', 'Account'),
+                    tabBarLabel: config('DRIVER_ACCOUNT_TAB_LABEL', 'پروفایل'),
                 };
             },
         },
@@ -516,27 +516,27 @@ const DriverNavigator = createBottomTabNavigator({
 
         return {
             headerTitle: '',
-            headerLeft: (props) => {
+            headerLeft: (props) => (
+                <View pl='$3'>
+                    <DriverOnlineToggle {...props} />
+                </View>
+            ),
+            headerRight: (props) => {
                 const { t } = useLanguage();
                 return (
-                    <View pl='$3'>
+                    <View pr='$3'>
                         <XStack alignItems='center'>
-                            <Image source={require('../../assets/navigator-icon-transparent.png')} style={{ width: 18, height: 18, marginRight: 5 }} />
+                            <Image source={require('../../assets/navigator-icon-transparent.png')} style={{ width: 18, height: 18, marginLeft: 5 }} />
                             <Text color='$textPrimary' fontSize={20} fontWeight='bold'>
                                 {t('DriverNavigator.navigator')}
                             </Text>
                         </XStack>
-                        <Text color='$textSecondary' fontSize={8} ml={25}>
+                        <Text color='$textSecondary' fontSize={8} mr={25}>
                             v{DeviceInfo.getVersion()} #{DeviceInfo.getBuildNumber()}
                         </Text>
                     </View>
                 );
             },
-            headerRight: (props) => (
-                <View pr='$3'>
-                    <DriverOnlineToggle {...props} />
-                </View>
-            ),
             headerStyle: {
                 backgroundColor: isDarkMode ? theme.background.val : theme.background.val,
                 elevation: 0,

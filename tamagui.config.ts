@@ -1,6 +1,75 @@
 import { config as baseConfig } from '@tamagui/config/v3';
-import { createTamagui, createTheme, createTokens } from 'tamagui';
+import { createTamagui, createTheme, createTokens, createFont } from 'tamagui';
 import { config, parseConfigObjectString, flattenTailwindCssColorsObject } from './src/utils/tamagui';
+
+// Shabnam font configuration - Persian/Farsi font
+const shabnamFont = createFont({
+    family: 'Shabnam',
+    size: {
+        1: 11,
+        2: 12,
+        3: 13,
+        4: 14,
+        true: 14,
+        5: 16,
+        6: 18,
+        7: 20,
+        8: 23,
+        9: 30,
+        10: 46,
+        11: 55,
+        12: 62,
+        13: 72,
+        14: 92,
+        15: 114,
+        16: 134,
+    },
+    lineHeight: {
+        1: 15,
+        2: 17,
+        3: 18,
+        4: 20,
+        true: 20,
+        5: 22,
+        6: 25,
+        7: 28,
+        8: 31,
+        9: 40,
+        10: 54,
+        11: 65,
+        12: 72,
+        13: 84,
+        14: 108,
+        15: 134,
+        16: 158,
+    },
+    weight: {
+        4: '300', // Shabnam-Light
+        5: '400', // Shabnam (regular)
+        true: '400',
+        6: '500', // Shabnam-Medium
+        7: '700', // Shabnam-Bold
+    },
+    letterSpacing: {
+        4: 0,
+        5: 0,
+        true: 0,
+        6: 0,
+        7: -0.5,
+        8: -1,
+        9: -2,
+        10: -3,
+        12: -4,
+        14: -5,
+        15: -6,
+    },
+    face: {
+        300: { normal: 'Shabnam-Light' },
+        400: { normal: 'Shabnam' },
+        500: { normal: 'Shabnam-Medium' },
+        700: { normal: 'Shabnam-Bold' },
+    },
+});
 
 const customColors = parseConfigObjectString(config('CUSTOM_COLORS', ''));
 const customColorsDark = parseConfigObjectString(config('CUSTOM_COLORS_DARK', ''));
@@ -282,6 +351,10 @@ const appConfig = createTamagui({
     ...baseConfig,
     themes,
     tokens,
+    fonts: {
+        heading: shabnamFont,
+        body: shabnamFont,
+    },
 });
 
 export type AppConfig = typeof appConfig;

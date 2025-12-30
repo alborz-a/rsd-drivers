@@ -1,0 +1,25 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/Shabnam-Bold.ttf",
+      "sha1": "c5606a3da09e2ed8f5005dfdbb2199f46b167fef"
+    },
+    {
+      "path": "src/assets/fonts/Shabnam-Light.ttf",
+      "sha1": "0548afc29bc9dcb593561cf7fcd8871ac59a68b0"
+    },
+    {
+      "path": "src/assets/fonts/Shabnam-Medium.ttf",
+      "sha1": "4683f4f3b77d6623f6ddc985c8976f5a1ca0a120"
+    },
+    {
+      "path": "src/assets/fonts/Shabnam-Thin.ttf",
+      "sha1": "2d2f173377f55acd84c0b068b967ca9d3275c559"
+    },
+    {
+      "path": "src/assets/fonts/Shabnam.ttf",
+      "sha1": "070a4618e121bdb4e3e121625a55a20b61c58516"
+    }
+  ]
+}

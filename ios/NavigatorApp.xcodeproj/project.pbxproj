@@ -14,6 +14,11 @@
 		E4AFEC662CF6BA4C000EDE15 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E4AFEC652CF6BA4C000EDE15 /* Config.xcconfig */; };
 		E4CDF7812CE20AF900D34FBB /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4CDF7802CE20AF900D34FBB /* BootSplash.storyboard */; };
 		FB15EE06433579CB8F2910C6 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		BC901510DA7149559B736903 /* Shabnam-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD90B8E2200742C788E564A3 /* Shabnam-Bold.ttf */; };
+		25A76273F3C541EABD2A33F7 /* Shabnam-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 845F7301CEF9468293E484CC /* Shabnam-Light.ttf */; };
+		2D1225C08C834C4E95AE6791 /* Shabnam-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01AA0852B6BA4B018A5E1E73 /* Shabnam-Medium.ttf */; };
+		6E193EE0ECEB412CA405355B /* Shabnam-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51591AD4FA424B21BFF3DD71 /* Shabnam-Thin.ttf */; };
+		67F633EE6EB049A5932A9CA0 /* Shabnam.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 620C8262DECC4DC595359D0D /* Shabnam.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,11 @@
 		E4C5571E2D3A1BFA00B22EA8 /* NavigatorApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = NavigatorApp.entitlements; path = NavigatorApp/NavigatorApp.entitlements; sourceTree = "<group>"; };
 		E4CDF7802CE20AF900D34FBB /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = NavigatorApp/BootSplash.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		DD90B8E2200742C788E564A3 /* Shabnam-Bold.ttf */ = {isa = PBXFileReference; name = "Shabnam-Bold.ttf"; path = "../src/assets/fonts/Shabnam-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		845F7301CEF9468293E484CC /* Shabnam-Light.ttf */ = {isa = PBXFileReference; name = "Shabnam-Light.ttf"; path = "../src/assets/fonts/Shabnam-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		01AA0852B6BA4B018A5E1E73 /* Shabnam-Medium.ttf */ = {isa = PBXFileReference; name = "Shabnam-Medium.ttf"; path = "../src/assets/fonts/Shabnam-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		51591AD4FA424B21BFF3DD71 /* Shabnam-Thin.ttf */ = {isa = PBXFileReference; name = "Shabnam-Thin.ttf"; path = "../src/assets/fonts/Shabnam-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		620C8262DECC4DC595359D0D /* Shabnam.ttf */ = {isa = PBXFileReference; name = "Shabnam.ttf"; path = "../src/assets/fonts/Shabnam.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +93,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				1F0FA2A176BB485DB9AD6A54 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -105,6 +116,19 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		1F0FA2A176BB485DB9AD6A54 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				DD90B8E2200742C788E564A3 /* Shabnam-Bold.ttf */,
+				845F7301CEF9468293E484CC /* Shabnam-Light.ttf */,
+				01AA0852B6BA4B018A5E1E73 /* Shabnam-Medium.ttf */,
+				51591AD4FA424B21BFF3DD71 /* Shabnam-Thin.ttf */,
+				620C8262DECC4DC595359D0D /* Shabnam.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -171,6 +195,11 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				FB15EE06433579CB8F2910C6 /* PrivacyInfo.xcprivacy in Resources */,
 				E4CDF7812CE20AF900D34FBB /* BootSplash.storyboard in Resources */,
+				BC901510DA7149559B736903 /* Shabnam-Bold.ttf in Resources */,
+				25A76273F3C541EABD2A33F7 /* Shabnam-Light.ttf in Resources */,
+				2D1225C08C834C4E95AE6791 /* Shabnam-Medium.ttf in Resources */,
+				6E193EE0ECEB412CA405355B /* Shabnam-Thin.ttf in Resources */,
+				67F633EE6EB049A5932A9CA0 /* Shabnam.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
