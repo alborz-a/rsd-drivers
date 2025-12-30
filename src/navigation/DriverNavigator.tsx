@@ -19,8 +19,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { useTheme, Text, View, XStack, Image } from 'tamagui';
 import { navigatorConfig, get, config, toArray, getTheme } from '../utils';
-import { configCase } from '../utils/format';
-import { formatLocalizedDate } from '../utils/dateUtils';
+import { configCase, formatLocalizedDate } from '../utils/format';
+import { format } from 'date-fns';
 import { PortalHost } from '@gorhom/portal';
 import { useIsNotAuthenticated, useIsAuthenticated } from '../contexts/AuthContext';
 import { useTempStore } from '../contexts/TempStoreContext';
