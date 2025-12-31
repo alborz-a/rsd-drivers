@@ -305,6 +305,12 @@ export const themes = {
         primaryBorder: colors.orange[700],
         primaryText: 'white',
     }),
+    lightGray: createTheme({
+        ...lightBase,
+        primary: colors.gray[600],
+        primaryBorder: colors.gray[700],
+        primaryText: 'white',
+    }),
 
     // Dark mode themes
     darkBlue: createTheme({
@@ -336,6 +342,12 @@ export const themes = {
         primary: colors.orange[500],
         primaryBorder: colors.orange[600],
         primaryText: colors.orange[100],
+    }),
+    darkGray: createTheme({
+        ...darkBase,
+        primary: colors.gray[500],
+        primaryBorder: colors.gray[600],
+        primaryText: colors.gray[100],
     }),
 };
 

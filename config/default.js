@@ -2,14 +2,14 @@ import { mergeConfigs, config, toBoolean } from '../src/utils/config';
 import { toArray } from '../src/utils';
 
 export const DefaultConfig = {
-    theme: config('APP_THEME', 'blue'),
+    theme: config('APP_THEME', 'gray'),
     driverNavigator: {
-        tabs: toArray(config('DRIVER_NAVIGATOR_TABS', 'DriverDashboardTab,DriverTaskTab,DriverReportTab,DriverChatTab,DriverAccountTab')),
+        tabs: toArray(config('DRIVER_NAVIGATOR_TABS', 'DriverTaskTab,DriverReportTab,DriverDashboardTab,DriverChatTab,DriverAccountTab')),
         defaultTab: toArray(config('DRIVER_NAVIGATOR_DEFAULT_TAB', 'DriverDashboardTab')),
     },
     defaultLocale: config('DEFAULT_LOCALE', 'fa'),
     colors: {
-        loginBackground: config('LOGIN_BG_COLOR', '#111827'),
+        loginBackground: config('LOGIN_BG_COLOR', '#1c1e20ff'),
     },
 };
 

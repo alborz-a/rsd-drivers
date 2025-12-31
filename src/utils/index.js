@@ -21,13 +21,13 @@ export async function resizePhoto(uri, maxSize = 1024) {
 
     const targetWidth = Math.floor(width * ratio);
     const targetHeight = Math.floor(height * ratio);
-
+    
     const resized = await ImageResizer.createResizedImage(
         uri,
         targetWidth,
         targetHeight,
         'JPEG',
-        80, // quality 0–100
+        100, // quality 0–100
         0, // rotation
         undefined, // let it pick a temp path
         false,
