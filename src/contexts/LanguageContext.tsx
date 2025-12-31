@@ -26,11 +26,11 @@ interface LanguageContextProps {
 
 const LanguageContext = createContext<LanguageContextProps>({
     locale: 'fa',
-    setLocale: () => { },
+    setLocale: () => {},
     t: () => '',
     current: {},
     language: {},
-    languages: []
+    languages: [],
 });
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
@@ -52,17 +52,18 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
         const isRTL = RTL_LANGUAGES.includes(newLocale);
         if (I18nManager.isRTL !== isRTL) {
             //  I18nManager.forceRTL(isRTL);
-             // Note: App needs to be reloaded for RTL changes to take effect
+            // Note: App needs to be reloaded for RTL changes to take effect
         }
     };
 
     useEffect(() => {
         I18n.locale = locale;
-        
+
         // Set initial RTL direction based on current locale
         const isRTL = RTL_LANGUAGES.includes(locale);
         if (I18nManager.isRTL !== isRTL) {
-            //  I18nManager.forceRTL(isRTL);
+            I18nManager.allowRTL(true);
+            I18nManager.forceRTL(isRTL);
         }
     }, []);
 
