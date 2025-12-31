@@ -100,10 +100,9 @@ function createTabScreens() {
 
                 return {
                     tabBarLabel: config('DRIVER_ORDER_TAB_LABEL', 'درخواست‌ها'),
-                    tabBarBadge: allActiveOrders.length,
+                    tabBarBadge: allActiveOrders.length > 0 ? allActiveOrders.length : undefined,
                     tabBarBadgeStyle: {
                         marginRight: -5,
-                        opacity: allActiveOrders.length ? 1 : 0.5,
                     },
                     tabBarActiveTintColor: theme['$gray-400']?.val ?? '#ccc',
                     tabBarInactiveTintColor: theme['$gray-400']?.val ?? '#ccc',
@@ -131,10 +130,9 @@ function createTabScreens() {
 
                 return {
                     tabBarLabel: config('DRIVER_CHAT_TAB_LABEL', 'چت'),
-                    tabBarBadge: unreadCount,
+                    tabBarBadge: unreadCount > 0 ? unreadCount : undefined,
                     tabBarBadgeStyle: {
                         marginRight: -5,
-                        opacity: unreadCount ? 1 : 0.5,
                     },
                     tabBarActiveTintColor: theme['$gray-400']?.val ?? '#ccc',
                     tabBarInactiveTintColor: theme['$gray-400']?.val ?? '#ccc',
@@ -542,7 +540,7 @@ const DriverNavigator = createBottomTabNavigator({
                 return (
                     <View pr='$3'>
                         <XStack alignItems='center'>
-                            <Image source={require('../../assets/navigator-icon-transparent.png')} style={{ width: 18, height: 18, marginLeft: 5 }} />
+                            <Image source={require('../../assets/navigator-icon-transparent.png')} style={{ height: 18, marginLeft: 5 }} resizeMode='contain' />
                         </XStack>
                         <Text color='$textSecondary' fontSize={8} mr={25}>
                             v{DeviceInfo.getVersion()} #{DeviceInfo.getBuildNumber()}
