@@ -599,6 +599,7 @@ const DriverNavigator = createBottomTabNavigator({
                     marginTop: isAndroid ? 4 : 15,
                     fontSize: isAndroid ? 13 : 15,
                     fontWeight: focused ? 700 : 600,
+                    fontFamily: 'Shabnam',
                 };
             },
         };
