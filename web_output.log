@@ -1,0 +1,106 @@
+
+> @fleetbase/navigator-app@2.0.9 web
+> webpack serve --config webpack.config.js
+
+<i> [webpack-dev-server] Project is running at:
+<i> [webpack-dev-server] Loopback: http://localhost:8080/, http://[::1]:8080/
+<i> [webpack-dev-server] On Your Network (IPv4): http://192.168.0.2:8080/
+<i> [webpack-dev-server] Content not from webpack is served from '/app/dist' directory
+<i> [webpack-dev-server] 404s will fallback to '/index.html'
+ native  |       OrderManagerContext   ·    0 found   ·    0 opt   ·    0 flat     4ms
+ native  |               ChatContext   ·    0 found   ·    0 opt   ·    0 flat     2ms
+ native  |           DriverNavigator   ·   18 found   ·   15 opt   ·    3 flat    60ms
+ native  |                 CoreStack   ·    0 found   ·    0 opt   ·    0 flat     0ms
+ native  |    DriverOrderManagementS   ·   25 found   ·   21 opt   ·    7 flat    81ms
+ native  |     DriverDashboardScreen   ·   21 found   ·   14 opt   ·   11 flat    37ms
+ native  |     ProofOfDeliveryScreen   ·    4 found   ·    4 opt   ·    3 flat    14ms
+ native  |               OrderScreen   ·   54 found   ·   31 opt   ·   20 flat   257ms
+ native  |        DriverReportScreen   ·   70 found   ·   49 opt   ·   23 flat   148ms
+ native  |              EntityScreen   ·   13 found   ·    6 opt   ·    2 flat    26ms
+ native  |           EditIssueScreen   ·    1 found   ·    1 opt   ·    0 flat     2ms
+ native  |         CreateIssueScreen   ·    1 found   ·    1 opt   ·    0 flat     2ms
+ native  |               IssueScreen   ·   41 found   ·   34 opt   ·   14 flat    50ms
+ native  |    CreateFuelReportScreen   ·    1 found   ·    1 opt   ·    0 flat     2ms
+ native  |      EditFuelReportScreen   ·    1 found   ·    1 opt   ·    0 flat     3ms
+ native  |            ChatHomeScreen   ·   16 found   ·   12 opt   ·    5 flat    38ms
+ native  |    ChatParticipantsScreen   ·   25 found   ·   15 opt   ·   14 flat    63ms
+ native  |         ChatChannelScreen   ·    8 found   ·    8 opt   ·    4 flat    22ms
+ native  |    CreateChatChannelScree   ·   26 found   ·   20 opt   ·    8 flat    68ms
+ native  |       DriverProfileScreen   ·   13 found   ·   11 opt   ·    2 flat    19ms
+ native  |          FuelReportScreen   ·   36 found   ·   30 opt   ·   12 flat    45ms
+ native  |       DriverAccountScreen   ·   26 found   ·   18 opt   ·    6 flat    67ms
+ native  |        DriverOnlineToggle   ·    3 found   ·    3 opt   ·    1 flat    16ms
+ native  |              HeaderButton   ·    1 found   ·    1 opt   ·    0 flat    15ms
+ native  |                     Badge   ·    3 found   ·    2 opt   ·    1 flat    39ms
+ native  |                BootScreen   ·    5 found   ·    5 opt   ·    1 flat    16ms
+ native  |                TestScreen   ·    2 found   ·    2 opt   ·    0 flat     2ms
+ native  |    LocationPermissionScre   ·   11 found   ·   10 opt   ·    1 flat    43ms
+ native  |               LoginScreen   ·    6 found   ·    6 opt   ·    1 flat    22ms
+ native  |          PhoneLoginScreen   ·    8 found   ·    8 opt   ·    1 flat    25ms
+ native  |    PhoneLoginVerifyScreen   ·   14 found   ·   14 opt   ·    5 flat    31ms
+ native  |       CreateAccountScreen   ·   10 found   ·    9 opt   ·    2 flat    35ms
+ native  |    CreateAccountVerifyScr   ·    6 found   ·    6 opt   ·    1 flat    19ms
+ native  |                 OrderCard   ·   37 found   ·   26 opt   ·   19 flat    65ms
+ native  |             PastOrderCard   ·   12 found   ·   11 opt   ·    6 flat    27ms
+ native  |            AdhocOrderCard   ·   20 found   ·   20 opt   ·    9 flat    43ms
+ native  |                    Spacer   ·    1 found   ·    1 opt   ·    0 flat     4ms
+ native  |              CustomHeader   ·    5 found   ·    2 opt   ·    0 flat    13ms
+ native  |             CameraCapture   ·   20 found   ·   16 opt   ·    7 flat    69ms
+ native  |            LoadingOverlay   ·    5 found   ·    3 opt   ·    3 flat    18ms
+ native  |            LiveOrderRoute   ·    7 found   ·    6 opt   ·    1 flat    24ms
+ native  |         OrderWaypointList   ·   21 found   ·   18 opt   ·    7 flat    81ms
+ native  |      OrderPayloadEntities   ·   17 found   ·   12 opt   ·    9 flat    34ms
+ native  |        OrderDocumentFiles   ·   13 found   ·   10 opt   ·    2 flat    23ms
+ native  |         OrderCustomerCard   ·   15 found   ·   10 opt   ·    5 flat    13ms
+ native  |      OrderProofOfDelivery   ·   12 found   ·   11 opt   ·    5 flat    30ms
+ native  |          OrderProgressBar   ·    7 found   ·    7 opt   ·    2 flat    29ms
+ native  |    CurrentDestinationSele   ·   33 found   ·   28 opt   ·   19 flat   102ms
+ native  |       OrderActivitySelect   ·   18 found   ·   13 opt   ·    6 flat    46ms
+ native  |    DestinationChangedAler   ·   14 found   ·   13 opt   ·    4 flat    18ms
+ native  |                   Content   ·   13 found   ·    8 opt   ·    8 flat    24ms
+ native  |                 TabSwitch   ·    3 found   ·    2 opt   ·    1 flat    23ms
+ native  |                 IssueForm   ·   16 found   ·   16 opt   ·    2 flat    30ms
+ native  |            FuelReportForm   ·   15 found   ·   15 opt   ·    2 flat    38ms
+ native  |              PlaceMapView   ·    1 found   ·    1 opt   ·    0 flat     8ms
+ native  |     ChatParticipantAvatar   ·    3 found   ·    3 opt   ·    1 flat     8ms
+ native  |         BottomSheetSelect   ·    7 found   ·    5 opt   ·    3 flat    24ms
+ native  |              ChatKeyboard   ·   10 found   ·    9 opt   ·    5 flat    44ms
+ native  |          ChatParticipants   ·    7 found   ·    6 opt   ·    2 flat    33ms
+ native  |                  ChatFeed   ·    1 found   ·    1 opt   ·    1 flat     5ms
+ native  |        SetupWarningScreen   ·   14 found   ·   14 opt   ·    5 flat    22ms
+ native  |                PhoneInput   ·    6 found   ·    2 opt   ·    0 flat    29ms
+ native  |                   Buttons   ·    5 found   ·    5 opt   ·    0 flat    19ms
+ native  |                     Input   ·    1 found   ·    1 opt   ·    1 flat     3ms
+ native  |    MultipleCustomerAvatar   ·    4 found   ·    4 opt   ·    2 flat    11ms
+ native  |               LoadingText   ·    3 found   ·    2 opt   ·    1 flat     5ms
+ native  |            LocationMarker   ·    6 found   ·    5 opt   ·    1 flat    50ms
+ native  |             CommentThread   ·    9 found   ·    5 opt   ·    2 flat    30ms
+ native  |              WaypointList   ·    4 found   ·    3 opt   ·    3 flat    26ms
+ native  |                 UnitInput   ·   10 found   ·    8 opt   ·    2 flat    41ms
+ native  |             TextAreaSheet   ·    7 found   ·    6 opt   ·    4 flat    22ms
+ native  |                MoneyInput   ·   13 found   ·    9 opt   ·    3 flat    44ms
+ native  |                   ChatLog   ·    3 found   ·    2 opt   ·    1 flat     3ms
+ native  |               ChatMessage   ·   17 found   ·   15 opt   ·    8 flat    39ms
+ native  |            ChatAttachment   ·    1 found   ·    0 opt   ·    1 flat     2ms
+ native  |                   Comment   ·   25 found   ·   21 opt   ·    4 flat    75ms
+ native  |            TrackingMarker   ·    4 found   ·    1 opt   ·    1 flat    11ms
+<i> [webpack-dev-middleware] wait until bundle finished: /
+asset bundle.js 14.5 MiB [emitted] (name: main)
+asset 7229777db752d8405b4f4e1c8a3b34ad.png 384 KiB [emitted] [immutable] [from: assets/images/isometric-geolocation-1.png] (auxiliary name: main)
+asset index.html 3.2 KiB [emitted]
+runtime modules 27.7 KiB 15 modules
+orphan modules 8.47 KiB [orphan] 13 modules
+modules by path ./node_modules/ 11.4 MiB 2134 modules
+modules by path ./src/ 907 KiB 120 modules
+modules by path ./webpack/mocks/*.js 9.39 KiB 19 modules
+modules by path ./assets/ 14.1 KiB
+  ./assets/navigator-icon-transparent.png 6.17 KiB [built] [code generated]
+  + 4 modules
+modules by path ./*.tsx 5.12 KiB
+  ./index.web.tsx 448 bytes [built] [code generated]
+  ./App.tsx 4.68 KiB [built] [code generated]
+modules by path ./*.ts 6.92 KiB
+  ./tamagui.config.ts 6.82 KiB [built] [code generated]
+  ./navigator.config.ts 99 bytes [built] [code generated]
+./config/default.js 692 bytes [built] [code generated]
+webpack 5.97.1 compiled successfully in 52485 ms
