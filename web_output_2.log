@@ -1,0 +1,563 @@
+<i> [webpack-dev-server] Project is running at:
+<i> [webpack-dev-server] Loopback: http://localhost:8080/, http://[::1]:8080/
+<i> [webpack-dev-server] On Your Network (IPv4): http://192.168.0.2:8080/
+<i> [webpack-dev-server] Content not from webpack is served from '/app/dist' directory
+<i> [webpack-dev-server] 404s will fallback to '/index.html'
+<i> [webpack-dev-middleware] wait until bundle finished: /
+assets by status 6.74 MiB [cached] 11 assets
+orphan modules 340 KiB [orphan] 150 modules
+runtime modules 28 KiB 16 modules
+modules by path ./node_modules/ 10.3 MiB (javascript) 2.7 KiB (asset) 1990 modules
+modules by path ./src/ 703 KiB 120 modules
+modules by path ./assets/ 394 KiB (asset) 210 bytes (javascript)
+  ./assets/navigator-icon-transparent.png 4.6 KiB (asset) 42 bytes (javascript) [built] [code generated]
+  ./assets/splash-screen.png 4.6 KiB (asset) 42 bytes (javascript) [built] [code generated]
+  + 3 modules
+modules by path ./*.tsx 3.39 KiB
+  ./index.web.tsx 416 bytes [built] [code generated]
+  ./App.tsx 2.99 KiB [built] [code generated]
+modules by path ./*.ts 5.88 KiB
+  ./tamagui.config.ts 5.7 KiB [built] [code generated]
+  ./navigator.config.ts 189 bytes [built] [code generated]
+./config/default.js 692 bytes [built] [code generated]
+
+WARNING in ./node_modules/@backpackapp-io/react-native-toast/lib/module/index.js 4:0-65
+export 'ToastAnimationType' (reexported as 'ToastAnimationType') was not found in './core/types' (possible exports: ToastPosition, resolveValue)
+ @ ./App.tsx
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/@bam.tech/react-native-image-resizer/lib/module/NativeImageResizer.js 2:15-47
+export 'TurboModuleRegistry' (imported as 'TurboModuleRegistry') was not found in 'react-native' (possible exports: AccessibilityInfo, ActivityIndicator, Alert, Animated, AppRegistry, AppState, Appearance, BackHandler, Button, CheckBox, Clipboard, DeviceEventEmitter, Dimensions, Easing, FlatList, I18nManager, Image, ImageBackground, InteractionManager, Keyboard, KeyboardAvoidingView, LayoutAnimation, Linking, LogBox, Modal, NativeEventEmitter, NativeModules, PanResponder, Picker, PixelRatio, Platform, Pressable, ProgressBar, RefreshControl, SafeAreaView, ScrollView, SectionList, Share, StatusBar, StyleSheet, Switch, Text, TextInput, Touchable, TouchableHighlight, TouchableNativeFeedback, TouchableOpacity, TouchableWithoutFeedback, UIManager, Vibration, View, VirtualizedList, YellowBox, __esModule, findNodeHandle, processColor, render, unmountComponentAtNode, unstable_createElement, useColorScheme, useLocaleContext, useWindowDimensions)
+ @ ./node_modules/@bam.tech/react-native-image-resizer/lib/module/index.js 4:44-83
+ @ ./src/utils/index.js 1:2739-2786
+ @ ./src/contexts/AuthContext.tsx 1:689-708
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/@react-native-camera-roll/camera-roll/lib/module/NativeCameraRollModule.js 5:15-47
+export 'TurboModuleRegistry' (imported as 'TurboModuleRegistry') was not found in 'react-native' (possible exports: AccessibilityInfo, ActivityIndicator, Alert, Animated, AppRegistry, AppState, Appearance, BackHandler, Button, CheckBox, Clipboard, DeviceEventEmitter, Dimensions, Easing, FlatList, I18nManager, Image, ImageBackground, InteractionManager, Keyboard, KeyboardAvoidingView, LayoutAnimation, Linking, LogBox, Modal, NativeEventEmitter, NativeModules, PanResponder, Picker, PixelRatio, Platform, Pressable, ProgressBar, RefreshControl, SafeAreaView, ScrollView, SectionList, Share, StatusBar, StyleSheet, Switch, Text, TextInput, Touchable, TouchableHighlight, TouchableNativeFeedback, TouchableOpacity, TouchableWithoutFeedback, UIManager, Vibration, View, VirtualizedList, YellowBox, __esModule, findNodeHandle, processColor, render, unmountComponentAtNode, unstable_createElement, useColorScheme, useLocaleContext, useWindowDimensions)
+ @ ./node_modules/@react-native-camera-roll/camera-roll/lib/module/CameraRoll.js 8:0-53 36:73-86 54:11-37 86:11-41 101:11-34 120:11-34 136:11-45 147:11-42
+ @ ./node_modules/@react-native-camera-roll/camera-roll/lib/module/index.js 2:0-29 2:0-29
+ @ ./src/components/CameraCapture.tsx
+ @ ./src/screens/ProofOfDeliveryScreen.tsx 1:982-1020
+ @ ./src/navigation/DriverNavigator.tsx 1:1293-1336
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/@react-native-camera-roll/camera-roll/lib/module/NativeCameraRollPermissionModule.js 4:15-38
+export 'TurboModuleRegistry' (imported as 'TurboModuleRegistry') was not found in 'react-native' (possible exports: AccessibilityInfo, ActivityIndicator, Alert, Animated, AppRegistry, AppState, Appearance, BackHandler, Button, CheckBox, Clipboard, DeviceEventEmitter, Dimensions, Easing, FlatList, I18nManager, Image, ImageBackground, InteractionManager, Keyboard, KeyboardAvoidingView, LayoutAnimation, Linking, LogBox, Modal, NativeEventEmitter, NativeModules, PanResponder, Picker, PixelRatio, Platform, Pressable, ProgressBar, RefreshControl, SafeAreaView, ScrollView, SectionList, Share, StatusBar, StyleSheet, Switch, Text, TextInput, Touchable, TouchableHighlight, TouchableNativeFeedback, TouchableOpacity, TouchableWithoutFeedback, UIManager, Vibration, View, VirtualizedList, YellowBox, __esModule, findNodeHandle, processColor, render, unmountComponentAtNode, unstable_createElement, useColorScheme, useLocaleContext, useWindowDimensions)
+ @ ./node_modules/@react-native-camera-roll/camera-roll/lib/module/CameraRollIOSPermission.js 2:0-76 8:13-39 11:69-95 14:9-51 18:9-62 22:9-60 26:9-57
+ @ ./node_modules/@react-native-camera-roll/camera-roll/lib/module/index.js 3:0-42 3:0-42
+ @ ./src/components/CameraCapture.tsx
+ @ ./src/screens/ProofOfDeliveryScreen.tsx 1:982-1020
+ @ ./src/navigation/DriverNavigator.tsx 1:1293-1336
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/FBLoginButton.js 60:25-47
+export 'requireNativeComponent' (imported as 'requireNativeComponent') was not found in 'react-native' (possible exports: AccessibilityInfo, ActivityIndicator, Alert, Animated, AppRegistry, AppState, Appearance, BackHandler, Button, CheckBox, Clipboard, DeviceEventEmitter, Dimensions, Easing, FlatList, I18nManager, Image, ImageBackground, InteractionManager, Keyboard, KeyboardAvoidingView, LayoutAnimation, Linking, LogBox, Modal, NativeEventEmitter, NativeModules, PanResponder, Picker, PixelRatio, Platform, Pressable, ProgressBar, RefreshControl, SafeAreaView, ScrollView, SectionList, Share, StatusBar, StyleSheet, Switch, Text, TextInput, Touchable, TouchableHighlight, TouchableNativeFeedback, TouchableOpacity, TouchableWithoutFeedback, UIManager, Vibration, View, VirtualizedList, YellowBox, __esModule, findNodeHandle, processColor, render, unmountComponentAtNode, unstable_createElement, useColorScheme, useLocaleContext, useWindowDimensions)
+ @ ./node_modules/react-native-fbsdk-next/lib/module/index.js 35:0-84 35:0-84 35:0-84 35:0-84
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/FBSendButton.js 39:24-46
+export 'requireNativeComponent' (imported as 'requireNativeComponent') was not found in 'react-native' (possible exports: AccessibilityInfo, ActivityIndicator, Alert, Animated, AppRegistry, AppState, Appearance, BackHandler, Button, CheckBox, Clipboard, DeviceEventEmitter, Dimensions, Easing, FlatList, I18nManager, Image, ImageBackground, InteractionManager, Keyboard, KeyboardAvoidingView, LayoutAnimation, Linking, LogBox, Modal, NativeEventEmitter, NativeModules, PanResponder, Picker, PixelRatio, Platform, Pressable, ProgressBar, RefreshControl, SafeAreaView, ScrollView, SectionList, Share, StatusBar, StyleSheet, Switch, Text, TextInput, Touchable, TouchableHighlight, TouchableNativeFeedback, TouchableOpacity, TouchableWithoutFeedback, UIManager, Vibration, View, VirtualizedList, YellowBox, __esModule, findNodeHandle, processColor, render, unmountComponentAtNode, unstable_createElement, useColorScheme, useLocaleContext, useWindowDimensions)
+ @ ./node_modules/react-native-fbsdk-next/lib/module/index.js 36:0-55 36:0-55
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/FBShareButton.js 39:25-47
+export 'requireNativeComponent' (imported as 'requireNativeComponent') was not found in 'react-native' (possible exports: AccessibilityInfo, ActivityIndicator, Alert, Animated, AppRegistry, AppState, Appearance, BackHandler, Button, CheckBox, Clipboard, DeviceEventEmitter, Dimensions, Easing, FlatList, I18nManager, Image, ImageBackground, InteractionManager, Keyboard, KeyboardAvoidingView, LayoutAnimation, Linking, LogBox, Modal, NativeEventEmitter, NativeModules, PanResponder, Picker, PixelRatio, Platform, Pressable, ProgressBar, RefreshControl, SafeAreaView, ScrollView, SectionList, Share, StatusBar, StyleSheet, Switch, Text, TextInput, Touchable, TouchableHighlight, TouchableNativeFeedback, TouchableOpacity, TouchableWithoutFeedback, UIManager, Vibration, View, VirtualizedList, YellowBox, __esModule, findNodeHandle, processColor, render, unmountComponentAtNode, unstable_createElement, useColorScheme, useLocaleContext, useWindowDimensions)
+ @ ./node_modules/react-native-fbsdk-next/lib/module/index.js 37:0-57 37:0-57
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 23:0-73
+export 'AccessTokenMap' (reexported as 'AccessTokenMap') was not found in './FBAccessToken' (possible exports: default)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 24:0-97
+export 'AuthenticationTokenMap' (reexported as 'AuthenticationTokenMap') was not found in './FBAuthenticationToken' (possible exports: default)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 25:0-171
+export 'AppEventsFlushBehavior' (reexported as 'AppEventsFlushBehavior') was not found in './FBAppEventsLogger' (possible exports: default)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 25:0-171
+export 'ProductAvailability' (reexported as 'ProductAvailability') was not found in './FBAppEventsLogger' (possible exports: default)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 25:0-171
+export 'ProductCondition' (reexported as 'ProductCondition') was not found in './FBAppEventsLogger' (possible exports: default)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 25:0-171
+export 'Params' (reexported as 'Params') was not found in './FBAppEventsLogger' (possible exports: default)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 25:0-171
+export 'UserData' (reexported as 'UserData') was not found in './FBAppEventsLogger' (possible exports: default)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 25:0-171
+export 'AppEvent' (reexported as 'AppEvent') was not found in './FBAppEventsLogger' (possible exports: default)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 25:0-171
+export 'AppEventParam' (reexported as 'AppEventParam') was not found in './FBAppEventsLogger' (possible exports: default)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 27:0-94
+export 'GameRequestDialogResult' (reexported as 'GameRequestDialogResult') was not found in './FBGameRequestDialog' (possible exports: default)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 28:0-125
+export 'GraphRequestCallback' (reexported as 'GraphRequestCallback') was not found in './FBGraphRequest' (possible exports: default)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 28:0-125
+export 'GraphRequestConfig' (reexported as 'GraphRequestConfig') was not found in './FBGraphRequest' (possible exports: default)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 28:0-125
+export 'GraphRequestParameters' (reexported as 'GraphRequestParameters') was not found in './FBGraphRequest' (possible exports: default)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 30:0-159
+export 'DefaultAudience' (reexported as 'DefaultAudience') was not found in './FBLoginManager' (possible exports: default)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 30:0-159
+export 'LoginBehavior' (reexported as 'LoginBehavior') was not found in './FBLoginManager' (possible exports: default)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 30:0-159
+export 'LoginBehaviorAndroid' (reexported as 'LoginBehaviorAndroid') was not found in './FBLoginManager' (possible exports: default)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 30:0-159
+export 'LoginBehaviorIOS' (reexported as 'LoginBehaviorIOS') was not found in './FBLoginManager' (possible exports: default)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 30:0-159
+export 'LoginResult' (reexported as 'LoginResult') was not found in './FBLoginManager' (possible exports: default)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 30:0-159
+export 'LoginTracking' (reexported as 'LoginTracking') was not found in './FBLoginManager' (possible exports: default)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 31:0-82
+export 'MessageDialogResult' (reexported as 'MessageDialogResult') was not found in './FBMessageDialog' (possible exports: default)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 32:0-61
+export 'ProfileMap' (reexported as 'ProfileMap') was not found in './FBProfile' (possible exports: default)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 34:0-137
+export 'ShareDialogMode' (reexported as 'ShareDialogMode') was not found in './FBShareDialog' (possible exports: default)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 34:0-137
+export 'ShareDialogModeAndroid' (reexported as 'ShareDialogModeAndroid') was not found in './FBShareDialog' (possible exports: default)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 34:0-137
+export 'ShareDialogModeIOS' (reexported as 'ShareDialogModeIOS') was not found in './FBShareDialog' (possible exports: default)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 34:0-137
+export 'ShareDialogResult' (reexported as 'ShareDialogResult') was not found in './FBShareDialog' (possible exports: default)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 35:0-84
+export 'Event' (reexported as 'Event') was not found in './FBLoginButton' (possible exports: default)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 35:0-84
+export 'TooltipBehaviorIOS' (reexported as 'TooltipBehaviorIOS') was not found in './FBLoginButton' (possible exports: default)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 40:0-85
+export 'ShareContent' (reexported as 'ShareContent') was not found in './models/FBShareContent' (module has no exports)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 40:0-85
+export 'ShareContentCommonParameters' (reexported as 'ShareContentCommonParameters') was not found in './models/FBShareContent' (module has no exports)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 41:0-63
+export 'ShareLinkContent' (reexported as 'ShareLinkContent') was not found in './models/FBShareLinkContent' (module has no exports)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 42:0-65
+export 'SharePhotoContent' (reexported as 'SharePhotoContent') was not found in './models/FBSharePhotoContent' (module has no exports)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-fbsdk-next/lib/module/index.js 43:0-65
+export 'ShareVideoContent' (reexported as 'ShareVideoContent') was not found in './models/FBShareVideoContent' (module has no exports)
+ @ ./src/contexts/AuthContext.tsx
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-share/lib/module/codegenSpec/NativeRNShare.js 2:15-47
+export 'TurboModuleRegistry' (imported as 'TurboModuleRegistry') was not found in 'react-native' (possible exports: AccessibilityInfo, ActivityIndicator, Alert, Animated, AppRegistry, AppState, Appearance, BackHandler, Button, CheckBox, Clipboard, DeviceEventEmitter, Dimensions, Easing, FlatList, I18nManager, Image, ImageBackground, InteractionManager, Keyboard, KeyboardAvoidingView, LayoutAnimation, Linking, LogBox, Modal, NativeEventEmitter, NativeModules, PanResponder, Picker, PixelRatio, Platform, Pressable, ProgressBar, RefreshControl, SafeAreaView, ScrollView, SectionList, Share, StatusBar, StyleSheet, Switch, Text, TextInput, Touchable, TouchableHighlight, TouchableNativeFeedback, TouchableOpacity, TouchableWithoutFeedback, UIManager, Vibration, View, VirtualizedList, YellowBox, __esModule, findNodeHandle, processColor, render, unmountComponentAtNode, unstable_createElement, useColorScheme, useLocaleContext, useWindowDimensions)
+ @ ./node_modules/react-native-share/lib/module/index.js 1:0-56 16:14-40 17:22-48 18:18-44 19:13-39 20:14-40 21:22-48 22:15-41 23:23-49 24:16-42 25:11-37 26:15-41 27:14-40 28:9-35 29:14-40 30:15-41 31:14-40 32:11-37 33:13-39 38:25-43 62:14-39 71:30-62
+ @ ./src/components/OrderDocumentFiles.tsx
+ @ ./src/screens/OrderScreen.tsx 1:2534-2577
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-share/lib/module/helpers/android.js 13:6-36
+export 'PermissionsAndroid' (imported as 'PermissionsAndroid') was not found in 'react-native' (possible exports: AccessibilityInfo, ActivityIndicator, Alert, Animated, AppRegistry, AppState, Appearance, BackHandler, Button, CheckBox, Clipboard, DeviceEventEmitter, Dimensions, Easing, FlatList, I18nManager, Image, ImageBackground, InteractionManager, Keyboard, KeyboardAvoidingView, LayoutAnimation, Linking, LogBox, Modal, NativeEventEmitter, NativeModules, PanResponder, Picker, PixelRatio, Platform, Pressable, ProgressBar, RefreshControl, SafeAreaView, ScrollView, SectionList, Share, StatusBar, StyleSheet, Switch, Text, TextInput, Touchable, TouchableHighlight, TouchableNativeFeedback, TouchableOpacity, TouchableWithoutFeedback, UIManager, Vibration, View, VirtualizedList, YellowBox, __esModule, findNodeHandle, processColor, render, unmountComponentAtNode, unstable_createElement, useColorScheme, useLocaleContext, useWindowDimensions)
+ @ ./node_modules/react-native-share/lib/module/helpers/checkPermissions.js 1:0-59 12:12-42
+ @ ./node_modules/react-native-share/lib/module/index.js 6:0-58 36:10-26 57:10-26
+ @ ./src/components/OrderDocumentFiles.tsx
+ @ ./src/screens/OrderScreen.tsx 1:2534-2577
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-share/lib/module/helpers/android.js 14:24-48
+export 'PermissionsAndroid' (imported as 'PermissionsAndroid') was not found in 'react-native' (possible exports: AccessibilityInfo, ActivityIndicator, Alert, Animated, AppRegistry, AppState, Appearance, BackHandler, Button, CheckBox, Clipboard, DeviceEventEmitter, Dimensions, Easing, FlatList, I18nManager, Image, ImageBackground, InteractionManager, Keyboard, KeyboardAvoidingView, LayoutAnimation, Linking, LogBox, Modal, NativeEventEmitter, NativeModules, PanResponder, Picker, PixelRatio, Platform, Pressable, ProgressBar, RefreshControl, SafeAreaView, ScrollView, SectionList, Share, StatusBar, StyleSheet, Switch, Text, TextInput, Touchable, TouchableHighlight, TouchableNativeFeedback, TouchableOpacity, TouchableWithoutFeedback, UIManager, Vibration, View, VirtualizedList, YellowBox, __esModule, findNodeHandle, processColor, render, unmountComponentAtNode, unstable_createElement, useColorScheme, useLocaleContext, useWindowDimensions)
+ @ ./node_modules/react-native-share/lib/module/helpers/checkPermissions.js 1:0-59 12:12-42
+ @ ./node_modules/react-native-share/lib/module/index.js 6:0-58 36:10-26 57:10-26
+ @ ./src/components/OrderDocumentFiles.tsx
+ @ ./src/screens/OrderScreen.tsx 1:2534-2577
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-share/lib/module/helpers/android.js 17:27-53
+export 'PermissionsAndroid' (imported as 'PermissionsAndroid') was not found in 'react-native' (possible exports: AccessibilityInfo, ActivityIndicator, Alert, Animated, AppRegistry, AppState, Appearance, BackHandler, Button, CheckBox, Clipboard, DeviceEventEmitter, Dimensions, Easing, FlatList, I18nManager, Image, ImageBackground, InteractionManager, Keyboard, KeyboardAvoidingView, LayoutAnimation, Linking, LogBox, Modal, NativeEventEmitter, NativeModules, PanResponder, Picker, PixelRatio, Platform, Pressable, ProgressBar, RefreshControl, SafeAreaView, ScrollView, SectionList, Share, StatusBar, StyleSheet, Switch, Text, TextInput, Touchable, TouchableHighlight, TouchableNativeFeedback, TouchableOpacity, TouchableWithoutFeedback, UIManager, Vibration, View, VirtualizedList, YellowBox, __esModule, findNodeHandle, processColor, render, unmountComponentAtNode, unstable_createElement, useColorScheme, useLocaleContext, useWindowDimensions)
+ @ ./node_modules/react-native-share/lib/module/helpers/checkPermissions.js 1:0-59 12:12-42
+ @ ./node_modules/react-native-share/lib/module/index.js 6:0-58 36:10-26 57:10-26
+ @ ./src/components/OrderDocumentFiles.tsx
+ @ ./src/screens/OrderScreen.tsx 1:2534-2577
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-share/lib/module/helpers/android.js 18:21-55
+export 'PermissionsAndroid' (imported as 'PermissionsAndroid') was not found in 'react-native' (possible exports: AccessibilityInfo, ActivityIndicator, Alert, Animated, AppRegistry, AppState, Appearance, BackHandler, Button, CheckBox, Clipboard, DeviceEventEmitter, Dimensions, Easing, FlatList, I18nManager, Image, ImageBackground, InteractionManager, Keyboard, KeyboardAvoidingView, LayoutAnimation, Linking, LogBox, Modal, NativeEventEmitter, NativeModules, PanResponder, Picker, PixelRatio, Platform, Pressable, ProgressBar, RefreshControl, SafeAreaView, ScrollView, SectionList, Share, StatusBar, StyleSheet, Switch, Text, TextInput, Touchable, TouchableHighlight, TouchableNativeFeedback, TouchableOpacity, TouchableWithoutFeedback, UIManager, Vibration, View, VirtualizedList, YellowBox, __esModule, findNodeHandle, processColor, render, unmountComponentAtNode, unstable_createElement, useColorScheme, useLocaleContext, useWindowDimensions)
+ @ ./node_modules/react-native-share/lib/module/helpers/checkPermissions.js 1:0-59 12:12-42
+ @ ./node_modules/react-native-share/lib/module/index.js 6:0-58 36:10-26 57:10-26
+ @ ./src/components/OrderDocumentFiles.tsx
+ @ ./src/screens/OrderScreen.tsx 1:2534-2577
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-vision-camera/lib/module/NativeCameraView.js 3:32-54
+export 'requireNativeComponent' (imported as 'requireNativeComponent') was not found in 'react-native' (possible exports: AccessibilityInfo, ActivityIndicator, Alert, Animated, AppRegistry, AppState, Appearance, BackHandler, Button, CheckBox, Clipboard, DeviceEventEmitter, Dimensions, Easing, FlatList, I18nManager, Image, ImageBackground, InteractionManager, Keyboard, KeyboardAvoidingView, LayoutAnimation, Linking, LogBox, Modal, NativeEventEmitter, NativeModules, PanResponder, Picker, PixelRatio, Platform, Pressable, ProgressBar, RefreshControl, SafeAreaView, ScrollView, SectionList, Share, StatusBar, StyleSheet, Switch, Text, TextInput, Touchable, TouchableHighlight, TouchableNativeFeedback, TouchableOpacity, TouchableWithoutFeedback, UIManager, Vibration, View, VirtualizedList, YellowBox, __esModule, findNodeHandle, processColor, render, unmountComponentAtNode, unstable_createElement, useColorScheme, useLocaleContext, useWindowDimensions)
+ @ ./node_modules/react-native-vision-camera/lib/module/Camera.js 10:0-54 611:44-60
+ @ ./node_modules/react-native-vision-camera/lib/module/index.js
+ @ ./src/components/CameraCapture.tsx 1:655-692
+ @ ./src/screens/ProofOfDeliveryScreen.tsx 1:982-1020
+ @ ./src/navigation/DriverNavigator.tsx 1:1293-1336
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-vision-camera/lib/module/dependencies/SkiaProxy.js 11:11-48
+Module not found: Error: Can't resolve '@shopify/react-native-skia' in '/app/node_modules/react-native-vision-camera/lib/module/dependencies'
+ @ ./node_modules/react-native-vision-camera/lib/module/skia/useSkiaFrameProcessor.js 3:0-54 131:15-29
+ @ ./node_modules/react-native-vision-camera/lib/module/index.js 38:0-45 38:0-45
+ @ ./src/components/CameraCapture.tsx 1:655-692
+ @ ./src/screens/ProofOfDeliveryScreen.tsx 1:982-1020
+ @ ./src/navigation/DriverNavigator.tsx 1:1293-1336
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-vision-camera/lib/module/dependencies/WorkletsProxy.js 11:11-48
+Module not found: Error: Can't resolve 'react-native-worklets-core' in '/app/node_modules/react-native-vision-camera/lib/module/dependencies'
+ @ ./node_modules/react-native-vision-camera/lib/module/frame-processors/runAsync.js 1:0-62 14:19-41
+ @ ./node_modules/react-native-vision-camera/lib/module/index.js 32:0-44 32:0-44
+ @ ./src/components/CameraCapture.tsx 1:655-692
+ @ ./src/screens/ProofOfDeliveryScreen.tsx 1:982-1020
+ @ ./src/navigation/DriverNavigator.tsx 1:1293-1336
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-vision-camera/lib/module/frame-processors/VisionCameraProxy.js 12:2-39
+Module not found: Error: Can't resolve 'react-native-worklets-core' in '/app/node_modules/react-native-vision-camera/lib/module/frame-processors'
+ @ ./node_modules/react-native-vision-camera/lib/module/index.js 35:0-53 35:0-53
+ @ ./src/components/CameraCapture.tsx 1:655-692
+ @ ./src/screens/ProofOfDeliveryScreen.tsx 1:982-1020
+ @ ./src/navigation/DriverNavigator.tsx 1:1293-1336
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+WARNING in configuration
+The 'mode' option has not been set, webpack will fallback to 'production' for this value.
+Set 'mode' option to 'development' or 'production' to enable defaults for each environment.
+You can also set it to 'none' to disable any default behavior. Learn more: https://webpack.js.org/configuration/mode/
+
+3 warnings have detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+ERROR in ./node_modules/@invertase/react-native-apple-authentication/lib/index.js 24:0-55
+Module not found: Error: Can't resolve './AppleButton' in '/app/node_modules/@invertase/react-native-apple-authentication/lib'
+ @ ./src/hooks/use-oauth.ts
+ @ ./src/screens/LoginScreen.tsx 1:1050-1079
+ @ ./src/navigation/stacks/AuthStack.tsx 1:311-347
+ @ ./src/navigation/AppNavigator.tsx 1:353-382
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/@react-native-community/blur/lib/module/index.js 1:0-52
+Module not found: Error: Can't resolve './components/BlurView' in '/app/node_modules/@react-native-community/blur/lib/module'
+ @ ./src/navigation/DriverNavigator.tsx 1:469-508
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/@react-native-community/blur/lib/module/index.js 2:0-60
+Module not found: Error: Can't resolve './components/VibrancyView' in '/app/node_modules/@react-native-community/blur/lib/module'
+ @ ./src/navigation/DriverNavigator.tsx 1:469-508
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/@react-native/assets-registry/registry.js 13:7
+Module parse failed: Unexpected token (13:7)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+| 'use strict';
+|
+> export type AssetDestPathResolver = 'android' | 'generic';
+|
+| export type PackagerAsset = {
+ @ ./node_modules/react-native-svg/lib/module/lib/resolveAssetUri.js 1:378-427
+ @ ./node_modules/react-native-svg/lib/module/css/LocalSvg.js 1:1629-1662
+ @ ./node_modules/react-native-svg/lib/module/css/index.js 1:980-1001
+ @ ./src/components/TrackingMarker.tsx 1:687-718
+ @ ./src/components/DriverMarker.tsx 1:701-728
+ @ ./src/components/LiveOrderRoute.tsx 1:1241-1266
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native-calendar-strip/src/CalendarStrip.js 531:6
+Module parse failed: Unexpected token (531:6)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+|   renderDay(props) {
+|     return (
+>       <CalendarDay {...props} />
+|     );
+|   }
+ @ ./node_modules/react-native-calendar-strip/index.js 4:17-47
+ @ ./src/screens/DriverOrderManagementScreen.tsx 1:1377-1415
+ @ ./src/navigation/DriverNavigator.tsx 1:1040-1089
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native-collapsible/Collapsible.js 225:6
+Module parse failed: Unexpected token (225:6)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+|
+|     return (
+>       <Animated.View
+|         style={style}
+|         pointerEvents={!enablePointerEvents && collapsed ? 'none' : 'auto'}
+ @ ./src/components/OrderWaypointList.tsx 1:821-856
+ @ ./src/screens/OrderScreen.tsx 1:2347-2389
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native-fs/FS.common.js 30:29
+Module parse failed: Unexpected token (30:29)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+| };
+|
+> var normalizeFilePath = (path: string) => (path.startsWith('file://') ? path.slice(7) : path);
+|
+| type MkdirOptions = {
+ @ ./src/components/CameraCapture.tsx 1:800-826
+ @ ./src/screens/ProofOfDeliveryScreen.tsx 1:982-1020
+ @ ./src/navigation/DriverNavigator.tsx 1:1293-1336
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native-image-picker/src/index.ts 15:36
+Module parse failed: Unexpected token (15:36)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+| export * from './types';
+|
+> export function launchCamera(options: CameraOptions, callback?: Callback) {
+|   return Platform.OS === 'web'
+|     ? webCamera(options, callback)
+ @ ./src/screens/DriverAccountScreen.tsx 1:1154-1190
+ @ ./src/navigation/DriverNavigator.tsx 1:2450-2491
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native-signature-canvas/index.js 266:6
+Module parse failed: Unexpected token (266:6)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+|
+|     return (
+>       <View style={[styles.webBg, style]}>
+|         <WebView
+|           bounces={false}
+ @ ./src/screens/ProofOfDeliveryScreen.tsx 1:1317-1357
+ @ ./src/navigation/DriverNavigator.tsx 1:1293-1336
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native-super-grid/FlatGrid.js 103:6
+Module parse failed: Unexpected token (103:6)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+|
+|     return (
+>       <FlatListComponent
+|         data={rows}
+|         ref={ref}
+ @ ./node_modules/react-native-super-grid/index.js 1:0-34 5:0-45 8:15-23
+ @ ./src/components/OrderPayloadEntities.tsx 1:427-461
+ @ ./src/screens/OrderScreen.tsx 1:2440-2485
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native-super-grid/SectionGrid.js 120:10
+Module parse failed: Unexpected token (120:10)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+|
+|         return (
+>           <View style={[rowStyle, additionalRowStyle, externalRowStyle, hasFullWidthItem ? { flexDirection: 'column', paddingBottom: 0 } : {}]}>
+|             {rowItems.map((item, index) => {
+|               const i = invertedRow ? -index + itemsPerRow - 1 : index;
+ @ ./node_modules/react-native-super-grid/index.js 3:0-40 5:0-45 9:0-47
+ @ ./src/components/OrderPayloadEntities.tsx 1:427-461
+ @ ./src/screens/OrderScreen.tsx 1:2440-2485
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native-super-grid/SimpleGrid.js 88:6
+Module parse failed: Unexpected token (88:6)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+|
+|     return (
+>       <View
+|         style={[
+|           {
+ @ ./node_modules/react-native-super-grid/index.js 2:0-38 5:0-45
+ @ ./src/components/OrderPayloadEntities.tsx 1:427-461
+ @ ./src/screens/OrderScreen.tsx 1:2440-2485
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 13:5
+Module parse failed: Unexpected token (13:5)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+| const {dispatchCommand} = require('../ReactNative/RendererProxy');
+|
+> type Options<T = string> = $ReadOnly<{|
+|   supportedCommands: $ReadOnlyArray<T>,
+| |}>;
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/PlaceMapView.tsx 1:647-675
+ @ ./src/screens/IssueScreen.tsx 1:1127-1164
+ @ ./src/navigation/DriverNavigator.tsx 1:1637-1670
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+3 errors have detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+webpack 5.97.1 compiled with 13 errors and 49 warnings in 57447 ms
+<i> [webpack-dev-server] Gracefully shutting down. To force exit, press ^C again. Please wait...

@@ -1,0 +1,1512 @@
+<i> [webpack-dev-server] Project is running at:
+<i> [webpack-dev-server] Loopback: http://localhost:8080/, http://[::1]:8080/
+<i> [webpack-dev-server] On Your Network (IPv4): http://192.168.0.2:8080/
+<i> [webpack-dev-server] Content not from webpack is served from '/app/dist' directory
+<i> [webpack-dev-server] 404s will fallback to '/index.html'
+ native  |               ChatContext   ·    0 found   ·    0 opt   ·    0 flat     4ms
+ native  |       OrderManagerContext   ·    0 found   ·    0 opt   ·    0 flat     3ms
+ native  |           DriverNavigator   ·   18 found   ·   15 opt   ·    3 flat    63ms
+ native  |                 CoreStack   ·    0 found   ·    0 opt   ·    0 flat     0ms
+<i> [webpack-dev-middleware] wait until bundle finished: /
+ native  |    DriverOrderManagementS   ·   25 found   ·   21 opt   ·    7 flat    78ms
+ native  |              EntityScreen   ·   13 found   ·    6 opt   ·    2 flat    31ms
+ native  |     ProofOfDeliveryScreen   ·    4 found   ·    4 opt   ·    3 flat    15ms
+ native  |               OrderScreen   ·   54 found   ·   31 opt   ·   20 flat   247ms
+ native  |         CreateIssueScreen   ·    1 found   ·    1 opt   ·    0 flat     2ms
+ native  |           EditIssueScreen   ·    1 found   ·    1 opt   ·    0 flat     2ms
+ native  |        DriverReportScreen   ·   70 found   ·   49 opt   ·   23 flat   146ms
+ native  |     DriverDashboardScreen   ·   21 found   ·   14 opt   ·   11 flat    35ms
+ native  |               IssueScreen   ·   41 found   ·   34 opt   ·   14 flat    50ms
+ native  |    CreateFuelReportScreen   ·    1 found   ·    1 opt   ·    0 flat     2ms
+ native  |      EditFuelReportScreen   ·    1 found   ·    1 opt   ·    0 flat     2ms
+ native  |          FuelReportScreen   ·   36 found   ·   30 opt   ·   12 flat    43ms
+ native  |            ChatHomeScreen   ·   16 found   ·   12 opt   ·    5 flat    35ms
+ native  |         ChatChannelScreen   ·    8 found   ·    8 opt   ·    4 flat    21ms
+ native  |    ChatParticipantsScreen   ·   25 found   ·   15 opt   ·   14 flat    58ms
+ native  |    CreateChatChannelScree   ·   26 found   ·   20 opt   ·    8 flat    66ms
+ native  |       DriverProfileScreen   ·   13 found   ·   11 opt   ·    2 flat    18ms
+ native  |                BootScreen   ·    5 found   ·    5 opt   ·    1 flat    16ms
+ native  |       DriverAccountScreen   ·   26 found   ·   18 opt   ·    6 flat    60ms
+ native  |    LocationPermissionScre   ·   11 found   ·   10 opt   ·    1 flat    36ms
+ native  |                TestScreen   ·    2 found   ·    2 opt   ·    0 flat     2ms
+ native  |               LoginScreen   ·    6 found   ·    6 opt   ·    1 flat    20ms
+ native  |          PhoneLoginScreen   ·    8 found   ·    8 opt   ·    1 flat    23ms
+ native  |       CreateAccountScreen   ·   10 found   ·    9 opt   ·    2 flat    33ms
+ native  |    CreateAccountVerifyScr   ·    6 found   ·    6 opt   ·    1 flat    19ms
+ native  |        DriverOnlineToggle   ·    3 found   ·    3 opt   ·    1 flat    17ms
+ native  |    PhoneLoginVerifyScreen   ·   14 found   ·   14 opt   ·    5 flat    32ms
+ native  |              HeaderButton   ·    1 found   ·    1 opt   ·    0 flat    12ms
+ native  |                     Badge   ·    3 found   ·    2 opt   ·    1 flat    38ms
+ native  |                 OrderCard   ·   37 found   ·   26 opt   ·   19 flat    72ms
+ native  |             PastOrderCard   ·   12 found   ·   11 opt   ·    6 flat    25ms
+ native  |                    Spacer   ·    1 found   ·    1 opt   ·    0 flat     5ms
+ native  |            AdhocOrderCard   ·   20 found   ·   20 opt   ·    9 flat    41ms
+ native  |                   Content   ·   13 found   ·    8 opt   ·    8 flat    25ms
+ native  |             CameraCapture   ·   20 found   ·   16 opt   ·    7 flat    57ms
+ native  |              CustomHeader   ·    5 found   ·    2 opt   ·    0 flat    12ms
+ native  |                 IssueForm   ·   16 found   ·   16 opt   ·    2 flat    31ms
+ native  |            LoadingOverlay   ·    5 found   ·    3 opt   ·    3 flat    15ms
+ native  |            LiveOrderRoute   ·    7 found   ·    6 opt   ·    1 flat    23ms
+ native  |      OrderPayloadEntities   ·   17 found   ·   12 opt   ·    9 flat    32ms
+ native  |         OrderWaypointList   ·   21 found   ·   18 opt   ·    7 flat    75ms
+ native  |         OrderCustomerCard   ·   15 found   ·   10 opt   ·    5 flat    13ms
+ native  |        OrderDocumentFiles   ·   13 found   ·   10 opt   ·    2 flat    28ms
+ native  |      OrderProofOfDelivery   ·   12 found   ·   11 opt   ·    5 flat    27ms
+ native  |          OrderProgressBar   ·    7 found   ·    7 opt   ·    2 flat    26ms
+ native  |    CurrentDestinationSele   ·   33 found   ·   28 opt   ·   19 flat    92ms
+ native  |    DestinationChangedAler   ·   14 found   ·   13 opt   ·    4 flat    18ms
+ native  |       OrderActivitySelect   ·   18 found   ·   13 opt   ·    6 flat    43ms
+ native  |                 TabSwitch   ·    3 found   ·    2 opt   ·    1 flat    17ms
+ native  |              PlaceMapView   ·    1 found   ·    1 opt   ·    0 flat     8ms
+ native  |            FuelReportForm   ·   15 found   ·   15 opt   ·    2 flat    34ms
+ native  |     ChatParticipantAvatar   ·    3 found   ·    3 opt   ·    1 flat     7ms
+ native  |                  ChatFeed   ·    1 found   ·    1 opt   ·    1 flat     4ms
+ native  |         BottomSheetSelect   ·    7 found   ·    5 opt   ·    3 flat    27ms
+ native  |              ChatKeyboard   ·   10 found   ·    9 opt   ·    5 flat    39ms
+ native  |        SetupWarningScreen   ·   14 found   ·   14 opt   ·    5 flat    15ms
+ native  |          ChatParticipants   ·    7 found   ·    6 opt   ·    2 flat    31ms
+ native  |                   Buttons   ·    5 found   ·    5 opt   ·    0 flat    19ms
+ native  |                PhoneInput   ·    6 found   ·    2 opt   ·    0 flat    25ms
+ native  |                     Input   ·    1 found   ·    1 opt   ·    1 flat     3ms
+ native  |    MultipleCustomerAvatar   ·    4 found   ·    4 opt   ·    2 flat    12ms
+ native  |               LoadingText   ·    3 found   ·    2 opt   ·    1 flat     4ms
+ native  |             TextAreaSheet   ·    7 found   ·    6 opt   ·    4 flat    20ms
+ native  |            LocationMarker   ·    6 found   ·    5 opt   ·    1 flat    45ms
+ native  |             CommentThread   ·    9 found   ·    5 opt   ·    2 flat    30ms
+ native  |              WaypointList   ·    4 found   ·    3 opt   ·    3 flat    25ms
+ native  |                   ChatLog   ·    3 found   ·    2 opt   ·    1 flat     3ms
+ native  |               ChatMessage   ·   17 found   ·   15 opt   ·    8 flat    33ms
+ native  |                MoneyInput   ·   13 found   ·    9 opt   ·    3 flat    50ms
+ native  |                 UnitInput   ·   10 found   ·    8 opt   ·    2 flat    42ms
+ native  |            ChatAttachment   ·    1 found   ·    0 opt   ·    1 flat     2ms
+ native  |                   Comment   ·   25 found   ·   21 opt   ·    4 flat    83ms
+ native  |            TrackingMarker   ·    4 found   ·    1 opt   ·    1 flat    14ms
+assets by status 8.33 MiB [cached] 18 assets
+orphan modules 235 KiB [orphan] 86 modules
+runtime modules 27.7 KiB 15 modules
+modules by path ./node_modules/ 13.6 MiB (javascript) 4.6 KiB (asset) 2535 modules
+modules by path ./src/ 702 KiB 119 modules
+modules by path ./assets/ 394 KiB (asset) 210 bytes (javascript)
+  ./assets/navigator-icon-transparent.png 4.6 KiB (asset) 42 bytes (javascript) [built] [code generated]
+  ./assets/splash-screen.png 4.6 KiB (asset) 42 bytes (javascript) [built] [code generated]
+  + 3 modules
+modules by path ./*.tsx 3.39 KiB
+  ./index.web.tsx 416 bytes [built] [code generated]
+  ./App.tsx 2.99 KiB [built] [code generated]
+modules by path ./*.ts 8.33 KiB
+  ./tamagui.config.ts 7.55 KiB [built] [code generated] [1 error]
+  ./navigator.config.ts + 1 modules 791 bytes [built] [code generated]
+
+WARNING in ./node_modules/@backpackapp-io/react-native-toast/lib/module/index.js 4:0-65
+export 'ToastAnimationType' (reexported as 'ToastAnimationType') was not found in './core/types' (possible exports: ToastPosition, resolveValue)
+ @ ./App.tsx
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/@bam.tech/react-native-image-resizer/lib/module/NativeImageResizer.js 2:15-47
+export 'TurboModuleRegistry' (imported as 'TurboModuleRegistry') was not found in 'react-native' (possible exports: AccessibilityInfo, ActivityIndicator, Alert, Animated, AppRegistry, AppState, Appearance, BackHandler, Button, CheckBox, Clipboard, DeviceEventEmitter, Dimensions, Easing, FlatList, I18nManager, Image, ImageBackground, InteractionManager, Keyboard, KeyboardAvoidingView, LayoutAnimation, Linking, LogBox, Modal, NativeEventEmitter, NativeModules, PanResponder, Picker, PixelRatio, Platform, Pressable, ProgressBar, RefreshControl, SafeAreaView, ScrollView, SectionList, Share, StatusBar, StyleSheet, Switch, Text, TextInput, Touchable, TouchableHighlight, TouchableNativeFeedback, TouchableOpacity, TouchableWithoutFeedback, UIManager, Vibration, View, VirtualizedList, YellowBox, __esModule, findNodeHandle, processColor, render, unmountComponentAtNode, unstable_createElement, useColorScheme, useLocaleContext, useWindowDimensions)
+ @ ./node_modules/@bam.tech/react-native-image-resizer/lib/module/index.js 4:44-83
+ @ ./src/utils/index.js 1:2739-2786
+ @ ./src/contexts/AuthContext.tsx 1:689-708
+ @ ./App.tsx 1:564-601
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-vision-camera/lib/module/dependencies/SkiaProxy.js 1:213-250
+Module not found: Error: Can't resolve '@shopify/react-native-skia' in '/app/node_modules/react-native-vision-camera/lib/module/dependencies'
+ @ ./node_modules/react-native-vision-camera/lib/module/skia/useSkiaFrameProcessor.js 1:270-306
+ @ ./node_modules/react-native-vision-camera/lib/module/index.js 1:7811-7850
+ @ ./src/components/QrCodeScanner.tsx 1:709-746
+ @ ./src/screens/ProofOfDeliveryScreen.tsx 1:900-938
+ @ ./src/navigation/DriverNavigator.tsx 1:1293-1336
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-vision-camera/lib/module/dependencies/WorkletsProxy.js 1:225-262
+Module not found: Error: Can't resolve 'react-native-worklets-core' in '/app/node_modules/react-native-vision-camera/lib/module/dependencies'
+ @ ./node_modules/react-native-vision-camera/lib/module/frame-processors/runAsync.js 1:100-140
+ @ ./node_modules/react-native-vision-camera/lib/module/index.js 1:6826-6864
+ @ ./src/components/QrCodeScanner.tsx 1:709-746
+ @ ./src/screens/ProofOfDeliveryScreen.tsx 1:900-938
+ @ ./src/navigation/DriverNavigator.tsx 1:1293-1336
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+WARNING in ./node_modules/react-native-vision-camera/lib/module/frame-processors/VisionCameraProxy.js 1:243-280
+Module not found: Error: Can't resolve 'react-native-worklets-core' in '/app/node_modules/react-native-vision-camera/lib/module/frame-processors'
+ @ ./node_modules/react-native-vision-camera/lib/module/index.js 1:7463-7510
+ @ ./src/components/QrCodeScanner.tsx 1:709-746
+ @ ./src/screens/ProofOfDeliveryScreen.tsx 1:900-938
+ @ ./src/navigation/DriverNavigator.tsx 1:1293-1336
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+WARNING in configuration
+The 'mode' option has not been set, webpack will fallback to 'production' for this value.
+Set 'mode' option to 'development' or 'production' to enable defaults for each environment.
+You can also set it to 'none' to disable any default behavior. Learn more: https://webpack.js.org/configuration/mode/
+
+3 warnings have detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+ERROR in ./node_modules/@invertase/react-native-apple-authentication/lib/index.js 24:0-55
+Module not found: Error: Can't resolve './AppleButton' in '/app/node_modules/@invertase/react-native-apple-authentication/lib'
+ @ ./src/hooks/use-oauth.ts
+ @ ./src/screens/LoginScreen.tsx 1:1050-1079
+ @ ./src/navigation/stacks/AuthStack.tsx 1:311-347
+ @ ./src/navigation/AppNavigator.tsx 1:353-382
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/@react-native-community/blur/lib/module/index.js 1:222-254
+Module not found: Error: Can't resolve './components/BlurView' in '/app/node_modules/@react-native-community/blur/lib/module'
+ @ ./src/navigation/DriverNavigator.tsx 1:469-508
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/@react-native-community/blur/lib/module/index.js 1:297-333
+Module not found: Error: Can't resolve './components/VibrancyView' in '/app/node_modules/@react-native-community/blur/lib/module'
+ @ ./src/navigation/DriverNavigator.tsx 1:469-508
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Alert/Alert.js 1:302-334
+Module not found: Error: Can't resolve '../Utilities/Platform' in '/app/node_modules/react-native/Libraries/Alert'
+ @ ./node_modules/react-native/Libraries/Core/setUpAlert.js 1:59-90
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:302-325
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Alert/Alert.js 1:380-408
+Module not found: Error: Can't resolve './RCTAlertManager' in '/app/node_modules/react-native/Libraries/Alert'
+ @ ./node_modules/react-native/Libraries/Core/setUpAlert.js 1:59-90
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:302-325
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Animated/Animated.js 1:200-232
+Module not found: Error: Can't resolve '../Utilities/Platform' in '/app/node_modules/react-native/Libraries/Animated'
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorSourceMapStatus.js 1:292-326
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorStackFrames.js 1:822-865
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorBody.js 1:848-887
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspector.js 1:593-625
+ @ ./node_modules/react-native/Libraries/LogBox/LogBoxInspectorContainer.js 1:929-960
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:6566-6619
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Animated/components/AnimatedImage.js 1:197-225
+Module not found: Error: Can't resolve '../../Image/Image' in '/app/node_modules/react-native/Libraries/Animated/components'
+ @ ./node_modules/react-native/Libraries/Animated/Animated.js 1:631-676
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorSourceMapStatus.js 1:292-326
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorStackFrames.js 1:822-865
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorBody.js 1:848-887
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspector.js 1:593-625
+ @ ./node_modules/react-native/Libraries/LogBox/LogBoxInspectorContainer.js 1:929-960
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:6566-6619
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Animated/components/AnimatedScrollView.js 1:738-773
+Module not found: Error: Can't resolve '../../Utilities/Platform' in '/app/node_modules/react-native/Libraries/Animated/components'
+ @ ./node_modules/react-native/Libraries/Animated/Animated.js 1:703-753
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorSourceMapStatus.js 1:292-326
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorStackFrames.js 1:822-865
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorBody.js 1:848-887
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspector.js 1:593-625
+ @ ./node_modules/react-native/Libraries/LogBox/LogBoxInspectorContainer.js 1:929-960
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:6566-6619
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Animated/nodes/AnimatedColor.js 1:950-1001
+Module not found: Error: Can't resolve '../../StyleSheet/PlatformColorValueTypes' in '/app/node_modules/react-native/Libraries/Animated/nodes'
+ @ ./node_modules/react-native/Libraries/Animated/AnimatedImplementation.js 1:689-721
+ @ ./node_modules/react-native/Libraries/Components/ScrollView/ScrollView.js 1:928-976
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorBody.js 1:307-356
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspector.js 1:593-625
+ @ ./node_modules/react-native/Libraries/LogBox/LogBoxInspectorContainer.js 1:929-960
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:6566-6619
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Animated/nodes/AnimatedStyle.js 1:1373-1408
+Module not found: Error: Can't resolve '../../Utilities/Platform' in '/app/node_modules/react-native/Libraries/Animated/nodes'
+ @ ./node_modules/react-native/Libraries/Animated/nodes/AnimatedProps.js 1:1439-1465
+ @ ./node_modules/react-native/Libraries/Animated/useAnimatedProps.js 1:938-970
+ @ ./node_modules/react-native/Libraries/Animated/createAnimatedComponent.js 1:659-688
+ @ ./node_modules/react-native/Libraries/Animated/AnimatedImplementation.js 1:527-563
+ @ ./node_modules/react-native/Libraries/Components/ScrollView/ScrollView.js 1:928-976
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorBody.js 1:307-356
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspector.js 1:593-625
+ @ ./node_modules/react-native/Libraries/LogBox/LogBoxInspectorContainer.js 1:929-960
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:6566-6619
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Animated/shouldUseTurboAnimatedModule.js 1:200-232
+Module not found: Error: Can't resolve '../Utilities/Platform' in '/app/node_modules/react-native/Libraries/Animated'
+ @ ./node_modules/react-native/src/private/specs/modules/NativeAnimatedModule.js 1:220-290
+ @ ./node_modules/react-native/Libraries/Animated/NativeAnimatedModule.js 1:150-213
+ @ ./node_modules/react-native/src/private/animated/NativeAnimatedHelper.js 1:212-271
+ @ ./node_modules/react-native/Libraries/Animated/AnimatedEvent.js 1:457-515
+ @ ./node_modules/react-native/Libraries/Animated/AnimatedImplementation.js 1:195-221
+ @ ./node_modules/react-native/Libraries/Components/ScrollView/ScrollView.js 1:928-976
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorBody.js 1:307-356
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspector.js 1:593-625
+ @ ./node_modules/react-native/Libraries/LogBox/LogBoxInspectorContainer.js 1:929-960
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:6566-6619
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/AppState/AppState.js 1:467-499
+Module not found: Error: Can't resolve '../Utilities/Platform' in '/app/node_modules/react-native/Libraries/AppState'
+ @ ./node_modules/react-native/Libraries/Core/setUpReactDevTools.js 1:3026-3057
+ @ ./node_modules/react-native/Libraries/Core/setUpDeveloperTools.js 1:192-223
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:463-495
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Components/Keyboard/Keyboard.js 1:581-616
+Module not found: Error: Can't resolve '../../Utilities/Platform' in '/app/node_modules/react-native/Libraries/Components/Keyboard'
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspector.js 1:209-254
+ @ ./node_modules/react-native/Libraries/LogBox/LogBoxInspectorContainer.js 1:929-960
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:6566-6619
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Components/RefreshControl/RefreshControl.js 1:2320-2355
+Module not found: Error: Can't resolve '../../Utilities/Platform' in '/app/node_modules/react-native/Libraries/Components/RefreshControl'
+ @ ./node_modules/react-native/Libraries/Animated/components/AnimatedScrollView.js 1:298-355
+ @ ./node_modules/react-native/Libraries/Animated/Animated.js 1:703-753
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorSourceMapStatus.js 1:292-326
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorStackFrames.js 1:822-865
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorBody.js 1:848-887
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspector.js 1:593-625
+ @ ./node_modules/react-native/Libraries/LogBox/LogBoxInspectorContainer.js 1:929-960
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:6566-6619
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Components/SafeAreaView/SafeAreaView.js 1:200-235
+Module not found: Error: Can't resolve '../../Utilities/Platform' in '/app/node_modules/react-native/Libraries/Components/SafeAreaView'
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorHeader.js 1:219-272
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspector.js 1:763-797
+ @ ./node_modules/react-native/Libraries/LogBox/LogBoxInspectorContainer.js 1:929-960
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:6566-6619
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Components/ScrollView/ScrollView.js 1:1665-1700
+Module not found: Error: Can't resolve '../../Utilities/Platform' in '/app/node_modules/react-native/Libraries/Components/ScrollView'
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorBody.js 1:307-356
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspector.js 1:593-625
+ @ ./node_modules/react-native/Libraries/LogBox/LogBoxInspectorContainer.js 1:929-960
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:6566-6619
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Components/ScrollView/ScrollViewNativeComponent.js 1:413-448
+Module not found: Error: Can't resolve '../../Utilities/Platform' in '/app/node_modules/react-native/Libraries/Components/ScrollView'
+ @ ./node_modules/react-native/src/private/components/VScrollViewNativeComponents.js 1:425-502
+ @ ./node_modules/react-native/Libraries/Components/ScrollView/ScrollView.js 1:806-876
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorBody.js 1:307-356
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspector.js 1:593-625
+ @ ./node_modules/react-native/Libraries/LogBox/LogBoxInspectorContainer.js 1:929-960
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:6566-6619
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Components/ScrollView/ScrollViewStickyHeader.js 1:566-601
+Module not found: Error: Can't resolve '../../Utilities/Platform' in '/app/node_modules/react-native/Libraries/Components/ScrollView'
+ @ ./node_modules/react-native/Libraries/Components/ScrollView/ScrollView.js 1:2155-2190
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorBody.js 1:307-356
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspector.js 1:593-625
+ @ ./node_modules/react-native/Libraries/LogBox/LogBoxInspectorContainer.js 1:929-960
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:6566-6619
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Components/ScrollView/processDecelerationRate.js 1:120-155
+Module not found: Error: Can't resolve '../../Utilities/Platform' in '/app/node_modules/react-native/Libraries/Components/ScrollView'
+ @ ./node_modules/react-native/Libraries/Components/ScrollView/ScrollView.js 1:1907-1943
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorBody.js 1:307-356
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspector.js 1:593-625
+ @ ./node_modules/react-native/Libraries/LogBox/LogBoxInspectorContainer.js 1:929-960
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:6566-6619
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Components/TextInput/TextInputState.js 1:332-367
+Module not found: Error: Can't resolve '../../Utilities/Platform' in '/app/node_modules/react-native/Libraries/Components/TextInput'
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInterface.js 1:420-469
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:126-200
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Components/Touchable/TouchableHighlight.js 1:1013-1048
+Module not found: Error: Can't resolve '../../Utilities/Platform' in '/app/node_modules/react-native/Libraries/Components/Touchable'
+ @ ./node_modules/react-native/Libraries/Inspector/InspectorPanel.js 1:1325-1378
+ @ ./node_modules/react-native/Libraries/Inspector/Inspector.js 1:958-985
+ @ ./node_modules/react-native/Libraries/ReactNative/AppContainer-dev.js 1:2428-2461
+ @ ./node_modules/react-native/Libraries/ReactNative/AppContainer.js 1:774-811
+ @ ./node_modules/react-native/Libraries/ReactNative/renderApplication.js 1:419-444
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:776-806
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Core/Devtools/loadBundleFromServer.js 1:217-255
+Module not found: Error: Can't resolve '../../Network/RCTNetworking' in '/app/node_modules/react-native/Libraries/Core/Devtools'
+ @ ./node_modules/react-native/Libraries/Core/setUpDeveloperTools.js 1:1253-1295
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:463-495
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Core/ReactNativeVersionCheck.js 1:120-152
+Module not found: Error: Can't resolve '../Utilities/Platform' in '/app/node_modules/react-native/Libraries/Core'
+ @ ./node_modules/react-native/Libraries/Core/checkNativeVersion.js 1:41-77
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:431-462
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Core/setUpDeveloperTools.js 1:120-152
+Module not found: Error: Can't resolve '../Utilities/Platform' in '/app/node_modules/react-native/Libraries/Core'
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:463-495
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Core/setUpReactDevTools.js 1:332-399
+Module not found: Error: Can't resolve '../../src/private/debugging/ReactDevToolsSettingsManager' in '/app/node_modules/react-native/Libraries/Core'
+ @ ./node_modules/react-native/Libraries/Core/setUpDeveloperTools.js 1:192-223
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:463-495
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/EventEmitter/NativeEventEmitter.js 1:395-427
+Module not found: Error: Can't resolve '../Utilities/Platform' in '/app/node_modules/react-native/Libraries/EventEmitter'
+ @ ./node_modules/react-native/Libraries/WebSocket/WebSocket.js 1:846-891
+ @ ./node_modules/react-native/Libraries/Core/setUpXHR.js 1:646-679
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:280-301
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Image/AssetSourceResolver.js 1:349-381
+Module not found: Error: Can't resolve '../Utilities/Platform' in '/app/node_modules/react-native/Libraries/Image'
+ @ ./node_modules/react-native/Libraries/Image/resolveAssetSource.js 1:204-236
+ @ ./node_modules/react-native/Libraries/ReactNative/getNativeComponentAttributes.js 1:295-333
+ @ ./node_modules/react-native/Libraries/NativeComponent/NativeComponentRegistry.js 1:399-453
+ @ ./node_modules/react-native/Libraries/Components/TextInput/RCTSingelineTextInputNativeComponent.js 1:263-319
+ @ ./node_modules/react-native/Libraries/Components/TextInput/TextInputState.js 1:149-223
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInterface.js 1:420-469
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:126-200
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Inspector/Inspector.js 1:776-808
+Module not found: Error: Can't resolve '../Utilities/Platform' in '/app/node_modules/react-native/Libraries/Inspector'
+ @ ./node_modules/react-native/Libraries/ReactNative/AppContainer-dev.js 1:2428-2461
+ @ ./node_modules/react-native/Libraries/ReactNative/AppContainer.js 1:774-811
+ @ ./node_modules/react-native/Libraries/ReactNative/renderApplication.js 1:419-444
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:776-806
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/LayoutAnimation/LayoutAnimation.js 1:315-347
+Module not found: Error: Can't resolve '../Utilities/Platform' in '/app/node_modules/react-native/Libraries/LayoutAnimation'
+ @ ./node_modules/react-native/Libraries/Components/Keyboard/Keyboard.js 1:406-454
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspector.js 1:209-254
+ @ ./node_modules/react-native/Libraries/LogBox/LogBoxInspectorContainer.js 1:929-960
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:6566-6619
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Linking/Linking.js 1:689-721
+Module not found: Error: Can't resolve '../Utilities/Platform' in '/app/node_modules/react-native/Libraries/Linking'
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxMessage.js 1:199-231
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorMessageHeader.js 1:417-443
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorBody.js 1:654-695
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspector.js 1:593-625
+ @ ./node_modules/react-native/Libraries/LogBox/LogBoxInspectorContainer.js 1:929-960
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:6566-6619
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Lists/FlatList.js 1:2432-2464
+Module not found: Error: Can't resolve '../Utilities/Platform' in '/app/node_modules/react-native/Libraries/Lists'
+ @ ./node_modules/react-native/Libraries/Inspector/NetworkOverlay.js 1:1343-1371
+ @ ./node_modules/react-native/Libraries/Inspector/InspectorPanel.js 1:1579-1606
+ @ ./node_modules/react-native/Libraries/Inspector/Inspector.js 1:958-985
+ @ ./node_modules/react-native/Libraries/ReactNative/AppContainer-dev.js 1:2428-2461
+ @ ./node_modules/react-native/Libraries/ReactNative/AppContainer.js 1:774-811
+ @ ./node_modules/react-native/Libraries/ReactNative/renderApplication.js 1:419-444
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:776-806
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Lists/SectionList.js 1:799-831
+Module not found: Error: Can't resolve '../Utilities/Platform' in '/app/node_modules/react-native/Libraries/Lists'
+ @ ./node_modules/react-native/Libraries/Animated/components/AnimatedSectionList.js 1:203-237
+ @ ./node_modules/react-native/Libraries/Animated/Animated.js 1:781-832
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorSourceMapStatus.js 1:292-326
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorStackFrames.js 1:822-865
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorBody.js 1:848-887
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspector.js 1:593-625
+ @ ./node_modules/react-native/Libraries/LogBox/LogBoxInspectorContainer.js 1:929-960
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:6566-6619
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/LogBox/LogBox.js 1:200-232
+Module not found: Error: Can't resolve '../Utilities/Platform' in '/app/node_modules/react-native/Libraries/LogBox'
+ @ ./node_modules/react-native/Libraries/Core/ExceptionsManager.js 1:3215-3250
+ @ ./node_modules/react-native/src/private/renderer/errorhandling/ErrorHandlers.js 1:202-257
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:726-791
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorCodeFrame.js 1:596-631
+Module not found: Error: Can't resolve '../../Utilities/Platform' in '/app/node_modules/react-native/Libraries/LogBox/UI'
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorBody.js 1:558-595
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspector.js 1:593-625
+ @ ./node_modules/react-native/Libraries/LogBox/LogBoxInspectorContainer.js 1:929-960
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:6566-6619
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorHeader.js 1:523-558
+Module not found: Error: Can't resolve '../../Utilities/Platform' in '/app/node_modules/react-native/Libraries/LogBox/UI'
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspector.js 1:763-797
+ @ ./node_modules/react-native/Libraries/LogBox/LogBoxInspectorContainer.js 1:929-960
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:6566-6619
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorHeaderButton.js 1:218-246
+Module not found: Error: Can't resolve '../../Image/Image' in '/app/node_modules/react-native/Libraries/LogBox/UI'
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorHeader.js 1:616-656
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspector.js 1:763-797
+ @ ./node_modules/react-native/Libraries/LogBox/LogBoxInspectorContainer.js 1:929-960
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:6566-6619
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorReactFrames.js 1:598-633
+Module not found: Error: Can't resolve '../../Utilities/Platform' in '/app/node_modules/react-native/Libraries/LogBox/UI'
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorBody.js 1:752-791
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspector.js 1:593-625
+ @ ./node_modules/react-native/Libraries/LogBox/LogBoxInspectorContainer.js 1:929-960
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:6566-6619
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorStackFrame.js 1:412-447
+Module not found: Error: Can't resolve '../../Utilities/Platform' in '/app/node_modules/react-native/Libraries/LogBox/UI'
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorStackFrames.js 1:921-959
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorBody.js 1:848-887
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspector.js 1:593-625
+ @ ./node_modules/react-native/Libraries/LogBox/LogBoxInspectorContainer.js 1:929-960
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:6566-6619
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/LogBox/UI/LogBoxNotificationDismissButton.js 1:294-322
+Module not found: Error: Can't resolve '../../Image/Image' in '/app/node_modules/react-native/Libraries/LogBox/UI'
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxNotification.js 1:692-736
+ @ ./node_modules/react-native/Libraries/LogBox/LogBoxNotificationContainer.js 1:692-726
+ @ ./node_modules/react-native/Libraries/ReactNative/AppContainer-dev.js 1:811-859
+ @ ./node_modules/react-native/Libraries/ReactNative/AppContainer.js 1:774-811
+ @ ./node_modules/react-native/Libraries/ReactNative/renderApplication.js 1:419-444
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:776-806
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/NativeComponent/PlatformBaseViewConfig.js 1:206-233
+Module not found: Error: Can't resolve './BaseViewConfig' in '/app/node_modules/react-native/Libraries/NativeComponent'
+ @ ./node_modules/react-native/Libraries/NativeComponent/ViewConfig.js 1:233-268
+ @ ./node_modules/react-native/Libraries/NativeComponent/NativeComponentRegistry.js 1:758-781
+ @ ./node_modules/react-native/Libraries/Components/TextInput/RCTSingelineTextInputNativeComponent.js 1:263-319
+ @ ./node_modules/react-native/Libraries/Components/TextInput/TextInputState.js 1:149-223
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInterface.js 1:420-469
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:126-200
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/NativeComponent/ViewConfigIgnore.js 1:361-393
+Module not found: Error: Can't resolve '../Utilities/Platform' in '/app/node_modules/react-native/Libraries/NativeComponent'
+ @ ./node_modules/react-native/Libraries/Components/TextInput/RCTTextInputViewConfig.js 1:22-71
+ @ ./node_modules/react-native/Libraries/Components/TextInput/RCTSingelineTextInputNativeComponent.js 1:472-507
+ @ ./node_modules/react-native/Libraries/Components/TextInput/TextInputState.js 1:149-223
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInterface.js 1:420-469
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:126-200
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Network/XMLHttpRequest.js 1:1580-1614
+Module not found: Error: Can't resolve './RCTNetworking' in '/app/node_modules/react-native/Libraries/Network'
+ @ ./node_modules/react-native/Libraries/Core/setUpXHR.js 1:157-193
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:280-301
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Pressability/HoverState.js 1:215-247
+Module not found: Error: Can't resolve '../Utilities/Platform' in '/app/node_modules/react-native/Libraries/Pressability'
+ @ ./node_modules/react-native/Libraries/Pressability/Pressability.js 1:736-759
+ @ ./node_modules/react-native/Libraries/Pressability/usePressability.js 1:213-238
+ @ ./node_modules/react-native/Libraries/Text/Text.js 1:423-465
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorHeader.js 1:458-484
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspector.js 1:763-797
+ @ ./node_modules/react-native/Libraries/LogBox/LogBoxInspectorContainer.js 1:929-960
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:6566-6619
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Pressability/Pressability.js 1:686-718
+Module not found: Error: Can't resolve '../Utilities/Platform' in '/app/node_modules/react-native/Libraries/Pressability'
+ @ ./node_modules/react-native/Libraries/Pressability/usePressability.js 1:213-238
+ @ ./node_modules/react-native/Libraries/Text/Text.js 1:423-465
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorHeader.js 1:458-484
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspector.js 1:763-797
+ @ ./node_modules/react-native/Libraries/LogBox/LogBoxInspectorContainer.js 1:929-960
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:6566-6619
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/ReactNative/BridgelessUIManager.js 1:335-367
+Module not found: Error: Can't resolve '../Utilities/Platform' in '/app/node_modules/react-native/Libraries/ReactNative'
+ @ ./node_modules/react-native/Libraries/ReactNative/UIManager.js 1:300-332
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInterface.js 1:495-530
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:126-200
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/ReactNative/PaperUIManager.js 1:370-402
+Module not found: Error: Can't resolve '../Utilities/Platform' in '/app/node_modules/react-native/Libraries/ReactNative'
+ @ ./node_modules/react-native/Libraries/ReactNative/UIManager.js 1:333-360
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInterface.js 1:495-530
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:126-200
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/ReactNative/renderApplication.js 1:795-830
+Module not found: Error: Can't resolve '../Utilities/BackHandler' in '/app/node_modules/react-native/Libraries/ReactNative'
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:776-806
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInterface.js 1:179-211
+Module not found: Error: Can't resolve '../Utilities/Platform' in '/app/node_modules/react-native/Libraries/ReactPrivate'
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:126-200
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInterface.js 1:902-973
+Module not found: Error: Can't resolve '../Components/AccessibilityInfo/legacySendAccessibilityEvent' in '/app/node_modules/react-native/Libraries/ReactPrivate'
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:126-200
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/StyleSheet/normalizeColor.js 1:255-291
+Module not found: Error: Can't resolve './PlatformColorValueTypes' in '/app/node_modules/react-native/Libraries/StyleSheet'
+ @ ./node_modules/react-native/Libraries/StyleSheet/processColor.js 1:158-185
+ @ ./node_modules/react-native/Libraries/Components/TextInput/AndroidTextInputNativeComponent.js 1:2063-2111 1:2204-2252 1:2382-2430 1:2462-2510 1:2542-2590 1:2720-2768 1:2897-2945 1:3395-3443 1:3489-3537 1:3560-3608 1:3706-3754 1:3805-3853
+ @ ./node_modules/react-native/Libraries/Components/TextInput/TextInputState.js 1:37-106
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInterface.js 1:420-469
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:126-200
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/StyleSheet/processColor.js 1:106-138
+Module not found: Error: Can't resolve '../Utilities/Platform' in '/app/node_modules/react-native/Libraries/StyleSheet'
+ @ ./node_modules/react-native/Libraries/Components/TextInput/AndroidTextInputNativeComponent.js 1:2063-2111 1:2204-2252 1:2382-2430 1:2462-2510 1:2542-2590 1:2720-2768 1:2897-2945 1:3395-3443 1:3489-3537 1:3560-3608 1:3706-3754 1:3805-3853
+ @ ./node_modules/react-native/Libraries/Components/TextInput/TextInputState.js 1:37-106
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInterface.js 1:420-469
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:126-200
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/StyleSheet/processColor.js 1:442-497
+Module not found: Error: Can't resolve './PlatformColorValueTypes' in '/app/node_modules/react-native/Libraries/StyleSheet'
+ @ ./node_modules/react-native/Libraries/Components/TextInput/AndroidTextInputNativeComponent.js 1:2063-2111 1:2204-2252 1:2382-2430 1:2462-2510 1:2542-2590 1:2720-2768 1:2897-2945 1:3395-3443 1:3489-3537 1:3560-3608 1:3706-3754 1:3805-3853
+ @ ./node_modules/react-native/Libraries/Components/TextInput/TextInputState.js 1:37-106
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInterface.js 1:420-469
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:126-200
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Text/Text.js 1:664-696
+Module not found: Error: Can't resolve '../Utilities/Platform' in '/app/node_modules/react-native/Libraries/Text'
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorHeader.js 1:458-484
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspector.js 1:763-797
+ @ ./node_modules/react-native/Libraries/LogBox/LogBoxInspectorContainer.js 1:929-960
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:6566-6619
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Utilities/DevSettings.js 1:313-345
+Module not found: Error: Can't resolve '../Utilities/Platform' in '/app/node_modules/react-native/Libraries/Utilities'
+ @ ./node_modules/react-native/Libraries/Utilities/HMRClient.js 1:428-452
+ @ ./node_modules/react-native/Libraries/Core/setUpBatchedBridge.js 1:1197-1230
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:354-385
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/Utilities/HMRClient.js 1:466-487
+Module not found: Error: Can't resolve './Platform' in '/app/node_modules/react-native/Libraries/Utilities'
+ @ ./node_modules/react-native/Libraries/Core/setUpBatchedBridge.js 1:1197-1230
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:354-385
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/WebSocket/WebSocket.js 1:1011-1043
+Module not found: Error: Can't resolve '../Utilities/Platform' in '/app/node_modules/react-native/Libraries/WebSocket'
+ @ ./node_modules/react-native/Libraries/Core/setUpXHR.js 1:646-679
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:280-301
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/Libraries/WebSocket/WebSocketInterceptor.js 1:214-246
+Module not found: Error: Can't resolve '../Utilities/Platform' in '/app/node_modules/react-native/Libraries/WebSocket'
+ @ ./node_modules/react-native/Libraries/Inspector/NetworkOverlay.js 1:1537-1581
+ @ ./node_modules/react-native/Libraries/Inspector/InspectorPanel.js 1:1579-1606
+ @ ./node_modules/react-native/Libraries/Inspector/Inspector.js 1:958-985
+ @ ./node_modules/react-native/Libraries/ReactNative/AppContainer-dev.js 1:2428-2461
+ @ ./node_modules/react-native/Libraries/ReactNative/AppContainer.js 1:774-811
+ @ ./node_modules/react-native/Libraries/ReactNative/renderApplication.js 1:419-444
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:776-806
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/src/private/animated/NativeAnimatedHelper.js 1:656-704
+Module not found: Error: Can't resolve '../../../Libraries/Utilities/Platform' in '/app/node_modules/react-native/src/private/animated'
+ @ ./node_modules/react-native/Libraries/Animated/AnimatedEvent.js 1:457-515
+ @ ./node_modules/react-native/Libraries/Animated/AnimatedImplementation.js 1:195-221
+ @ ./node_modules/react-native/Libraries/Components/ScrollView/ScrollView.js 1:928-976
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorBody.js 1:307-356
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspector.js 1:593-625
+ @ ./node_modules/react-native/Libraries/LogBox/LogBoxInspectorContainer.js 1:929-960
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:6566-6619
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/src/private/components/HScrollViewNativeComponents.js 1:708-756
+Module not found: Error: Can't resolve '../../../Libraries/Utilities/Platform' in '/app/node_modules/react-native/src/private/components'
+ @ ./node_modules/react-native/Libraries/Components/ScrollView/ScrollView.js 1:702-772
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorBody.js 1:307-356
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspector.js 1:593-625
+ @ ./node_modules/react-native/Libraries/LogBox/LogBoxInspectorContainer.js 1:929-960
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:6566-6619
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/src/private/components/SafeAreaView_INTERNAL_DO_NOT_USE.js 1:376-424
+Module not found: Error: Can't resolve '../../../Libraries/Utilities/Platform' in '/app/node_modules/react-native/src/private/components'
+ @ ./node_modules/react-native/Libraries/LogBox/LogBoxNotificationContainer.js 1:290-362
+ @ ./node_modules/react-native/Libraries/ReactNative/AppContainer-dev.js 1:811-859
+ @ ./node_modules/react-native/Libraries/ReactNative/AppContainer.js 1:774-811
+ @ ./node_modules/react-native/Libraries/ReactNative/renderApplication.js 1:419-444
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:776-806
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/src/private/components/VScrollViewNativeComponents.js 1:626-674
+Module not found: Error: Can't resolve '../../../Libraries/Utilities/Platform' in '/app/node_modules/react-native/src/private/components'
+ @ ./node_modules/react-native/Libraries/Components/ScrollView/ScrollView.js 1:806-876
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorBody.js 1:307-356
+ @ ./node_modules/react-native/Libraries/LogBox/UI/LogBoxInspector.js 1:593-625
+ @ ./node_modules/react-native/Libraries/LogBox/LogBoxInspectorContainer.js 1:929-960
+ @ ./node_modules/react-native/Libraries/ReactNative/AppRegistry.js 1:6566-6619
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:543-580
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./node_modules/react-native/src/private/specs/modules/NativeExceptionsManager.js 1:904-955
+Module not found: Error: Can't resolve '../../../../Libraries/Utilities/Platform' in '/app/node_modules/react-native/src/private/specs/modules'
+ @ ./node_modules/react-native/Libraries/Core/NativeExceptionsManager.js 1:153-219
+ @ ./node_modules/react-native/Libraries/Utilities/HMRClient.js 17:1147-1197
+ @ ./node_modules/react-native/Libraries/Core/setUpBatchedBridge.js 1:1197-1230
+ @ ./node_modules/react-native/Libraries/Core/InitializeCore.js 1:354-385
+ @ ./node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js 1:0-33
+ @ ./node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-dev.js 1:286-365
+ @ ./node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js 1:241-286
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererImplementation.js 1:947-1002 1:1803-1867 1:2779-2861 1:2971-3063
+ @ ./node_modules/react-native/Libraries/ReactNative/RendererProxy.js 1:85-120
+ @ ./node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js 1:93-132
+ @ ./node_modules/react-native-maps/lib/MapMarkerNativeComponent.js 1:249-314
+ @ ./node_modules/react-native-maps/lib/MapMarker.js 1:2241-2278
+ @ ./node_modules/react-native-maps/lib/index.js 1:2012-2034 1:2087-2109
+ @ ./src/components/LiveOrderRoute.tsx 1:1003-1031
+ @ ./src/screens/OrderScreen.tsx 1:2260-2299
+ @ ./src/navigation/DriverNavigator.tsx 1:1131-1164
+ @ ./src/navigation/AppNavigator.tsx 1:428-456
+ @ ./App.tsx 1:915-955
+ @ ./index.web.tsx 1:115-131
+
+ERROR in ./tamagui.config.ts 287:7
+Module parse failed: Unexpected token (287:7)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+| });
+|
+> export type AppConfig = typeof appConfig;
+|
+| declare module 'tamagui' {
+ @ ./App.tsx 1:1299-1326
+ @ ./index.web.tsx 1:115-131
+
+62 errors have detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+webpack 5.97.1 compiled with 63 errors and 6 warnings in 131280 ms
+<i> [webpack-dev-server] Gracefully shutting down. To force exit, press ^C again. Please wait...
